@@ -1,1 +1,45 @@
-<p>dashboard works!</p>
+<div class="dashboard-container">
+  <div class="intro-group">
+    <div class="intro">
+      <h1 class="headline">
+        "Acredito no poder da tecnologia de unir as pessoas"
+      </h1>
+      <p>
+        Desde que comecei na área da computação, sempre fui um jovem inquieto,
+        constantemente refletindo sobre a vida.
+      </p>
+      <p>
+        Muitas vezes, falando sozinho... sem ter certeza do que a vida pensa
+        sobre mim, nem de qual é o meu propósito.
+      </p>
+      <p>
+        Esta aplicação não é apenas um projeto para demonstrar habilidades
+        técnicas. É também um espaço onde registro pensamentos, valores, visão
+        de mundo e sonhos.
+      </p>
+      <p>
+        Aqui está o que se passa na mente de um jovem que realmente sonha
+        grande.
+      </p>
+      <p>
+        Inclusive, alguém já te perguntou como está o tempo hoje? Por aqui, está
+        assim:
+      </p>
+    </div>
+
+    <div class="weather-card">
+      <h2>Clima em {{ clima?.cidade }}, {{ clima?.pais }}</h2>
+      <div class="weather-info">
+        <p><strong>Temperatura:</strong> {{ clima?.temperatura }}°C</p>
+        <p><strong>Horário local:</strong> {{ clima?.horario }}</p>
+        <p>
+          <strong>Fuso horário (UTC):</strong>
+          {{ clima?.timezone / 3600 >= 0 ? "+" : ""
+          }}{{ clima?.timezone / 3600 }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="technologies-profile-resume"></div>
+</div>
