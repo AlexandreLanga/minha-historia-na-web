@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  padding: 2rem;
+  color: #333;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+}
+
+.intro-group {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  gap: 2rem;
+}
+
+.intro {
+  background: #eeeeee;
+  padding: 2rem;
+  border-radius: 8px;
+  color: #333;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.headline {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222831;
+  font-weight: bold;
+}
+
+.intro p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.weather-card {
+  background-color: #eeeeee;
+  border-left: 5px solid #00adb5;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 665px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card h2 {
+  margin-top: 0;
+  color: #222831;
+}
+
+.weather-info p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #393e46;
+}
+
+.technologies-profile-resume {
+  background: #eeeeee;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 745px;
+  min-height: 860px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
