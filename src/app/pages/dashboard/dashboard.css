@@ -1,23 +1,19 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #fafafa;
-  padding: 2rem;
-  color: #333;
-}
-
 .dashboard-container {
   display: flex;
-  flex-direction: row;
-  gap: 4rem;
-  justify-content: center;
-  align-items: flex-start;
-  margin-bottom: 4rem;
+  /*flex-direction: row;*/
+  gap: 2rem;
+  max-width: 100%;
+  /*max-height: 100%;*/
+  min-height: 100%;
+  border: 1px dashed red;
 }
 
-.intro-group {
+.group {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  max-width: 100%;
+  min-height: 100%;
+  flex-grow: 1;
   gap: 2rem;
 }
 
@@ -27,6 +23,9 @@ body {
   border-radius: 8px;
   color: #333;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px dashed red;
 }
 
 .headline {
@@ -34,12 +33,15 @@ body {
   margin-bottom: 1rem;
   color: #222831;
   font-weight: bold;
+  text-align: center;
+  background-color: aquamarine;
+  border-radius: 20%;
 }
 
 .intro p {
   line-height: 1.6;
   margin-bottom: 1rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .weather-card {
@@ -47,8 +49,10 @@ body {
   border-left: 5px solid #00adb5;
   border-radius: 8px;
   padding: 16px;
-  max-width: 665px;
+  max-width: 100%;
+  max-height: 100%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px dashed red;
 }
 
 .weather-card h2 {
@@ -66,7 +70,31 @@ body {
   background: #eeeeee;
   padding: 2rem;
   border-radius: 8px;
-  width: 745px;
-  min-height: 860px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  border: 1px dashed red;
+  flex-grow: 1;
+}
+
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.profile-image {
+  height: 280px;
+  width: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 10%;
+}
+
+.tech-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0.5rem;
+  object-fit: contain;
 }
