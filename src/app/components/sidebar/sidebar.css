@@ -1,11 +1,8 @@
 .sidebar {
   width: 250px;
-  height: 100vh;
+  min-height: 100%;
+  max-height: 300%;
   background-color: #2885e2;
-  color: white;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  border: 1px #2885e2 dashed; /*esse border "gruda" 100% a div no topo da página*/
 }
 
 .sidebar ul {
