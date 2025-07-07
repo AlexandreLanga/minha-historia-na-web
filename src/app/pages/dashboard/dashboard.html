@@ -28,7 +28,7 @@
     </div>
 
     <div class="weather-card">
-      <h2>Clima em {{ clima?.cidade }}, {{ clima?.pais }}</h2>
+      <h2>{{ clima?.cidade }}, {{ clima?.pais }}</h2>
       <div class="weather-info">
         <p><strong>Temperatura:</strong> {{ clima?.temperatura }}°C</p>
         <p><strong>Horário local:</strong> {{ clima?.horario }}</p>
@@ -38,6 +38,43 @@
           }}{{ clima?.timezone / 3600 }}
         </p>
       </div>
+    </div>
+
+    <div class="extra-informations">
+      <a
+        href="https://www.linkedin.com/in/alexandre-langa-9b9092249/"
+        target="_blank"
+        class="social-links"
+      >
+        <img
+          src="linkedin.png"
+          alt="LinkedIn de Alexandre"
+          class="social-icon"
+        />
+        <span>Visite meu LinkedIn</span>
+      </a>
+
+      <a
+        href="https://www.instagram.com/alexandre.langa/"
+        target="_blank"
+        class="social-links"
+      >
+        <img
+          src="instagram.png"
+          alt="Instagram de Alexandre"
+          class="social-icon"
+        />
+        <span>Visite meu Instagram</span>
+      </a>
+
+      <a
+        href="https://github.com/AlexandreLanga"
+        target="_blank"
+        class="social-links"
+      >
+        <img src="github.png" alt="GitHub de Alexandre" class="social-icon" />
+        <span>Visite meu GitHub</span>
+      </a>
     </div>
   </div>
 
@@ -52,11 +89,15 @@
       />
     </div>
 
-    <p>
-      -----------------------------------------------------------------------------
+    <br />
+    <p style="text-align: center; color: black">
+      Idade atual: {{ idadeAtual }} anos
     </p>
 
-    <p style="color: cyan">Tecnologias que domino:</p>
+    <br />
+    <p style="color: black">
+      Tecnologias com experiência, em evolução ao domínio pleno:
+    </p>
 
     <div class="tech-icons">
       <img src="c-sharp.png" alt="C#" class="tech-icon" />
@@ -64,6 +105,7 @@
       <img src="typescript.png" alt="TypeScript" class="tech-icon" />
       <img src="angular.png" alt="Angular" class="tech-icon" />
       <img src="html.png" alt="Html" class="tech-icon" />
+      <img src="css.png" alt="Css" class="tech-icon" />
       <img src="sqlserver.png" alt="SQLServer" class="tech-icon" />
       <img src="postgresql.png" alt="PostgreSQL" class="tech-icon" />
       <img src="oraclesql.png" alt="OracleSQL" class="tech-icon" />
