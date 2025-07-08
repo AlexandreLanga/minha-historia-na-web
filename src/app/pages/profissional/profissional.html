@@ -1,1 +1,51 @@
-<p>profissional works!</p>
+<header>
+  <h1>Alexandre Langa Goldoni</h1>
+  <p class="subtitle">Currículo Profissional</p>
+</header>
+
+<br />
+
+<section class="profile">
+  <h2>Resumo Profissional</h2>
+  <p>
+    Profissional com experiência em desenvolvimento e manutenção de sistemas.
+    Formação em andamento na área de tecnologia e forte interesse por soluções
+    web e desktop.
+  </p>
+</section>
+
+<section class="experience">
+  <h2>Experiência Profissional</h2>
+  <div class="job" *ngFor="let experiencia of experiencias">
+    <h3>{{ experiencia.empresa }}</h3>
+    <p><strong>Cargo:</strong> {{ experiencia.cargo }}</p>
+    <p><strong>Período:</strong> {{ experiencia.periodo }}</p>
+    <p>{{ experiencia.descricao }}</p>
+    <br />
+  </div>
+</section>
+
+<section class="education">
+  <h2>Formação Acadêmica</h2>
+  <ul>
+    <li><strong>Ciência da Computação</strong> - Unochapecó (Em andamento)</li>
+    <li><strong>Inglês</strong> - Wizard by Pearson (2013 - 2022)</li>
+  </ul>
+</section>
+
+<br />
+
+<section class="skills">
+  <h2>Competências</h2>
+  <ul>
+    <li>Desenvolvimento com C# e .NET</li>
+    <li>Angular</li>
+    <li>SQL Server / PostgreSQL</li>
+    <li>Git e controle de versão</li>
+    <li>Boa comunicação e trabalho em equipe</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 Alexandre Langa Goldoni</p>
+</footer>
