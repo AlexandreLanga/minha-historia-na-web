@@ -1,23 +1,35 @@
 <nav class="sidebar">
+  <div class="language-switcher">
+    <button (click)="switchLang('pt')" class="lang-btn">
+      <img src="brazil.png" alt="Brazil" class="tech-icon" />
+      <span>{{ "SIDEBAR.PORTUGUESE" | translate }}</span>
+    </button>
+    <button (click)="switchLang('en')" class="lang-btn">
+      <img src="united-states.png" alt="USA" class="tech-icon" />
+      <span>{{ "SIDEBAR.ENGLISH" | translate }}</span>
+    </button>
+  </div>
+
   <ul>
     <li>
       <a routerLink="/dashboard" routerLinkActive="active">
-        <i class="fas fa-user"></i> Dashboard
+        <i class="fas fa-user"></i> {{ "SIDEBAR.DASHBOARD" | translate }}
       </a>
     </li>
     <li>
       <a routerLink="/minha-historia" routerLinkActive="active">
-        <i class="fas fa-book-open"></i> Minha história
+        <i class="fas fa-book-open"></i> {{ "SIDEBAR.MY_STORY" | translate }}
       </a>
     </li>
     <li>
       <a routerLink="/profissional" routerLinkActive="active">
-        <i class="fas fa-briefcase"></i> Profissional
+        <i class="fas fa-briefcase"></i>
+        {{ "SIDEBAR.PROFESSIONAL" | translate }}
       </a>
     </li>
     <li>
       <a routerLink="/mais-sobre-mim" routerLinkActive="active">
-        <i class="fas fa-user-circle"></i> Mais sobre mim
+        <i class="fas fa-user-circle"></i> {{ "SIDEBAR.ABOUT_ME" | translate }}
       </a>
     </li>
   </ul>
