@@ -4,11 +4,11 @@ import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 export interface WeatherData {
-  temperatura: number;
-  cidade: string;
-  pais: string;
+  temperature: number;
+  city: string;
+  country: string;
   timezone: number;
-  horario: string;
+  localTime: string;
 }
 
 @Injectable({
@@ -27,20 +27,19 @@ export class WeatherService {
 
     return this.http.get<any>(url).pipe(
       map((data) => ({
-        temperatura: data.main.temp,
-        cidade: data.name,
-        pais: data.sys.country,
+        temperature: data.main.temp,
+        city: data.name,
+        country: data.sys.country,
         timezone: data.timezone,
-        horario: new Date(Date.now() + data.timezone * 1000).toLocaleTimeString(
-          'pt-BR'
-        ),
+        localTime: new Date(Date.now() + data.timezone * 1000).toLocaleTimeString('pt-BR'),
       })),
       catchError(this.handleError)
     );
   }
 
+
   private handleError(error: HttpErrorResponse) {
-    console.error('Erro na requisição da API:', error);
+    console.error('API requisition error:', error);
     return throwError(
       () =>
         new Error(

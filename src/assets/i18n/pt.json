@@ -6,5 +6,74 @@
     "MY_STORY": "Minha história",
     "PROFESSIONAL": "Profissional",
     "ABOUT_ME": "Sobre mim"
+  },
+  "DASHBOARD": {
+    "INTRODUCTION": "\"Acredito no poder da tecnologia de unir as pessoas\"",
+    "TEXT_ONE": "Desde que comecei na área da computação, sempre fui um jovem inquieto, constantemente refletindo sobre a vida.",
+    "TEXT_TWO": "Muitas vezes, falando sozinho... sem ter certeza do que a vida pensa sobre mim, nem de qual é o meu propósito.",
+    "TEXT_THREE": "Esta aplicação não é apenas um projeto para demonstrar habilidades técnicas. É também um espaço onde registro pensamentos, valores, visão de mundo e sonhos.",
+    "TEXT_FOUR": "Aqui está o que se passa na mente de um jovem que realmente sonha grande.",
+    "TEXT_FIVE": "Inclusive, alguém já te perguntou como está o tempo hoje? Por aqui, está assim:",
+    "TEMPERATURE": "Temperatura:",
+    "LOCALTIME": "Horário local:",
+    "TIMEZONE": "Fuso horário (UTC)",
+    "LINKEDIN": "Visite meu LinkedIn",
+    "INSTAGRAM": "Visite meu Instagram",
+    "GITHUB": "Visite meu GitHub",
+    "ACTUAL_AGE": "Idade atual:",
+    "YEARS": "anos",
+    "TECHNOLOGIES": "Tecnologias com experiência, em evolução ao domínio pleno:"
+  },
+  "PROFESSIONAL": {
+    "NAME": "Alexandre Langa Goldoni",
+    "TITLE": "Currículo Profissional",
+    "SECTION_SUMMARY": "Resumo Profissional",
+    "PROFESSIONAL_SUMMARY": "Profissional com experiência em desenvolvimento e manutenção de sistemas. Formação em andamento na área de tecnologia e forte interesse por soluções web e desktop.",
+    "SECTION_EXPERIENCE": "Carreira Profissional",
+    "PROFESSIONAL_EXPERIENCE": [
+      {
+        "COMPANY": "Concert Technologies",
+        "POSITION": "Analista de Software Júnior",
+        "PERIOD": "jun 2025 - Atual",
+        "DESCRIPTION": "Atuação com Angular e .NET, com foco em soluções para monitoramento e inspeção de redes elétricas com uso de drones e IA."
+      },
+      {
+        "COMPANY": "Vision System",
+        "POSITION": "Assistente de Apoio a Programação de Sistemas",
+        "PERIOD": "set 2024 - jun 2025",
+        "DESCRIPTION": "Desenvolvimento com .NET Framework, C#, TypeScript, Angular e PrimeNG. Utilização de PostgreSQL e SQL Server."
+      },
+      {
+        "COMPANY": "Infogen Software",
+        "POSITION": "Programador Trainee / Estagiário",
+        "PERIOD": "fev 2023 - ago 2024",
+        "DESCRIPTION": "Atuação de 1 ano de estágio e 7 meses como programador, atuando com C#, GeneXus, Oracle, SQL Server, deploy e manutenção de sistemas."
+      },
+      {
+        "COMPANY": "Supermercado Popiolski",
+        "POSITION": "Operador de Caixa / Jovem Aprendiz",
+        "PERIOD": "jan 2019 - mai 2022",
+        "DESCRIPTION": "Atuação de 1 ano e 5 meses como Jovem Aprendiz, e 1 ano e 4 meses como Operador de Caixa, atuando em serviços operacionais e de atendimento ao cliente."
+      }
+    ],
+    "EDUCATION": [
+      {
+        "COURSE": "Ciência da Computação",
+        "INSTITUTION": "Unochapecó",
+        "STATUS": "Em andamento"
+      },
+      {
+        "COURSE": "Inglês",
+        "INSTITUTION": "Wizard by Pearson",
+        "PERIOD": "2013 - 2022"
+      }
+    ],
+    "SKILLS": [
+      "Desenvolvimento com C# e .NET",
+      "Angular",
+      "SQL Server / PostgreSQL",
+      "Git e controle de versão",
+      "Boa comunicação e trabalho em equipe"
+    ]
   }
 }

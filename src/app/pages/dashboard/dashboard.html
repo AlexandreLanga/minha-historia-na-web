@@ -2,40 +2,34 @@
   <div class="group">
     <div class="intro">
       <h1 class="headline">
-        "Acredito no poder da tecnologia de unir as pessoas"
+        {{ "DASHBOARD.INTRODUCTION" | translate }}
       </h1>
       <p>
-        Desde que comecei na área da computação, sempre fui um jovem inquieto,
-        constantemente refletindo sobre a vida.
+        {{ "DASHBOARD.TEXT_ONE" | translate }}
       </p>
       <p>
-        Muitas vezes, falando sozinho... sem ter certeza do que a vida pensa
-        sobre mim, nem de qual é o meu propósito.
+        {{ "DASHBOARD.TEXT_TWO" | translate }}
       </p>
       <p>
-        Esta aplicação não é apenas um projeto para demonstrar habilidades
-        técnicas. É também um espaço onde registro pensamentos, valores, visão
-        de mundo e sonhos.
+        {{ "DASHBOARD.TEXT_THREE" | translate }}
       </p>
       <p>
-        Aqui está o que se passa na mente de um jovem que realmente sonha
-        grande.
+        {{ "DASHBOARD.TEXT_FOUR" | translate }}
       </p>
       <p>
-        Inclusive, alguém já te perguntou como está o tempo hoje? Por aqui, está
-        assim:
+        {{ "DASHBOARD.TEXT_FIVE" | translate }}
       </p>
     </div>
 
     <div class="weather-card">
-      <h2>{{ clima?.cidade }}, {{ clima?.pais }}</h2>
+      <h2>{{ wheather?.city }}, {{ wheather?.country }}</h2>
       <div class="weather-info">
-        <p><strong>Temperatura:</strong> {{ clima?.temperatura }}°C</p>
-        <p><strong>Horário local:</strong> {{ clima?.horario }}</p>
+        <p><strong> {{ "DASHBOARD.TEMPERATURE" | translate }} </strong> {{ wheather?.temperature }}°C</p>
+        <p><strong> {{ "DASHBOARD.LOCALTIME" | translate }} </strong> {{ wheather?.localTime }}</p>
         <p>
-          <strong>Fuso horário (UTC):</strong>
-          {{ clima?.timezone / 3600 >= 0 ? "+" : ""
-          }}{{ clima?.timezone / 3600 }}
+          <strong> {{ "DASHBOARD.TIMEZONE" | translate }} :</strong>
+          {{ wheather?.timezone / 3600 >= 0 ? "+" : "" }}
+          {{ wheather?.timezone / 3600 }}
         </p>
       </div>
     </div>
@@ -48,10 +42,10 @@
       >
         <img
           src="linkedin.png"
-          alt="LinkedIn de Alexandre"
+          alt="Alexandre's LinkedIn"
           class="social-icon"
         />
-        <span>Visite meu LinkedIn</span>
+        <span> {{ "DASHBOARD.LINKEDIN" | translate }} </span>
       </a>
 
       <a
@@ -61,10 +55,10 @@
       >
         <img
           src="instagram.png"
-          alt="Instagram de Alexandre"
+          alt="Alexandre's Instagram"
           class="social-icon"
         />
-        <span>Visite meu Instagram</span>
+        <span> {{ "DASHBOARD.INSTAGRAM" | translate }} </span>
       </a>
 
       <a
@@ -72,8 +66,8 @@
         target="_blank"
         class="social-links"
       >
-        <img src="github.png" alt="GitHub de Alexandre" class="social-icon" />
-        <span>Visite meu GitHub</span>
+        <img src="github.png" alt="Alexandre's GitHub" class="social-icon" />
+        <span> {{ "DASHBOARD.GITHUB" | translate }} </span>
       </a>
     </div>
   </div>
@@ -84,19 +78,19 @@
     <div class="profile-image-container">
       <img
         src="foto_alexandre.jpeg"
-        alt="Foto de Alexandre"
+        alt="Alexandre's Picture"
         class="profile-image"
       />
     </div>
 
     <br />
     <p style="text-align: center; color: black">
-      Idade atual: {{ idadeAtual }} anos
+      {{ "DASHBOARD.ACTUAL_AGE" | translate }} {{ actualAge }} {{ "DASHBOARD.YEARS" | translate }}
     </p>
 
     <br />
     <p style="color: black">
-      Tecnologias com experiência, em evolução ao domínio pleno:
+      {{ "DASHBOARD.TECHNOLOGIES" | translate }}
     </p>
 
     <div class="tech-icons">

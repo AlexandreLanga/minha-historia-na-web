@@ -1,0 +1,28 @@
+<header>
+  <h1>{{ "PROFESSIONAL.NAME" | translate }}</h1>
+  <p class="subtitle">{{ 'PROFESSIONAL.TITLE' | translate }}</p>
+</header>
+
+<br />
+
+<section class="profile">
+  <h2>{{ "PROFESSIONAL.SECTION_SUMMARY" | translate }}</h2>
+  <p>{{ "PROFESSIONAL.PROFESSIONAL_SUMMARY" | translate }}</p>
+</section>
+
+<section class="experience">
+  <h2>{{ "PROFESSIONAL.SECTION_EXPERIENCE" | translate }}</h2>
+  <div class="job" *ngFor="let experience of experiences">
+    <h3>{{ experience.company | translate }}</h3>
+    <p>{{ experience.position | translate }}</p>
+    <p>{{ experience.period | translate }}</p>
+    <p>{{ experience.description | translate }}</p>
+    <br />
+  </div>
+</section>
+
+<br />
+
+<footer>
+  <p>&copy; 2025 {{ "PROFESSIONAL.NAME" | translate }}</p>
+</footer>

@@ -6,5 +6,22 @@
     "MY_STORY": "My story",
     "PROFESSIONAL": "Professional",
     "ABOUT_ME": "About me"
+  },
+  "DASHBOARD": {
+    "INTRODUCTION": "\"I believe in the power of technology to bring people together\"",
+    "TEXT_ONE": "Since I started in the field of computing, I have always been a restless young person, constantly reflecting on life.",
+    "TEXT_TWO": "Often, talking to myself... without being sure what life thinks of me, or what my purpose is.",
+    "TEXT_THREE": "This application is not just a project to showcase technical skills. It's also a space where I record thoughts, values, worldview, and dreams.",
+    "TEXT_FOUR": "Here is what's going on in the mind of a young person who truly dreams big.",
+    "TEXT_FIVE": "By the way, has anyone asked you how the weather is today? Around here, it's like this:",
+    "TEMPERATURE": "Temperature:",
+    "LOCALTIME": "Local time:",
+    "TIMEZONE": "Time zone (UTC)",
+    "LINKEDIN": "Visit my LinkedIn",
+    "INSTAGRAM": "Visit my Instagram",
+    "GITHUB": "Visit my GitHub",
+    "ACTUAL_AGE": "Current age:",
+    "YEARS": "years",
+    "TECHNOLOGIES": "Technologies with experience, evolving towards full mastery:"
   }
 }
