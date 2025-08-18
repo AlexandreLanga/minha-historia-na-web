@@ -1,13 +1,13 @@
 import { RouterModule, Routes } from '@angular/router';
 import { Dashboard } from './pages/dashboard/dashboard';
-import { MinhaHistoria } from './pages/minha-historia/minha-historia';
+import { MyHistory } from './pages/my-history/my-history';
 import { Professional } from './pages/professional/professional';
-import { MaisSobreMim } from './pages/mais-sobre-mim/mais-sobre-mim';
+import { AboutMe } from './pages/about-me/about-me';
 
 export const routes: Routes = [
   { path: 'dashboard', component: Dashboard },
-  { path: 'minha-historia', component: MinhaHistoria },
+  { path: 'my-history', component: MyHistory },
   { path: 'profissional', component: Professional },
-  { path: 'mais-sobre-mim', component: MaisSobreMim },
+  { path: 'about-me', component: AboutMe },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ];

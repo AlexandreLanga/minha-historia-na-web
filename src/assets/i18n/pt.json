@@ -3,7 +3,7 @@
     "PORTUGUESE": "Português",
     "ENGLISH": "Inglês",
     "DASHBOARD": "Dashboard",
-    "MY_STORY": "Minha história",
+    "MY_HISTORY": "Minha história",
     "PROFESSIONAL": "Profissional",
     "ABOUT_ME": "Sobre mim"
   },
@@ -75,5 +75,8 @@
       "Git e controle de versão",
       "Boa comunicação e trabalho em equipe"
     ]
+  },
+  "MY_HISTORY": {
+    "TITLE": "Minha História"
   }
 }

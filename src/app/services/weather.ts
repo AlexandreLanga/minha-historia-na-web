@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-
 export interface WeatherData {
   temperature: number;
   city: string;
@@ -10,7 +9,6 @@ export interface WeatherData {
   timezone: number;
   localTime: string;
 }
-
 @Injectable({
   providedIn: 'root',
 })
@@ -21,9 +19,7 @@ export class WeatherService {
   constructor(private http: HttpClient) {}
 
   getWeather(city: string): Observable<WeatherData> {
-    const url = `${this.baseUrl}?q=${encodeURIComponent(city)}&appid=${
-      this.apiKey
-    }&units=metric&lang=pt_br`;
+    const url = `${this.baseUrl}?q=${encodeURIComponent(city)}&appid=${this.apiKey}&units=metric&lang=pt_br`;
 
     return this.http.get<any>(url).pipe(
       map((data) => ({
@@ -37,13 +33,12 @@ export class WeatherService {
     );
   }
 
-
   private handleError(error: HttpErrorResponse) {
     console.error('API requisition error:', error);
     return throwError(
       () =>
         new Error(
-          'Erro ao buscar dados climáticos. Tente novamente mais tarde.'
+          'Error while searching weather data. Reload the page or try again later'
         )
     );
   }
