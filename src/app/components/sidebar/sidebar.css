@@ -59,8 +59,8 @@
 }
 
 .lang-btn:hover {
-  background-color: #e2e8f0; /* tom suave */
-  border-color: #3182ce; /* azul */
+  background-color: #e2e8f0;
+  border-color: #3182ce;
   color: #3182ce;
   box-shadow: 0 2px 8px rgba(49, 130, 206, 0.4);
 }

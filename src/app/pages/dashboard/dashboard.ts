@@ -1,44 +1,43 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WeatherService } from '../../services/weather';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './dashboard.html',
   styleUrls: ['./dashboard.css'],
 })
 export class Dashboard implements OnInit {
-  clima: any;
-  idadeAtual: number;
-  dataNascimento = new Date('2004-10-16');
+  wheather: any;
+  actualAge: number;
+  bornDate = new Date('2004-10-16');
 
-  constructor(private weatherService: WeatherService) {
-    this.idadeAtual = this.calcularIdade(this.dataNascimento);
+  constructor(
+    private weatherService: WeatherService,
+    private translate: TranslateService
+  ) {
+    this.actualAge = this.calculateAge(this.bornDate);
   }
 
   ngOnInit(): void {
     this.weatherService.getWeather('Chapecó').subscribe((res) => {
-      this.clima = res;
+      this.wheather = res;
     });
   }
 
-  calcularIdade(dataNascimento: Date): number {
-    const hoje = new Date();
-    let idade = hoje.getFullYear() - dataNascimento.getFullYear();
-    const mesAtual = hoje.getMonth();
-    const diaAtual = hoje.getDate();
-    const mesNascimento = dataNascimento.getMonth();
-    const diaNascimento = dataNascimento.getDate();
+  calculateAge(bornDate: Date): number {
+    const today = new Date();
+    let age = today.getFullYear() - bornDate.getFullYear();
+    const actualMonth = today.getMonth();
+    const actualDay = today.getDate();
+    const bornMonth = bornDate.getMonth();
+    const bornDay = bornDate.getDate();
 
-    if (
-      mesAtual < mesNascimento ||
-      (mesAtual === mesNascimento && diaAtual < diaNascimento)
-    ) {
-      idade--;
-    }
+    if (actualMonth < bornMonth || (actualMonth === bornMonth && actualDay < bornDay)) age--;
 
-    return idade;
+    return age;
   }
 }
