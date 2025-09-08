@@ -25,42 +25,48 @@
     "TECHNOLOGIES": "Technologies with experience, evolving towards full mastery:"
   },
   "PROFESSIONAL": {
-  "NAME": "Alexandre Langa Goldoni",
-  "TITLE": "Professional Resume",
-  "SECTION_SUMMARY": "Professional Summary",
-  "PROFESSIONAL_SUMMARY": "Professional with experience in system development and maintenance. Currently pursuing a degree in technology with a strong interest in web and desktop solutions.",
-  "SECTION_EXPERIENCE": "Professional Career",
-  "PROFESSIONAL_EXPERIENCE": [
-    {
-      "COMPANY": "Concert Technologies",
-      "POSITION": "Junior Software Analyst",
-      "PERIOD": "Jun 2025 - Present",
-      "DESCRIPTION": "Working with Angular and .NET, focusing on solutions for monitoring and inspecting electrical networks using drones and AI."
+    "NAME": "Alexandre Langa Goldoni",
+    "TITLE": "Professional Resume",
+    "SECTION_SUMMARY": "Professional Summary",
+    "PROFESSIONAL_SUMMARY": "Professional with experience in system development and maintenance. Currently pursuing a degree in technology with a strong interest in web and desktop solutions.",
+    "SECTION_EXPERIENCE": "Professional Career",
+    "PROFESSIONAL_EXPERIENCE": [
+      {
+        "COMPANY": "Concert Technologies",
+        "POSITION": "Junior Software Analyst",
+        "PERIOD": "Jun 2025 - Present",
+        "DESCRIPTION": "Working with Angular and .NET, focusing on solutions for monitoring and inspecting electrical networks using drones and AI."
+      },
+      {
+        "COMPANY": "Vision System",
+        "POSITION": "System Programming Support Assistant",
+        "PERIOD": "Sep 2024 - Jun 2025",
+        "DESCRIPTION": "Development with .NET Framework, C#, TypeScript, Angular, and PrimeNG. Use of PostgreSQL and SQL Server."
+      },
+      {
+        "COMPANY": "Infogen Software",
+        "POSITION": "Trainee Programmer / Intern",
+        "PERIOD": "Feb 2023 - Aug 2024",
+        "DESCRIPTION": "Worked for 1 year as an intern and 7 months as a programmer, with experience in C#, GeneXus, Oracle, SQL Server, deployment, and system maintenance."
+      },
+      {
+        "COMPANY": "Popiolski Supermarket",
+        "POSITION": "Cashier / Apprentice",
+        "PERIOD": "Jan 2019 - May 2022",
+        "DESCRIPTION": "Worked for 1 year and 5 months as an Apprentice, and 1 year and 4 months as a Cashier, performing operational tasks and customer service."
+      }
+    ],
+    "EDUCATION_TITLE": "Education and Academic Background",
+    "EDUCATION_STATUS": {
+      "IN_PROGRESS": "In progress",
+      "COMPLETED": "Completed",
+      "PAUSED": "Paused"
     },
-    {
-      "COMPANY": "Vision System",
-      "POSITION": "System Programming Support Assistant",
-      "PERIOD": "Sep 2024 - Jun 2025",
-      "DESCRIPTION": "Development with .NET Framework, C#, TypeScript, Angular, and PrimeNG. Use of PostgreSQL and SQL Server."
-    },
-    {
-      "COMPANY": "Infogen Software",
-      "POSITION": "Trainee Programmer / Intern",
-      "PERIOD": "Feb 2023 - Aug 2024",
-      "DESCRIPTION": "Worked for 1 year as an intern and 7 months as a programmer, with experience in C#, GeneXus, Oracle, SQL Server, deployment, and system maintenance."
-    },
-    {
-      "COMPANY": "Popiolski Supermarket",
-      "POSITION": "Cashier / Apprentice",
-      "PERIOD": "Jan 2019 - May 2022",
-      "DESCRIPTION": "Worked for 1 year and 5 months as an Apprentice, and 1 year and 4 months as a Cashier, performing operational tasks and customer service."
-    }
-  ],
     "EDUCATION": [
       {
         "COURSE": "Computer Science",
-        "INSTITUTION": "Unochapecó",
-        "STATUS": "Ongoing"
+        "INSTITUTION": "Unochapecó - Community University of the Region of Chapecó",
+        "PERIOD": "2023 - 2027"
       },
       {
         "COURSE": "English",

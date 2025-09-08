@@ -9,6 +9,18 @@ export interface Experience {
   description: string;
 }
 
+export enum EducationStatus {
+  IN_PROGRESS = 'IN_PROGRESS',
+  COMPLETED = 'COMPLETED',
+  PAUSED = 'PAUSED'
+}
+export interface Education {
+  course: string;
+  institution: string;
+  status: EducationStatus;
+  period: string;
+}
+
 const EXPERIENCES: Experience[] = [
   {
     company: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.0.COMPANY',
@@ -36,6 +48,21 @@ const EXPERIENCES: Experience[] = [
   },
 ];
 
+const EDUCATIONS: Education[] = [
+  {
+    course: 'PROFESSIONAL.EDUCATION.0.COURSE',
+    institution: 'PROFESSIONAL.EDUCATION.0.INSTITUTION',
+    status: EducationStatus.IN_PROGRESS,
+    period: 'PROFESSIONAL.EDUCATION.0.PERIOD'
+  },
+  {
+    course: 'PROFESSIONAL.EDUCATION.1.COURSE',
+    institution: 'PROFESSIONAL.EDUCATION.1.INSTITUTION',
+    status: EducationStatus.COMPLETED,
+    period: 'PROFESSIONAL.EDUCATION.1.PERIOD'
+  }
+];
+
 @Component({
   selector: 'app-professional',
   standalone: true,
@@ -43,7 +70,13 @@ const EXPERIENCES: Experience[] = [
   templateUrl: './professional.html',
   styleUrls: ['./professional.css'],
 })
+
 export class Professional {
   experiences = EXPERIENCES;
+  educations = EDUCATIONS;
   constructor(private translate: TranslateService) {}
+
+  getEducationStatus(status: EducationStatus) {
+    return `PROFESSIONAL.EDUCATION_STATUS.${status}`;
+  }
 }
