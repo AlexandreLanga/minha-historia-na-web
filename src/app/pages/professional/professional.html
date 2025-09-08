@@ -12,11 +12,25 @@
 
 <section class="experience">
   <h2>{{ "PROFESSIONAL.SECTION_EXPERIENCE" | translate }}</h2>
-  <div class="job" *ngFor="let experience of experiences">
+  <div class="item" *ngFor="let experience of experiences">
     <h3>{{ experience.company | translate }}</h3>
     <p>{{ experience.position | translate }}</p>
     <p>{{ experience.period | translate }}</p>
     <p>{{ experience.description | translate }}</p>
+    <br />
+  </div>
+</section>
+
+<section>
+  <h2>{{ "PROFESSIONAL.EDUCATION_TITLE" | translate }}</h2>
+</section>
+
+<section>
+  <div class="item" *ngFor="let education of educations">
+    <h3>{{ education.course | translate }}</h3>
+    <p>{{ education.institution | translate }}</p>
+    <p>{{ getEducationStatus(education.status) | translate }}</p>
+    <p>{{ education.period | translate }}</p>
     <br />
   </div>
 </section>

@@ -34,33 +34,39 @@
       {
         "COMPANY": "Concert Technologies",
         "POSITION": "Analista de Software Júnior",
-        "PERIOD": "jun 2025 - Atual",
+        "PERIOD": "Jun 2025 - Atual",
         "DESCRIPTION": "Atuação com Angular e .NET, com foco em soluções para monitoramento e inspeção de redes elétricas com uso de drones e IA."
       },
       {
         "COMPANY": "Vision System",
         "POSITION": "Assistente de Apoio a Programação de Sistemas",
-        "PERIOD": "set 2024 - jun 2025",
+        "PERIOD": "Set 2024 - Jun 2025",
         "DESCRIPTION": "Desenvolvimento com .NET Framework, C#, TypeScript, Angular e PrimeNG. Utilização de PostgreSQL e SQL Server."
       },
       {
         "COMPANY": "Infogen Software",
         "POSITION": "Programador Trainee / Estagiário",
-        "PERIOD": "fev 2023 - ago 2024",
+        "PERIOD": "Fev 2023 - Ago 2024",
         "DESCRIPTION": "Atuação de 1 ano de estágio e 7 meses como programador, atuando com C#, GeneXus, Oracle, SQL Server, deploy e manutenção de sistemas."
       },
       {
         "COMPANY": "Supermercado Popiolski",
         "POSITION": "Operador de Caixa / Jovem Aprendiz",
-        "PERIOD": "jan 2019 - mai 2022",
+        "PERIOD": "Jan 2019 - Mai 2022",
         "DESCRIPTION": "Atuação de 1 ano e 5 meses como Jovem Aprendiz, e 1 ano e 4 meses como Operador de Caixa, atuando em serviços operacionais e de atendimento ao cliente."
       }
     ],
+    "EDUCATION_TITLE": "Estudos e Formação Acadêmica",
+    "EDUCATION_STATUS": {
+      "IN_PROGRESS": "Em andamento",
+      "COMPLETED": "Concluído",
+      "PAUSED": "Pausado"
+    },
     "EDUCATION": [
       {
         "COURSE": "Ciência da Computação",
-        "INSTITUTION": "Unochapecó",
-        "STATUS": "Em andamento"
+        "INSTITUTION": "Unochapecó - Universidade Comunitária da Região de Chapecó",
+        "PERIOD": "2023 - 2027"
       },
       {
         "COURSE": "Inglês",
