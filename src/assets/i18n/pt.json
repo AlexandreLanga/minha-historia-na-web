@@ -83,6 +83,30 @@
     ]
   },
   "MY_HISTORY": {
-    "TITLE": "Minha História"
+    "TITLE": "Minha História",
+    "SECTIONS": {
+      "CHILDHOOD": {
+        "TITLE": "Infância e Adolescência",
+        "CONTENT": {
+          "P1": "Nasci na cidade de Chapecó, no oeste do estado de Santa Catarina, no dia 16 de outubro de 2004, no Hospital Unimed Chapecó, entre a 01:00 e 02:00 da madrugada.",
+          "P2": "Desde o momento em que estava para vir ao mundo, a vida me disse para ser diferente. Eu quis levar isso ao pé da letra e acabei nascendo \"duas vezes\"...",
+          "P3": "Bom, eu era para nascer de parto normal, porém quis ser diferente até demais e acabei nascendo com os pés no lugar da cabeça... É, não estou brincando.",
+          "P4": "O resultado foi interromper o parto normal e recorrer a uma cesárea. Então, talvez, se eu não fosse tão arteiro, teria nascido no dia 15. Que loucura, não?",
+          "P5": "Quando era pequeno, sempre fui uma criança estressada e impulsiva, aprontei algumas, mas sempre tive o privilégio de ser o único neto até meus quatro anos...",
+          "P6": "Meu perfil foi se moldando para um jovem mais introspectivo e reservado. Conversava sozinho muitas vezes (até hoje ainda sou assim). Sou da geração Z que cresceu assistindo Dragon Ball, Super Onze, Naruto em DVDs de locadora... e ainda tive a chance de ver o mundo antes do boom da tecnologia.",
+          "P7": "Na adolescência encontrei refúgio nos videogames e animes. Bandas como Linkin Park e Bring Me The Horizon marcaram minha vida, assim como animes como Attack On Titan, Naruto Shippuden, Fairy Tail, JoJo, Black Clover e One Piece. Jogos como Fortnite, Rainbow Six, League of Legends, Skyrim e outros mundos abertos também deixaram suas marcas.",
+          "P8": "Hoje tudo isso fica mais como hobby de fim de semana, mas continuo acreditando que nunca é \"só um jogo\" ou \"só um desenho\" — sempre há algo para aprender nessas histórias."
+        }
+      },
+      "EDUCATION": {
+        "TITLE": "Educação",
+        "CONTENT": {
+          "P1": "Concluí o ensino médio na EEB Marechal Bormann, escola onde conheci amigos que levo para a vida e tenho muito carinho. Durante o terceiro ano do ensino médio fiz meu primeiro contato com o mundo da programação, ao participar do Entra21, programa da Blusoft, empresa de Blumenau, em parceria com a Fapesc, que foi realizado no Senac de Chapecó. Foram 6 meses de aprendizado e conhecimento na área de programação e, sendo bem honesto, fiquei muito assustado. Imagine-se no lugar de um jovem de 17 anos, que ainda não sabia o que de fato queria da vida, ao ver OOP, bancos de dados, protocolos web... Meu santo Cristo! Havia aulas em que o professor fazia algumas piadas, pois eu acabava dormindo no fundo da sala. No começo é assim, acho difícil não ser.",
+          "P2": "Passados os 6 meses, concluí o ensino médio juntamente com o curso e, imediatamente, comecei a faculdade de Ciência da Computação. Apesar de ainda ter muito medo da área, senti confiança de que era isso que eu queria para minha vida, pois os desafios são muitos, ilimitados, \"nunca é o suficiente\", digamos assim... Mas isso me instigou, pois sempre é um novo aprendizado. Para quem começou trabalhando em supermercado desde os 14 anos, é melhor do que nada, não?",
+          "P3": "Ao mesmo tempo em que entrei na faculdade, iniciei um estágio de desenvolvimento de software na Infogen Sistemas, empresa que me ajudou muito, com conhecimentos que sempre irei usar. Foi 1 ano de estágio com a mão na massa, aprendendo a desenvolver não só software, mas também a criatividade, a visão sistêmica e o senso crítico. Atualmente sigo em cursos para aprimorar ainda mais meu conhecimento no que já sei fazer, e também em novos aprendizados. Foi isso que me prendeu na área: a cada passo, a cada novo aprendizado, você se torna uma nova versão de si mesmo, não fica na \"mesma mesmice\". E hoje sigo em frente por mais.",
+          "P4": "Ah, e eu já estava esquecendo, mas também sou proficiente em inglês. Não gosto de dizer fluente, pois, no meu conceito, fluência de fato beira a natividade. Assim como na programação, sempre deve estar sendo praticada. Enfim... estudei por nove anos na Wizard by Pearson de Chapecó, escola que também tem meu coração, com uma ótima metodologia de ensino. Concluí todas as fases em 2022, melhorando cada vez mais minha conversação, leitura e escrita. Hoje, para manter o aprendizado constante, sigo praticando principalmente através da música e da leitura. Em um futuro próximo, penso em estudar mais idiomas. Conhecimento me fascina."
+        }
+      }
+    }
   }
 }
