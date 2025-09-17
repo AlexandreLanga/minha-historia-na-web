@@ -25,3 +25,50 @@
   margin-top: 10px;
   text-align: justify;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  background: #f9f9f9;
+}
+
+section {
+  background: #fff;
+  color: rgb(78, 78, 78);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.life-section {
+  margin-bottom: 40px;
+}
+
+.life-section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.content-box {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.image-box {
+  flex: 1;
+  max-width: 300px;
+}
+
+.image-box img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+.text-box {
+  flex: 3;
+  text-align: justify;
+}
