@@ -1,0 +1,36 @@
+<div class="content-wrapper">
+  <h1>{{ "Sobre mim" | translate }}</h1>
+</div>
+
+<div class="window">
+  <div class="titlebar">
+    <div class="win-controls">
+      <span class="btn-dot dot-red"></span>
+      <span class="btn-dot dot-yellow"></span>
+      <span class="btn-dot dot-green"></span>
+    </div>
+
+    <div class="title">
+      Se pudesse se descrever em 4 pessoas/personagens que admira e se inspira, quem seriam?
+    </div>
+    <div style="width:40px"></div>
+  </div>
+
+  <div class="content">
+    <section class="grid">
+       <figure class="card" *ngFor="let c of cards" (click)="showDescription(c.desc)">
+        <div class="photo">
+          <img [src]="c.img" [alt]="c.nome" />
+        </div>
+        <figcaption>
+          <div class="caption">{{ c.nome }}</div>
+        </figcaption>
+      </figure>
+    </section> 
+
+    <!-- Área da descrição -->
+    <div class="description-area">
+      <p>{{ description }}</p>
+    </div>
+  </div>
+</div>
