@@ -34,7 +34,7 @@
       {
         "COMPANY": "Concert Technologies",
         "POSITION": "Junior Software Analyst",
-        "PERIOD": "Jun 2025 - Present",
+        "PERIOD": "Jun 2025 - Sep 2025",
         "DESCRIPTION": "Working with Angular and .NET, focusing on solutions for monitoring and inspecting electrical networks using drones and AI."
       },
       {
@@ -83,7 +83,7 @@
     ]
   },
   "MY_HISTORY": {
-    "TITLE": "My History",
+    "TITLE": "Reliving what has already been lived",
     "SECTIONS": {
       "CHILDHOOD": {
         "TITLE": "Childhood and Adolescence",
@@ -107,6 +107,75 @@
           "P4": "Oh, and I almost forgot, but I’m also proficient in English. I don’t like to say fluent, because, in my view, true fluency borders on being a native speaker. Just like programming, it always needs to be practiced. Anyway... I studied for nine years at Wizard by Pearson in Chapecó, a school that also has a place in my heart, with a great teaching methodology. I completed all levels in 2022, continuously improving my conversation, reading, and writing skills. Today, to keep learning constantly, I mainly practice through music and reading. In the near future, I plan to study more languages — knowledge fascinates me."
         }
       }
+    }
+  },
+  "ABOUT_ME": {
+    "DEFAULT_DESCRIPTION": "Click on one of the cards to see the description here.",
+    "CARACTERS": [
+      {
+        "NAME": "Oliver Scott Sykes",
+        "IMG": "assets/img/oliver-sykes.jpg",
+        "DESC": "Oliver Sykes is the lead vocalist of Bring Me The Horizon, known for his musical versatility and authenticity. He inspires through his ability to reinvent himself and use art as an expression of overcoming challenges."
+      },
+      {
+        "NAME": "Monkey D. Luffy",
+        "IMG": "assets/img/monkey-d-luffy.jpg",
+        "DESC": "Monkey D. Luffy, the protagonist of One Piece, symbolizes courage, friendship, and determination. He represents the pursuit of freedom and the power to inspire others with his optimistic spirit."
+      },
+      {
+        "NAME": "Francisco",
+        "IMG": "assets/img/pope-francis.jpg",
+        "DESC": "Pope Francis is admired for his humility, empathy, and commitment to social causes. He inspires through his focus on inclusion, solidarity, and humanity."
+      },
+      {
+        "NAME": "Satoru Gojo",
+        "IMG": "assets/img/satoru-gojo.jpg",
+        "DESC": "Satoru Gojo, from Jujutsu Kaisen, is considered the most powerful sorcerer. He represents confidence, humor, and the importance of protecting those we care about."
+      }
+    ],
+    "PHRASES": [
+      {
+        "TITLE": "Believe in yourself",
+        "IMG": "assets/img/pantheon.jpg",
+        "ALT": "Pantheon",
+        "PHRASE": "''People beg for a strength that already exists inside them''",
+        "AUTHOR": "- Pantheon"
+      },
+      {
+        "TITLE": "Responsibilities never belong solely to one thing or one person",
+        "IMG": "assets/img/sempiternal.jpg",
+        "ALT": "Sempiternal",
+        "PHRASE": "''You think you’re changing anything? Question everything''",
+        "AUTHOR": "- Antivist, Bring Me The Horizon"
+      },
+      {
+        "TITLE": "Humility to learn everything, always",
+        "IMG": "assets/img/master-yi.jpg",
+        "ALT": "Master Yi",
+        "PHRASE": "''A true master is an eternal student''",
+        "AUTHOR": "- Master Yi"
+      },
+      {
+        "TITLE": "Where I find myself",
+        "IMG": "assets/img/chester-bennington.jpg",
+        "ALT": "Chester Bennington",
+        "PHRASE": "''For me, music works better than therapy''",
+        "AUTHOR": "- Chester Bennington"
+      },
+      {
+        "TITLE": "In the end, it will all be worth it",
+        "IMG": "assets/img/thats-the-spirit.png",
+        "ALT": "That's The Spirit",
+        "PHRASE": "''Every wound will shape me, every scar will build my throne''",
+        "AUTHOR": "- Throne, Bring Me The Horizon"
+      }
+    ],
+    "TITLES": {
+      "MOTIVATION": "Sources of motivation",
+      "INSPIRATION_PHRASES": "Phrases that inspire me"
+    },
+    "SUBTITLES": {
+      "MOTIVATION_QUESTION": "If you could describe yourself through 4 people/characters you admire and draw inspiration from, who would they be?"
     }
   }
 }
