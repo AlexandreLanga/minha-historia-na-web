@@ -1,5 +1,5 @@
 <div class="content-wrapper">
-  <h1>{{ "Sobre mim" | translate }}</h1>
+  <h1>{{ "ABOUT_ME.TITLES.MOTIVATION" | translate }}</h1>
 </div>
 
 <div class="window">
@@ -11,7 +11,7 @@
     </div>
 
     <div class="title">
-      Se pudesse se descrever em 4 pessoas/personagens que admira e se inspira, quem seriam?
+      {{ "ABOUT_ME.SUBTITLES.MOTIVATION_QUESTION" | translate }}
     </div>
     <div style="width:40px"></div>
   </div>
@@ -20,17 +20,35 @@
     <section class="grid">
        <figure class="card" *ngFor="let c of cards" (click)="showDescription(c.desc)">
         <div class="photo">
-          <img [src]="c.img" [alt]="c.nome" />
+          <img [src]="c.img | translate" [alt]="c.nome | translate" />
         </div>
         <figcaption>
-          <div class="caption">{{ c.nome }}</div>
+          <div class="caption">{{ c.nome | translate }}</div>
         </figcaption>
       </figure>
     </section> 
 
-    <!-- Área da descrição -->
     <div class="description-area">
-      <p>{{ description }}</p>
+      <p>{{ description | translate }}</p>
     </div>
   </div>
 </div>
+
+<div class="content-wrapper">
+  <h1> {{ "ABOUT_ME.TITLES.INSPIRATION_PHRASES" | translate }} </h1>
+</div>
+
+<section class="life-section" *ngFor="let item of phrases">
+  <h2>{{ item.title | translate }}</h2>
+
+  <div class="content-box">
+    <div class="image-box">
+      <img [src]="item.img | translate" [alt]="item.alt | translate" />
+    </div>
+
+    <div class="text-box">
+      <p>{{ item.phrase | translate }}</p>
+      <p class="author">{{ item.author | translate }}</p>
+    </div>
+  </div>
+</section>

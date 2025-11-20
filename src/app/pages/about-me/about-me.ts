@@ -12,28 +12,66 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class AboutMe {
   constructor(private translate: TranslateService){}
 
-  description: string = 'Clique em um dos cards para ver a descrição aqui.';
+  description: string = 'ABOUT_ME.DEFAULT_DESCRIPTION';
 
   cards = [
     {
-      nome: 'Oliver Scott Sykes',
-      img: 'assets/img/oliver-sykes.jpg',
-      desc: 'Oliver Sykes é vocalista da banda Bring Me The Horizon, conhecido por sua versatilidade musical e autenticidade. Inspira pela capacidade de se reinventar e usar a arte como expressão de superação.'
+      nome: 'ABOUT_ME.CARACTERS.0.NAME',
+      img: 'ABOUT_ME.CARACTERS.0.IMG',
+      desc: 'ABOUT_ME.CARACTERS.0.DESC'
     },
     {
-      nome: 'Monkey D Luffy',
-      img: 'assets/img/monkey-d-luffy.jpg',
-      desc: 'Monkey D. Luffy, protagonista de One Piece, é símbolo de coragem, amizade e determinação. Representa a busca pela liberdade e a capacidade de inspirar outros com seu espírito otimista.'
+      nome: 'ABOUT_ME.CARACTERS.1.NAME',
+      img: 'ABOUT_ME.CARACTERS.1.IMG',
+      desc: 'ABOUT_ME.CARACTERS.1.DESC'
     },
     {
-      nome: 'Francisco',
-      img: 'assets/img/pope-francis.jpg',
-      desc: 'Papa Francisco é admirado pela humildade, empatia e compromisso com causas sociais. Inspira pelo foco em inclusão, solidariedade e humanidade.'
+      nome: 'ABOUT_ME.CARACTERS.2.NAME',
+      img: 'ABOUT_ME.CARACTERS.2.IMG',
+      desc: 'ABOUT_ME.CARACTERS.2.DESC'
     },
     {
-      nome: 'Satoru Gojo',
-      img: 'assets/img/satoru-gojo.jpg',
-      desc: 'Satoru Gojo, de Jujutsu Kaisen, é considerado o feiticeiro mais poderoso. Representa confiança, senso de humor e a importância de proteger aqueles que se importam conosco.'
+      nome: 'ABOUT_ME.CARACTERS.3.NAME',
+      img: 'ABOUT_ME.CARACTERS.3.IMG',
+      desc: 'ABOUT_ME.CARACTERS.3.DESC'
+    }
+  ];
+
+  phrases = [
+    {
+      title: "ABOUT_ME.PHRASES.0.TITLE",
+      img: "ABOUT_ME.PHRASES.0.IMG",
+      alt: "ABOUT_ME.PHRASES.0.ALT",
+      phrase: "ABOUT_ME.PHRASES.0.PHRASE",
+      author: "ABOUT_ME.PHRASES.0.AUTHOR"
+    },
+    {
+      title: "ABOUT_ME.PHRASES.1.TITLE",
+      img: "ABOUT_ME.PHRASES.1.IMG",
+      alt: "ABOUT_ME.PHRASES.1.ALT",
+      phrase: "ABOUT_ME.PHRASES.1.PHRASE",
+      author: "ABOUT_ME.PHRASES.1.AUTHOR"
+    },
+    {
+      title: "ABOUT_ME.PHRASES.2.TITLE",
+      img: "ABOUT_ME.PHRASES.2.IMG",
+      alt: "ABOUT_ME.PHRASES.2.ALT",
+      phrase: "ABOUT_ME.PHRASES.2.PHRASE",
+      author: "ABOUT_ME.PHRASES.2.AUTHOR"
+    },
+    {
+      title: "ABOUT_ME.PHRASES.3.TITLE",
+      img: "ABOUT_ME.PHRASES.3.IMG",
+      alt: "ABOUT_ME.PHRASES.3.ALT",
+      phrase: "ABOUT_ME.PHRASES.3.PHRASE",
+      author: "ABOUT_ME.PHRASES.3.AUTHOR"
+    },
+    {
+      title: "ABOUT_ME.PHRASES.4.TITLE",
+      img: "ABOUT_ME.PHRASES.4.IMG",
+      alt: "ABOUT_ME.PHRASES.4.ALT",
+      phrase: "ABOUT_ME.PHRASES.4.PHRASE",
+      author: "ABOUT_ME.PHRASES.4.AUTHOR"
     }
   ];
 
