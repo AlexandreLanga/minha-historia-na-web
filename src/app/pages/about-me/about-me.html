@@ -52,3 +52,33 @@
     </div>
   </div>
 </section>
+
+<div class="content-wrapper">
+  <h1>{{ "Shows" | translate }}</h1>
+</div>
+
+<section class="shows">
+  <h2>Bring Me The Horizon - 2024</h2>
+
+  <div class="shows-grid">
+    <div class="show-card" *ngFor="let video of videos">
+      
+      <iframe
+        *ngIf="video.plataform === 'youtube'"
+        [src]="video.url | safeUrl"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+
+      <h3>{{ video.tittle }}</h3>
+      <p class="info">
+        {{ video.place }} • {{ video.year }}
+      </p>
+
+      <p class="description" *ngIf="video.description">
+        {{ video.description }}
+      </p>
+
+    </div>
+  </div>
+</section>

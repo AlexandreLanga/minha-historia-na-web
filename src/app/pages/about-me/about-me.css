@@ -174,6 +174,47 @@ section {
   margin-top: 5%;        
 }
 
+.shows {
+  padding: 2rem;
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .shows-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .show-card {
+    background: #111;
+    padding: 1rem;
+    border-radius: 8px;
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      margin: 0.5rem 0;
+    }
+
+    .info {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .description {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
+  }
+}
+
 @media (max-width: 800px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
