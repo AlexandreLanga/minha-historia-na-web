@@ -1,0 +1,181 @@
+{
+  "SIDEBAR": {
+    "PORTUGUESE": "Portuguese",
+    "ENGLISH": "English",
+    "DASHBOARD": "Dashboard",
+    "MY_HISTORY": "My history",
+    "PROFESSIONAL": "Professional",
+    "ABOUT_ME": "About me"
+  },
+  "DASHBOARD": {
+    "INTRODUCTION": "\"I believe in the power of technology to bring people together\"",
+    "TEXT_ONE": "Since I started in the field of computing, I have always been a restless young person, constantly reflecting on life.",
+    "TEXT_TWO": "Often, talking to myself... without being sure what life thinks of me, or what my purpose is.",
+    "TEXT_THREE": "This application is not just a project to showcase technical skills. It's also a space where I record thoughts, values, worldview, and dreams.",
+    "TEXT_FOUR": "Here is what's going on in the mind of a young person who truly dreams big.",
+    "TEXT_FIVE": "By the way, has anyone asked you how the weather is today? Around here, it's like this:",
+    "TEMPERATURE": "Temperature:",
+    "LOCALTIME": "Local time:",
+    "TIMEZONE": "Time zone (UTC)",
+    "LINKEDIN": "Visit my LinkedIn",
+    "INSTAGRAM": "Visit my Instagram",
+    "GITHUB": "Visit my GitHub",
+    "ACTUAL_AGE": "Current age:",
+    "YEARS": "years",
+    "TECHNOLOGIES": "Technologies with experience, evolving towards full mastery:"
+  },
+  "PROFESSIONAL": {
+    "NAME": "Alexandre Langa Goldoni",
+    "TITLE": "Professional Resume",
+    "SECTION_SUMMARY": "Professional Summary",
+    "PROFESSIONAL_SUMMARY": "Professional with experience in system development and maintenance. Currently pursuing a degree in technology with a strong interest in web and desktop solutions.",
+    "SECTION_EXPERIENCE": "Professional Career",
+    "PROFESSIONAL_EXPERIENCE": [
+      {
+        "COMPANY": "Concert Technologies",
+        "POSITION": "Junior Software Analyst",
+        "PERIOD": "Jun 2025 - Sep 2025",
+        "DESCRIPTION": "Working with Angular and .NET, focusing on solutions for monitoring and inspecting electrical networks using drones and AI."
+      },
+      {
+        "COMPANY": "Vision System",
+        "POSITION": "System Programming Support Assistant",
+        "PERIOD": "Sep 2024 - Jun 2025",
+        "DESCRIPTION": "Development with .NET Framework, C#, TypeScript, Angular, and PrimeNG. Use of PostgreSQL and SQL Server."
+      },
+      {
+        "COMPANY": "Infogen Software",
+        "POSITION": "Trainee Programmer / Intern",
+        "PERIOD": "Feb 2023 - Aug 2024",
+        "DESCRIPTION": "Worked for 1 year as an intern and 7 months as a programmer, with experience in C#, GeneXus, Oracle, SQL Server, deployment, and system maintenance."
+      },
+      {
+        "COMPANY": "Popiolski Supermarket",
+        "POSITION": "Cashier / Apprentice",
+        "PERIOD": "Jan 2019 - May 2022",
+        "DESCRIPTION": "Worked for 1 year and 5 months as an Apprentice, and 1 year and 4 months as a Cashier, performing operational tasks and customer service."
+      }
+    ],
+    "EDUCATION_TITLE": "Education and Academic Background",
+    "EDUCATION_STATUS": {
+      "IN_PROGRESS": "In progress",
+      "COMPLETED": "Completed",
+      "PAUSED": "Paused"
+    },
+    "EDUCATION": [
+      {
+        "COURSE": "Computer Science",
+        "INSTITUTION": "Unochapecó - Community University of the Region of Chapecó",
+        "PERIOD": "2023 - 2027"
+      },
+      {
+        "COURSE": "English",
+        "INSTITUTION": "Wizard by Pearson",
+        "PERIOD": "2013 - 2022"
+      }
+    ],
+    "SKILLS": [
+      "Development with C# and .NET",
+      "Angular",
+      "SQL Server / PostgreSQL",
+      "Git and version control",
+      "Good communication and teamwork"
+    ]
+  },
+  "MY_HISTORY": {
+    "TITLE": "Reliving what has already been lived",
+    "SECTIONS": {
+      "CHILDHOOD": {
+        "TITLE": "Childhood and Adolescence",
+        "CONTENT": {
+          "P1": "I was born in the city of Chapecó, in the west of the state of Santa Catarina, on October 16, 2004, at Unimed Chapecó Hospital, between 1:00 and 2:00 a.m.",
+          "P2": "From the moment I was about to come into the world, life told me to be different. I took that literally and ended up being born \"twice\"...",
+          "P3": "Well, I was supposed to be born through natural delivery, but I wanted to be a bit too different and ended up being born with my feet where my head should be... Yeah, I’m not kidding.",
+          "P4": "The result was that the natural delivery had to be stopped and they resorted to a C-section. So maybe, if I hadn’t been so mischievous, I would have been born on the 15th. Crazy, right?",
+          "P5": "When I was little, I was always a stressed and impulsive child. I caused some trouble, but I also had the privilege of being the only grandchild until I was four years old...",
+          "P6": "My personality gradually shaped into that of a more introspective and reserved young person. I often talked to myself (I still do to this day). I’m part of Generation Z, who grew up watching Dragon Ball, Super Eleven, and Naruto on rental DVDs... and I even had the chance to see the world before the big tech boom.",
+          "P7": "In my teenage years, I found refuge in video games and anime. Bands like Linkin Park and Bring Me The Horizon marked my life, as well as anime such as Attack On Titan, Naruto Shippuden, Fairy Tail, JoJo, Black Clover, and One Piece. Games like Fortnite, Rainbow Six, League of Legends, Skyrim, and other open-world titles also left their mark.",
+          "P8": "Today, all of this is more of a weekend hobby, but I still believe it’s never \"just a game\" or \"just a cartoon\" — there’s always something to learn from these stories."
+        }
+      },
+      "EDUCATION": {
+        "TITLE": "Education",
+        "CONTENT": {
+          "P1": "I graduated from high school at EEB Marechal Bormann, a school where I met friends I’ll carry with me for life and for which I have great affection. During my third year of high school, I had my first contact with the world of programming by participating in Entra21, a program by Blusoft, a company from Blumenau, in partnership with Fapesc, held at Senac in Chapecó. It was 6 months of learning and gaining knowledge in programming. Honestly, I was very scared. Imagine being a 17-year-old who still didn’t know what he wanted in life, suddenly faced with OOP, databases, web protocols... Oh my God! There were classes where the teacher made jokes about me because I would fall asleep in the back of the classroom. At the beginning, it’s like that, I think it’s hard not to be.",
+          "P2": "After those 6 months, I finished high school along with the course and immediately started studying Computer Science at university. Even though I was still very afraid of the field, I felt confident that this was what I wanted for my life, because the challenges are many, unlimited, \"never enough,\" so to speak... But that intrigued me, because there’s always something new to learn. For someone who started working in a supermarket at the age of 14, it’s better than nothing, right?",
+          "P3": "At the same time I entered college, I started a software development internship at Infogen Sistemas, a company that helped me a lot with knowledge I’ll always carry with me. It was a year of hands-on experience, learning not only how to develop software, but also creativity, systemic vision, and critical thinking. Today, I continue taking courses to further improve my knowledge of what I already know and to learn new things. That’s what hooked me into this field: with each step, with each new piece of knowledge, you become a new version of yourself — you don’t remain in the \"same old sameness.\" And today I keep moving forward for more.",
+          "P4": "Oh, and I almost forgot, but I’m also proficient in English. I don’t like to say fluent, because, in my view, true fluency borders on being a native speaker. Just like programming, it always needs to be practiced. Anyway... I studied for nine years at Wizard by Pearson in Chapecó, a school that also has a place in my heart, with a great teaching methodology. I completed all levels in 2022, continuously improving my conversation, reading, and writing skills. Today, to keep learning constantly, I mainly practice through music and reading. In the near future, I plan to study more languages — knowledge fascinates me."
+        }
+      }
+    }
+  },
+  "ABOUT_ME": {
+    "DEFAULT_DESCRIPTION": "Click on one of the cards to see the description here.",
+    "CARACTERS": [
+      {
+        "NAME": "Oliver Scott Sykes",
+        "IMG": "assets/img/oliver-sykes.jpg",
+        "DESC": "Oliver Sykes is the lead vocalist of Bring Me The Horizon, known for his musical versatility and authenticity. He inspires through his ability to reinvent himself and use art as an expression of overcoming challenges."
+      },
+      {
+        "NAME": "Monkey D. Luffy",
+        "IMG": "assets/img/monkey-d-luffy.jpg",
+        "DESC": "Monkey D. Luffy, the protagonist of One Piece, symbolizes courage, friendship, and determination. He represents the pursuit of freedom and the power to inspire others with his optimistic spirit."
+      },
+      {
+        "NAME": "Francisco",
+        "IMG": "assets/img/pope-francis.jpg",
+        "DESC": "Pope Francis is admired for his humility, empathy, and commitment to social causes. He inspires through his focus on inclusion, solidarity, and humanity."
+      },
+      {
+        "NAME": "Satoru Gojo",
+        "IMG": "assets/img/satoru-gojo.jpg",
+        "DESC": "Satoru Gojo, from Jujutsu Kaisen, is considered the most powerful sorcerer. He represents confidence, humor, and the importance of protecting those we care about."
+      }
+    ],
+    "PHRASES": [
+      {
+        "TITLE": "Believe in yourself",
+        "IMG": "assets/img/pantheon.jpg",
+        "ALT": "Pantheon",
+        "PHRASE": "''People beg for a strength that already exists inside them''",
+        "AUTHOR": "- Pantheon"
+      },
+      {
+        "TITLE": "Responsibilities never belong solely to one thing or one person",
+        "IMG": "assets/img/sempiternal.jpg",
+        "ALT": "Sempiternal",
+        "PHRASE": "''You think you’re changing anything? Question everything''",
+        "AUTHOR": "- Antivist, Bring Me The Horizon"
+      },
+      {
+        "TITLE": "Humility to learn everything, always",
+        "IMG": "assets/img/master-yi.jpg",
+        "ALT": "Master Yi",
+        "PHRASE": "''A true master is an eternal student''",
+        "AUTHOR": "- Master Yi"
+      },
+      {
+        "TITLE": "Where I find myself",
+        "IMG": "assets/img/chester-bennington.jpg",
+        "ALT": "Chester Bennington",
+        "PHRASE": "''For me, music works better than therapy''",
+        "AUTHOR": "- Chester Bennington"
+      },
+      {
+        "TITLE": "In the end, it will all be worth it",
+        "IMG": "assets/img/thats-the-spirit.png",
+        "ALT": "That's The Spirit",
+        "PHRASE": "''Every wound will shape me, every scar will build my throne''",
+        "AUTHOR": "- Throne, Bring Me The Horizon"
+      }
+    ],
+    "TITLES": {
+      "MOTIVATION": "Sources of motivation",
+      "INSPIRATION_PHRASES": "Phrases that inspire me"
+    },
+    "SUBTITLES": {
+      "MOTIVATION_QUESTION": "If you could describe yourself through 4 people/characters you admire and draw inspiration from, who would they be?"
+    }
+  }
+}
