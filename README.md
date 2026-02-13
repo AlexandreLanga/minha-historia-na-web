@@ -7,45 +7,45 @@ O objetivo é centralizar minha presença digital em uma aplicação própria, c
 🚀 Tecnologias Utilizadas
 Frontend
 
-Angular CLI 20.0.4
+- Angular CLI 20.0.4
 
-Angular Standalone Components
+- Angular Standalone Components
 
-TypeScript
+- TypeScript
 
-HTML5
+- HTML5
 
-CSS3
+- CSS3
 
-Runtime
+- Runtime
 
-Node.js 24.3.0
+- Node.js 24.3.0
 
-UI e Estilização
+- UI e Estilização
 
-FontAwesome (ícones)
+- FontAwesome (ícones)
 
-Layout responsivo
+- Layout responsivo
 
-Integração com a API do OpenWheatherMap
+- Integração com a API do OpenWheatherMap
 
 Em estudo para evolução do projeto
 
-Melhorias de performance e otimização
+- Melhorias de performance e otimização
 
-Novos recursos de UI/UX
+- Novos recursos de UI/UX
 
 🎯 Objetivos do Projeto
 
-Apresentar minha trajetória profissional e acadêmica
+- Apresentar minha trajetória profissional e acadêmica
 
-Servir como portfólio interativo
+- Servir como portfólio interativo
 
-Demonstrar habilidades com Angular moderno
+- Demonstrar habilidades com Angular moderno
 
-Evoluir continuamente com novas tecnologias
+- Evoluir continuamente com novas tecnologias
 
-Consolidar identidade digital como desenvolvedor
+- Consolidar identidade digital como desenvolvedor
 
 ⚙️ Pré-requisitos
 
@@ -63,7 +63,9 @@ node -v
 npm -v
 ng version
 
+
 ▶️ Como Executar o Projeto
+
 1️⃣ Clonar o repositório
 git clone https://github.com/AlexandreLanga/minha-historia-na-web.git
 
@@ -86,19 +88,19 @@ http://localhost:4200
 
 O projeto foi desenvolvido para funcionar em:
 
-Desktop
+- Desktop
 
 🧩 Funcionalidades
 
-Apresentação pessoal e profissional
+- Apresentação pessoal e profissional
 
-Navegação por seções do portfólio
+- Navegação por seções do portfólio
 
-Layout moderno e minimalista
+- Layout moderno e minimalista
 
-Estrutura escalável para novas páginas
+- Estrutura escalável para novas páginas
 
-Integração com ícones e recursos visuais
+- Integração com ícones e recursos visuais
 
 👨‍💻 Autor
 
