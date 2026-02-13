@@ -61,22 +61,48 @@
   <h2>Bring Me The Horizon - 2024</h2>
 
   <div class="shows-grid">
-    <div class="show-card" *ngFor="let video of videos">
+    <div class="show-card" *ngFor="let bmthVideo of bmthVideos">
       
       <iframe
-        *ngIf="video.plataform === 'youtube'"
-        [src]="video.url | safeUrl"
+        *ngIf="bmthVideo.plataform === 'youtube'"
+        [src]="bmthVideo.url | safeUrl"
         frameborder="0"
         allowfullscreen>
       </iframe>
 
-      <h3>{{ video.tittle }}</h3>
+      <h3>{{ bmthVideo.tittle }}</h3>
       <p class="info">
-        {{ video.place }} • {{ video.year }}
+        {{ bmthVideo.place }} • {{ bmthVideo.year }}
       </p>
 
-      <p class="description" *ngIf="video.description">
-        {{ video.description }}
+      <p class="description" *ngIf="bmthVideo.description">
+        {{ bmthVideo.description }}
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<section class="shows">
+  <h2>Linkin Park - 2025</h2>
+
+  <div class="shows-grid">
+    <div class="show-card" *ngFor="let linkinParkVideo of linkinParkVideos">
+      
+      <iframe
+        *ngIf="linkinParkVideo.plataform === 'youtube'"
+        [src]="linkinParkVideo.url | safeUrl"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+
+      <h3>{{ linkinParkVideo.tittle }}</h3>
+      <p class="info">
+        {{ linkinParkVideo.place }} • {{ linkinParkVideo.year }}
+      </p>
+
+      <p class="description" *ngIf="linkinParkVideo.description">
+        {{ linkinParkVideo.description }}
       </p>
 
     </div>
