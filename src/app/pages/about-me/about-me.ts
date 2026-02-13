@@ -86,7 +86,7 @@ export class AboutMe {
     }
   ];
 
-  videos: ShowVideo[] = [
+  bmthVideos: ShowVideo[] = [
     {
       id: 1,
       tittle: 'We go one more',
@@ -158,6 +158,81 @@ export class AboutMe {
       plataform: 'youtube',
       url: 'https://www.youtube.com/embed/C3kVAGqqkTU',
       description: 'MCLan, DiFerrero and Oliver dicided to sing together'
+    },
+  ];
+
+  linkinParkVideos: ShowVideo[] = [
+    {
+      id: 1,
+      tittle: 'POPPY',
+      place: 'Couto Pereira - PR',
+      year: 2025,
+      plataform: 'youtube',
+      url: 'https://www.youtube.com/embed/GUp_sTv3Qi0',
+      description: 'She sings very fucking well!'
+    },
+    {
+      id: 2,
+      tittle: 'VAN',
+      place: 'Couto Pereira - PR',
+      year: 2025,
+      plataform: 'youtube',
+      url: 'https://www.youtube.com/embed/KBg8j1ltAqg',
+      description: 'Id forgot that she is the singer of this music, only remember by BAD OMENS...'
+    },
+    {
+      id: 3,
+      tittle: 'new way out',
+      place: 'Couto Pereira - PR',
+      year: 2025,
+      plataform: 'youtube',
+      url: 'https://www.youtube.com/embed/CChb0sZ1TYM',
+      description: 'I really liked this song, first listened on live!'
+    },
+    {
+      id: 4,
+      tittle: 'The Emptiness Machine',
+      place: 'Couto Pereira - PR',
+      year: 2025,
+      plataform: 'youtube',
+      url: 'https://www.youtube.com/embed/fEgNi3r8r2Q',
+      description: 'Everybody singing together... INSANE!'
+    },
+    {
+      id: 5,
+      tittle: 'Up From The Bottom',
+      place: 'Couto Pereira - PR',
+      year: 2025,
+      plataform: 'youtube',
+      url: 'https://www.youtube.com/embed/pMkWwFsa97A',
+      description: 'The new LP phase is well directed!'
+    },
+    {
+      id: 6,
+      tittle: 'Numb',
+      place: 'Couto Pereira - PR',
+      year: 2025,
+      plataform: 'youtube',
+      url: 'https://www.youtube.com/embed/80D9wIgKFS8',
+      description: 'Were my musical story started... Legendary!'
+    },
+    {
+      id: 7,
+      tittle: 'Heavy Is The Crown',
+      place: 'Couto Pereira - PR',
+      year: 2025,
+      plataform: 'youtube',
+      url: 'https://www.youtube.com/embed/fHBPn-GYCco',
+      description: 'T1 vs BLG, my first tatoo... Only good memories related to this masterpiece!'
+    },
+    {
+      id: 8,
+      tittle: 'In The End',
+      place: 'Couto Pereira - PR',
+      year: 2025,
+      plataform: 'youtube',
+      url: 'https://www.youtube.com/embed/XAGfFEZivQI',
+      description: 'Everyone born since 2000 from now own recognizes this song, in the whole world, independent of what language speaks'
     },
   ];
 
