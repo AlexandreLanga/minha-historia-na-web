@@ -1,4 +1,4 @@
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { MyHistory } from './pages/my-history/my-history';
 import { Professional } from './pages/professional/professional';
@@ -9,5 +9,7 @@ export const routes: Routes = [
   { path: 'my-history', component: MyHistory },
   { path: 'profissional', component: Professional },
   { path: 'about-me', component: AboutMe },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+
+  { path: '', pathMatch: 'full', component: Dashboard },
+  { path: '**', redirectTo: 'dashboard' }
 ];
