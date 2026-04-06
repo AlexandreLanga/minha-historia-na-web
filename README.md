@@ -78,17 +78,13 @@ npm install
 4️⃣ Executar em ambiente de desenvolvimento
 ng serve
 
-
-A aplicação estará disponível em:
-
-http://localhost:4200
-
+A aplicação estará disponível em: http://localhost:4200
 
 📱 Responsividade
 
 O projeto foi desenvolvido para funcionar em:
 
-- Desktop
+- Web (desktop ou mobile)
 
 🧩 Funcionalidades
 
