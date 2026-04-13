@@ -1,0 +1,11 @@
+Steps
+
+1. run on terminal: ng build --configuration production --base-href /minha-historia-na-web/
+
+2. rename index.csr.html into index.html
+
+3. change <base href="C:/Program Files/Git/minha-historia-na-web/"> into <base href="/minha-historia-na-web/">
+
+4. run npx angular-cli-ghpages --dir=dist/minha-historia-na-web
+
+This is the founded until resolve SPA and SSR questions, new automatized and trustful development configuration is being study.

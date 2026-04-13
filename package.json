@@ -7,10 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:minha-historia-na-web": "node dist/minha-historia-na-web/server/server.mjs",
-    "build:gh": "ng build --configuration production --base-href /minha-historia-na-web/",
-    "fix:index": "cp dist/minha-historia-na-web/browser/index.csr.html dist/minha-historia-na-web/browser/index.html && cp dist/minha-historia-na-web/browser/index.html dist/minha-historia-na-web/browser/404.html",
-    "deploy": "npm run build:gh && npm run fix:index && npx angular-cli-ghpages --dir=dist/minha-historia-na-web/browser"
+    "serve:ssr:minha-historia-na-web": "node dist/minha-historia-na-web/server/server.mjs"
   },
   "prettier": {
     "overrides": [
