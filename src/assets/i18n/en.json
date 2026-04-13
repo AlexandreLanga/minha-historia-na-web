@@ -32,6 +32,12 @@
     "SECTION_EXPERIENCE": "Professional Career",
     "PROFESSIONAL_EXPERIENCE": [
       {
+        "COMPANY": "Expresso São Miguel",
+        "POSITION": "Software Development Intern",
+        "PERIOD": "Mar 2026 - Actually",
+        "DESCRIPTION": "Learning software development with Java/Spring Boot, React, Delphi and MongoDB."
+      },
+      {
         "COMPANY": "Concert Technologies",
         "POSITION": "Junior Software Analyst",
         "PERIOD": "Jun 2025 - Sep 2025",

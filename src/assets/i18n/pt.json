@@ -32,6 +32,12 @@
     "SECTION_EXPERIENCE": "Carreira Profissional",
     "PROFESSIONAL_EXPERIENCE": [
       {
+        "COMPANY": "Expresso São Miguel",
+        "POSITION": "Estagiário de desenvolvimento e sistemas",
+        "PERIOD": "Mar 2026 - Atual",
+        "DESCRIPTION": "Aprendizado em desenvolvimento de software com Java/Spring Boot, React, Delphi e MongoDB."
+      },
+      {
         "COMPANY": "Concert Technologies",
         "POSITION": "Analista de Software Júnior",
         "PERIOD": "Jun 2025 - Set 2025",
