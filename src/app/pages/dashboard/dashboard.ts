@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WeatherService } from '../../services/weather';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -17,7 +17,8 @@ export class Dashboard implements OnInit {
 
   constructor(
     private weatherService: WeatherService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private cdr: ChangeDetectorRef
   ) {
     this.actualAge = this.calculateAge(this.bornDate);
   }
@@ -25,6 +26,7 @@ export class Dashboard implements OnInit {
   ngOnInit(): void {
     this.weatherService.getWeather('Chapecó').subscribe((res) => {
       this.wheather = res;
+      this.cdr.detectChanges();
     });
   }
 
