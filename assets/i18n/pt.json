@@ -22,7 +22,8 @@
     "GITHUB": "Visite meu GitHub",
     "ACTUAL_AGE": "Idade atual:",
     "YEARS": "anos",
-    "TECHNOLOGIES": "Tecnologias com experiência, em evolução ao domínio pleno:"
+    "TECHNOLOGIES": "Tecnologias dominadas:",
+    "LEARNING_TECHNOLOGIES": "Tecnologias em aprendizado:"
   },
   "PROFESSIONAL": {
     "NAME": "Alexandre Langa Goldoni",
