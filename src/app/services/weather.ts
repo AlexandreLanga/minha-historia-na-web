@@ -6,7 +6,7 @@ export interface WeatherData {
   temperature: number;
   city: string;
   country: string;
-  timezone: number;
+  timezone: number | null | undefined;
   localTime: string;
 }
 @Injectable({
@@ -27,7 +27,7 @@ export class WeatherService {
         city: data.name,
         country: data.sys.country,
         timezone: data.timezone,
-        localTime: new Date(Date.now() + data.timezone * 1000).toLocaleTimeString('pt-BR'),
+        localTime: new Date(Date.now()).toLocaleTimeString('pt-BR'),
       })),
       catchError(this.handleError)
     );

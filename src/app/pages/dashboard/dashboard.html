@@ -28,8 +28,8 @@
         <p><strong> {{ "DASHBOARD.LOCALTIME" | translate }} </strong> {{ wheather?.localTime }}</p>
         <p>
           <strong> {{ "DASHBOARD.TIMEZONE" | translate }} :</strong>
-          {{ wheather?.timezone / 3600 >= 0 ? "+" : "" }}
-          {{ wheather?.timezone / 3600 }}
+          {{ (wheather?.timezone || 0) / 3600 >= 0 ? "+" : "" }}
+          {{ (wheather?.timezone || 0) / 3600 }}
         </p>
       </div>
     </div>

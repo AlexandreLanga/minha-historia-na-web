@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WeatherService } from '../../services/weather';
+import { WeatherData, WeatherService } from '../../services/weather';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -11,7 +11,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrls: ['./dashboard.css'],
 })
 export class Dashboard implements OnInit {
-  wheather: any;
+  wheather: WeatherData | null = null;
   actualAge: number;
   bornDate = new Date('2004-10-16');
 
