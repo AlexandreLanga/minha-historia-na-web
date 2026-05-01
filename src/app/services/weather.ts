@@ -6,7 +6,7 @@ export interface WeatherData {
   temperature: number;
   city: string;
   country: string;
-  timezone: number | null | undefined;
+  timezone: number;
   localTime: string;
 }
 @Injectable({
