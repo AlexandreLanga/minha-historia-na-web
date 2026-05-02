@@ -34,33 +34,69 @@
     "PROFESSIONAL_EXPERIENCE": [
       {
         "COMPANY": "Expresso São Miguel",
-        "POSITION": "Estagiário de desenvolvimento e sistemas",
+        "POSITION": "Estagiário de Desenvolvimento e Sistemas",
         "PERIOD": "Mar 2026 - Atual",
-        "DESCRIPTION": "Aprendizado em desenvolvimento de software com Java/Spring Boot, React, Delphi e MongoDB."
+        "DESCRIPTION": [
+          "Ajuste e análise de queries em massa pós migração de coluna de tabela.",
+          "Aprendizagem em aplicações TMS.",
+          "Aprendizado em linguagem Java, NodeJS/React e Delphi.",
+          "Criação de treinamentos sobre a regra de negócio e logística, agregando valor para a equipe e para a empresa."
+        ]
       },
       {
         "COMPANY": "Concert Technologies",
         "POSITION": "Analista de Software Júnior",
         "PERIOD": "Jun 2025 - Set 2025",
-        "DESCRIPTION": "Atuação com Angular e .NET, com foco em soluções para monitoramento e inspeção de redes elétricas com uso de drones e IA."
+        "DESCRIPTION": [
+          "Desenvolvimento e manutenção de aplicações web e APIs REST utilizando .NET, C#, Angular e TypeScript.",
+          "Criação de códigos limpos e escaláveis, reduzindo custo computacional, otimizando a experiência do usuário e melhorando a performance da solução.",
+          "Criação de novas funcionalidades e correção de bugs em sistema de geração automática de emissão de documentos.",
+          "Integração de aplicações com banco de dados PostgreSQL.",
+          "Colaboração em equipe ágil (Scrum) para entrega contínua de software.",
+          "Apoio na análise de requisitos e sugestão de melhorias técnicas."
+        ]
       },
       {
         "COMPANY": "Vision System",
         "POSITION": "Assistente de Apoio a Programação de Sistemas",
         "PERIOD": "Set 2024 - Jun 2025",
-        "DESCRIPTION": "Desenvolvimento com .NET Framework, C#, TypeScript, Angular e PrimeNG. Utilização de PostgreSQL e SQL Server."
+        "DESCRIPTION": [
+          "Desenvolvimento e manutenção de aplicações web e APIs RESTful utilizando .NET, C#, Angular/TypeScript e a biblioteca PrimeNG.",
+          "Suporte em UX/UI, recebendo e entregando sugestões de melhorias da interface e experiência do usuário, mantendo o padrão para a solução e facilitando a usabilidade do usuário diante da solução.",
+          "Integração de aplicações com bancos de dados PostgreSQL e SQL Server.",
+          "Apoio na documentação técnica e nos testes de software.",
+          "Participação em reuniões de alinhamento com stakeholders."
+        ]
       },
       {
         "COMPANY": "Infogen Software",
         "POSITION": "Programador Trainee / Estagiário",
         "PERIOD": "Fev 2023 - Ago 2024",
-        "DESCRIPTION": "Atuação de 1 ano de estágio e 7 meses como programador, atuando com C#, GeneXus, Oracle, SQL Server, deploy e manutenção de sistemas."
+        "DESCRIPTION": [
+          "Desenvolvimento de pequenas funcionalidades sob supervisão de analistas, com foco em entender a regra de negócio e agregar valor ao cliente.",
+          "Correção de bugs simples e manutenção de código, visando entender a causa e origem do erro, investigando a fundo o seu impacto e suas consequências.",
+          "Refatorações e melhor compreensão do comando de linha.",
+          "Colaboração em atividades de teste e homologação juntamente de analistas de negócios, aprimorando habilidades de comunicação. ",
+          "Transcrevendo problemas técnicos para uma linguagem simples em prol de melhorar a eficiência e qualidade do atendimento.",
+          "Aprendizado prático em GeneXus 9 e GeneXus X Evolution em projetos legados com utilização de banco de dados SQL Server.",
+          "Apoio no desenvolvimento e aprendizado em C# e ASP.NET Core.",
+          "Aprendizado em comportamento empresarial e conduta em empresas de software, validando soft skills para focar nas dores dos clientes, garantindo uma solução de impacto que gere valor para o cliente.",
+          "Colaboração para o andamento das tarefas coletivamente, entendendo ritmos e equipes de software em ambiente ágil (Kanban), aprendendo a tomar decisões com independência e a encaminhar a melhor solução para o problema."
+        ]
       },
       {
         "COMPANY": "Supermercado Popiolski",
         "POSITION": "Operador de Caixa / Jovem Aprendiz",
         "PERIOD": "Jan 2019 - Mai 2022",
-        "DESCRIPTION": "Atuação de 1 ano e 5 meses como Jovem Aprendiz, e 1 ano e 4 meses como Operador de Caixa, atuando em serviços operacionais e de atendimento ao cliente."
+        "DESCRIPTION": [
+          "Atendimento ao cliente presencial e finalização de compras de mercadorias.",
+          "Suporte em atividades operacionais do estabelecimento.",
+          "Gerenciamento de abastecimento de produtos, gerando um ambiente padronizado e organizado.",
+          "Habilidades de negociação e indução do cliente a aderir a compra de produtos e serviços, gerando senso de valorização e fidelidade.",
+          "Aprendizado sobre logística, organização, postura profissional e valores para um bom ambiente de trabalho.",
+          "Atuação no empacotamento de compras e organização de itens.",
+          "Suporte interno nas atividades da empresa e na finalização de atendimento ao consumidor final, somando nas ações para agilizar as ações de maneira eficiente."
+        ]
       }
     ],
     "EDUCATION_TITLE": "Estudos e Formação Acadêmica",

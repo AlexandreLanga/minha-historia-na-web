@@ -34,33 +34,69 @@
     "PROFESSIONAL_EXPERIENCE": [
       {
         "COMPANY": "Expresso São Miguel",
-        "POSITION": "Software Development Intern",
-        "PERIOD": "Mar 2026 - Actually",
-        "DESCRIPTION": "Learning software development with Java/Spring Boot, React, Delphi and MongoDB."
+        "POSITION": "Systems Development Intern",
+        "PERIOD": "Mar 2026 - Present",
+        "DESCRIPTION": [
+          "Adjustment and analysis of mass queries following table column migration.",
+          "Training and immersion in TMS (Transportation Management System) applications.",
+          "Ongoing learning in Java, NodeJS/React, and Delphi.",
+          "Creation of training sessions on business rules and logistics, adding value to the team and the company."
+        ]
       },
       {
         "COMPANY": "Concert Technologies",
         "POSITION": "Junior Software Analyst",
         "PERIOD": "Jun 2025 - Sep 2025",
-        "DESCRIPTION": "Working with Angular and .NET, focusing on solutions for monitoring and inspecting electrical networks using drones and AI."
+        "DESCRIPTION": [
+          "Development and maintenance of web applications and REST APIs using .NET, C#, Angular, and TypeScript.",
+          "Creation of clean and scalable code, reducing computational costs, optimizing user experience, and improving solution performance.",
+          "Development of new features and bug fixing for an automated document issuance system.",
+          "Integration of applications with PostgreSQL databases.",
+          "Collaboration in an agile team (Scrum) for continuous software delivery.",
+          "Support in requirements analysis and technical improvement suggestions."
+        ]
       },
       {
         "COMPANY": "Vision System",
-        "POSITION": "System Programming Support Assistant",
+        "POSITION": "Systems Programming Support Assistant",
         "PERIOD": "Sep 2024 - Jun 2025",
-        "DESCRIPTION": "Development with .NET Framework, C#, TypeScript, Angular, and PrimeNG. Use of PostgreSQL and SQL Server."
+        "DESCRIPTION": [
+          "Development and maintenance of web applications and RESTful APIs using .NET, C#, Angular/TypeScript, and the PrimeNG library.",
+          "UX/UI support, providing and implementing interface and user experience improvement suggestions, maintaining solution standards and enhancing usability.",
+          "Integration of applications with PostgreSQL and SQL Server databases.",
+          "Assistance with technical documentation and software testing.",
+          "Participation in alignment meetings with stakeholders."
+        ]
       },
       {
         "COMPANY": "Infogen Software",
         "POSITION": "Trainee Programmer / Intern",
         "PERIOD": "Feb 2023 - Aug 2024",
-        "DESCRIPTION": "Worked for 1 year as an intern and 7 months as a programmer, with experience in C#, GeneXus, Oracle, SQL Server, deployment, and system maintenance."
+        "DESCRIPTION": [
+          "Development of minor features under analyst supervision, focusing on understanding business rules and adding value to the client.",
+          "Correction of simple bugs and code maintenance, investigating root causes and assessing impact and consequences.",
+          "Refactoring and improving command-line proficiency.",
+          "Collaboration in testing and QA activities alongside business analysts, enhancing communication skills.",
+          "Translating technical issues into simple language to improve efficiency and service quality.",
+          "Practical learning in GeneXus 9 and GeneXus X Evolution on legacy projects using SQL Server databases.",
+          "Support in development and learning of C# and ASP.NET Core.",
+          "Learning corporate behavior and professional conduct in software companies, validating soft skills to focus on client pain points and high-impact solutions.",
+          "Collective task management in an agile environment (Kanban), learning independent decision-making and optimal problem-solving."
+        ]
       },
       {
-        "COMPANY": "Popiolski Supermarket",
-        "POSITION": "Cashier / Apprentice",
+        "COMPANY": "Supermercado Popiolski",
+        "POSITION": "Cashier / Young Apprentice",
         "PERIOD": "Jan 2019 - May 2022",
-        "DESCRIPTION": "Worked for 1 year and 5 months as an Apprentice, and 1 year and 4 months as a Cashier, performing operational tasks and customer service."
+        "DESCRIPTION": [
+          "In-person customer service and transaction processing.",
+          "Support for operational activities within the establishment.",
+          "Product stocking management, ensuring a standardized and organized environment.",
+          "Negotiation skills and encouraging customer loyalty through product and service value awareness.",
+          "Learning logistics, organization, professional conduct, and values for a positive work environment.",
+          "Packaging and item organization.",
+          "Internal support for company activities to streamline final customer service efficiently."
+        ]
       }
     ],
     "EDUCATION_TITLE": "Education and Academic Background",
