@@ -12,11 +12,23 @@
 
 <section class="experience">
   <h2>{{ "PROFESSIONAL.SECTION_EXPERIENCE" | translate }}</h2>
+  
   <div class="item" *ngFor="let experience of experiences">
-    <h3>{{ experience.company | translate }}</h3>
-    <p>{{ experience.position | translate }}</p>
-    <p>{{ experience.period | translate }}</p>
-    <p>{{ experience.description | translate }}</p>
+    <div class="experience-header">
+      <img [src]="experience.logoUrl" alt="Logo" class="company-logo">
+      
+      <div class="experience-titles">
+        <h3>{{ experience.company | translate }}</h3>
+        <p class="position"><strong>{{ experience.position | translate }}</strong></p>
+        <p class="period">{{ experience.period | translate }}</p>
+      </div>
+    </div>
+
+    <ul class="description-list">
+      <li *ngFor="let item of (experience.description | translate)">
+        {{ item }}
+      </li>
+    </ul>
     <br />
   </div>
 </section>
@@ -25,12 +37,19 @@
   <h2>{{ "PROFESSIONAL.EDUCATION_TITLE" | translate }}</h2>
 </section>
 
-<section>
+<section class="education">
   <div class="item" *ngFor="let education of educations">
-    <h3>{{ education.course | translate }}</h3>
-    <p>{{ education.institution | translate }}</p>
-    <p>{{ getEducationStatus(education.status) | translate }}</p>
-    <p>{{ education.period | translate }}</p>
+    <div class="education-header">
+      <img [src]="education.logoUrl" alt="Logo" class="edu-logo">
+      
+      <div class="education-titles">
+        <h3>{{ education.course | translate }}</h3>
+        <p class="institution">{{ education.institution | translate }}</p>
+        <p class="status-period">
+          {{ getEducationStatus(education.status) | translate }} | {{ education.period | translate }}
+        </p>
+      </div>
+    </div>
     <br />
   </div>
 </section>
