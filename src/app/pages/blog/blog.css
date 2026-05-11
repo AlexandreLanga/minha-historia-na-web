@@ -49,10 +49,15 @@
   background-color: #0056b3;
 }
 
-.full-post h1 {
-  margin-bottom: 10px;
+.full-post img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
 }
 
-.full-post .date {
-  margin-bottom: 20px;
+.post-item img {
+  max-width: 100px;
+  height: auto;
+  float: right;
+  margin-left: 10px;
 }

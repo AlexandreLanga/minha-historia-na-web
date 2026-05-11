@@ -5,7 +5,7 @@
       <div class="post-item" *ngFor="let post of posts" (click)="selectPost(post)">
         <h2>{{ post.title }}</h2>
         <p class="date">{{ post.date | date }}</p>
-        <p>{{ post.content | slice:0:100 }}...</p>
+        <p [innerHTML]="post.content | slice:0:200"></p>
       </div>
     </div>
   </div>
@@ -14,6 +14,6 @@
     <button class="back-btn" (click)="backToList()">{{ "BLOG.BACK" | translate }}</button>
     <h1>{{ selectedPost.title }}</h1>
     <p class="date">{{ selectedPost.date | date }}</p>
-    <p>{{ selectedPost.content }}</p>
+    <p [innerHTML]="selectedPost.content"></p>
   </div>
 </div>
