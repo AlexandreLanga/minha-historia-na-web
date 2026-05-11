@@ -158,57 +158,48 @@
     "CARACTERS": [
       {
         "NAME": "Oliver Scott Sykes",
-        "IMG": "assets/img/oliver-sykes.webp",
         "DESC": "Oliver Sykes é vocalista da banda Bring Me The Horizon, conhecido por sua versatilidade musical e autenticidade. Inspira pela capacidade de se reinventar e usar a arte como expressão de superação."
       },
       {
         "NAME": "Monkey D. Luffy",
-        "IMG": "assets/img/monkey-d-luffy.webp",
         "DESC": "Monkey D. Luffy, protagonista de One Piece, é símbolo de coragem, amizade e determinação. Representa a busca pela liberdade e a capacidade de inspirar outros com seu espírito otimista."
       },
       {
         "NAME": "Francisco",
-        "IMG": "assets/img/pope-francis.webp",
         "DESC": "Papa Francisco é admirado pela humildade, empatia e compromisso com causas sociais. Inspira pelo foco em inclusão, solidariedade e humanidade."
       },
       {
         "NAME": "Satoru Gojo",
-        "IMG": "assets/img/satoru-gojo.webp",
         "DESC": "Satoru Gojo, de Jujutsu Kaisen, é considerado o feiticeiro mais poderoso. Representa confiança, senso de humor e a importância de proteger aqueles que se importam conosco."
       }
     ],
     "PHRASES": [
       {
         "TITLE": "Acredite em si mesmo",
-        "IMG": "assets/img/pantheon.webp",
         "ALT": "Pantheon",
         "PHRASE": "''As pessoas suplicam por uma força que já existe dentro delas''",
         "AUTHOR": "- Pantheon"
       },
       {
         "TITLE": "Responsabilidades nunca pertencem individualmente somente a algo ou a alguém",
-        "IMG": "assets/img/sempiternal.webp",
         "ALT": "Sempiternal",
         "PHRASE": "''Você acha que está mudando alguma coisa? Questione tudo''",
         "AUTHOR": "- Antivist, Bring Me The Horizon"
       },
       {
         "TITLE": "Humildade para aprender sobre tudo, sempre",
-        "IMG": "assets/img/master-yi.webp",
         "ALT": "Master Yi",
         "PHRASE": "''Um verdadeiro mestre é um eterno aprendiz''",
         "AUTHOR": "- Master Yi"
       },
       {
         "TITLE": "Onde eu me encontro comigo mesmo",
-        "IMG": "assets/img/chester-bennington.webp",
         "ALT": "Chester Bennington",
         "PHRASE": "''Para mim, música funciona melhor do que terapia''",
         "AUTHOR": "- Chester Bennington"
       },
       {
         "TITLE": "No fim, tudo valerá a pena",
-        "IMG": "assets/img/thats-the-spirit.webp",
         "ALT": "That's The Spirit",
         "PHRASE": "''Cada ferida vai me moldar, cada cicatriz vai construir o meu trono''",
         "AUTHOR": "- Throne, Bring Me The Horizon"
