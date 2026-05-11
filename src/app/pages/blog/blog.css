@@ -2,6 +2,10 @@
   padding: 20px;
 }
 
+.blog-container h1 {
+  color: white;
+}
+
 .posts-list {
   display: flex;
   flex-direction: column;
@@ -17,7 +21,7 @@
 }
 
 .post-item:hover {
-  background-color: #f9f9f9;
+  background-color: #3f3f3f;
 }
 
 .post-item h2 {
@@ -31,7 +35,6 @@
 }
 
 .full-post {
-  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -62,7 +65,6 @@
   margin-left: 10px;
 }
 
-/* Markdown styling */
 .full-post h2 {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -120,4 +122,10 @@
   border: none;
   border-top: 2px solid #ddd;
   margin: 20px 0;
+}
+
+.content {
+  background-color: white;
+  border-radius: 3px;
+  color: black;
 }

@@ -1,0 +1,24 @@
+.blog-post-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.summary {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+}
+
+.content {
+  line-height: 1.6;
+}

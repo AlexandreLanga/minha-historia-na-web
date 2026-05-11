@@ -4,6 +4,7 @@ import { MyHistory } from './pages/my-history/my-history';
 import { Professional } from './pages/professional/professional';
 import { AboutMe } from './pages/about-me/about-me';
 import { Blog } from './pages/blog/blog';
+import { BlogPost } from './pages/blog-post/blog-post';
 
 export const routes: Routes = [
   { path: 'dashboard', component: Dashboard },
@@ -11,6 +12,7 @@ export const routes: Routes = [
   { path: 'profissional', component: Professional },
   { path: 'about-me', component: AboutMe },
   { path: 'blog', component: Blog },
+  { path: 'blog/:slug', component: BlogPost },
 
   { path: '', pathMatch: 'full', component: Dashboard },
   { path: '**', redirectTo: 'dashboard' }

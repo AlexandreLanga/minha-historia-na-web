@@ -1,20 +1,11 @@
 <div class="blog-container">
-  <div *ngIf="!selectedPost">
-    <h1>{{ "BLOG.TITLE" | translate }}</h1>
-    <div class="posts-list">
-      <div class="post-item" *ngFor="let post of posts" (click)="selectPost(post)">
-        <h2>{{ post.title }}</h2>
-        <p class="date">{{ post.date | date }}</p>
-        <p class="summary">{{ post.summary }}</p>
-      </div>
+  <h1>{{ "BLOG.TITLE" | translate }}</h1>
+  <br>
+  <div class="posts-list">
+    <div class="post-item" *ngFor="let post of posts" (click)="selectPost(post)">
+      <h2>{{ post.title }}</h2>
+      <p class="date">{{ post.date | date }}</p>
+      <p class="summary">{{ post.summary }}</p>
     </div>
-  </div>
-
-  <div *ngIf="selectedPost" class="full-post">
-    <button class="back-btn" (click)="backToList()">{{ "BLOG.BACK" | translate }}</button>
-    <h1>{{ selectedPost.title }}</h1>
-    <p class="date">{{ selectedPost.date | date }}</p>
-    <div *ngIf="isLoading" class="loading">{{ "BLOG.LOADING" | translate }}</div>
-    <div *ngIf="!isLoading" [innerHTML]="selectedPostContent | markdown"></div>
   </div>
 </div>

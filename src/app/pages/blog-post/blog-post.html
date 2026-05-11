@@ -1,0 +1,12 @@
+<div class="blog-post-container">
+  <div *ngIf="post; else notFound">
+    <h1>{{ post.title }}</h1>
+    <p class="date">{{ post.date | date:'longDate' }}</p>
+    <p class="summary">{{ post.summary }}</p>
+    <div *ngIf="isLoading" class="loading">Carregando...</div>
+    <div *ngIf="!isLoading" class="content" [innerHTML]="content | markdown"></div>
+  </div>
+  <ng-template #notFound>
+    <p>Post não encontrado.</p>
+  </ng-template>
+</div>

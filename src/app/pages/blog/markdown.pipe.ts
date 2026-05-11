@@ -87,6 +87,11 @@ export class MarkdownPipe implements PipeTransform {
     html = html.replace(/\n\n/g, '</p><p>');
     html = '<p>' + html + '</p>';
 
+    // Line breaks within paragraphs
+    html = html.replace(/<\/p><p>/g, '</p>\n<p>'); // Temporarily separate paragraphs
+    html = html.replace(/\n/g, '<br>'); // Convert all remaining newlines to <br>
+    html = html.replace(/<\/p>\n<p>/g, '</p><p>'); // Restore paragraph separation
+
     // Cleanup
     html = html.replace(/<p><\/p>/g, '');
     html = html.replace(/<p><(h[1-6]|ul|ol|hr)/g, '<$1');
