@@ -225,6 +225,7 @@
   "BLOG": {
     "TITLE": "Programming Blog",
     "MAX_POSTS": "Maximum of 5 posts reached.",
-    "BACK": "Back"
+    "BACK": "Back",
+    "LOADING": "Loading post..."
   }
 }
