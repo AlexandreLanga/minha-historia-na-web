@@ -6,6 +6,24 @@
   color: white;
 }
 
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  color: #000;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
 .posts-list {
   display: flex;
   flex-direction: column;
