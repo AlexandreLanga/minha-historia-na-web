@@ -1,8 +1,17 @@
 <div class="blog-container">
   <h1>{{ "BLOG.TITLE" | translate }}</h1>
   <br>
+  <div class="search-bar">
+    <input
+      type="text"
+      [value]="searchTerm"
+      (input)="onSearch($any($event.target).value)"
+      placeholder="Buscar por título"
+      aria-label="Buscar posts por título"
+    />
+  </div>
   <div class="posts-list">
-    <div class="post-item" *ngFor="let post of posts" (click)="selectPost(post)">
+    <div class="post-item" *ngFor="let post of filteredPosts" (click)="selectPost(post)">
       <h2>{{ post.title }}</h2>
       <p class="date">{{ post.date | date }}</p>
       <p class="summary">{{ post.summary }}</p>

@@ -13,9 +13,22 @@ import { BlogService, Post } from '../../services/blog.service';
 })
 export class Blog {
   posts: Post[];
+  searchTerm = '';
 
   constructor(private router: Router, private blogService: BlogService) {
     this.posts = this.blogService.getPosts();
+  }
+
+  get filteredPosts(): Post[] {
+    const term = this.searchTerm.trim().toLowerCase();
+    if (!term) {
+      return this.posts;
+    }
+    return this.posts.filter(post => post.title.toLowerCase().includes(term));
+  }
+
+  onSearch(value: string) {
+    this.searchTerm = value;
   }
 
   selectPost(post: Post) {
