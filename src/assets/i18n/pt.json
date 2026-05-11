@@ -5,7 +5,8 @@
     "DASHBOARD": "Dashboard",
     "MY_HISTORY": "Minha história",
     "PROFESSIONAL": "Profissional",
-    "ABOUT_ME": "Sobre mim"
+    "ABOUT_ME": "Sobre mim",
+    "BLOG": "Blog"
   },
   "DASHBOARD": {
     "INTRODUCTION": "\"Acredito no poder da tecnologia de unir as pessoas\"",
@@ -220,5 +221,9 @@
     "SUBTITLES":{
       "MOTIVATION_QUESTION": "Se pudesse se descrever em 4 pessoas/personagens que admira e se inspira, quem seriam?"
     }
+  },
+  "BLOG": {
+    "TITLE": "Blog de Programação",
+    "MAX_POSTS": "Máximo de 5 postagens atingido."
   }
 }

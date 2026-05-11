@@ -1,0 +1,19 @@
+.blog-container {
+  padding: 20px;
+}
+
+.posts {
+  margin-top: 20px;
+}
+
+.post {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.date {
+  font-size: 0.8em;
+  color: #666;
+}

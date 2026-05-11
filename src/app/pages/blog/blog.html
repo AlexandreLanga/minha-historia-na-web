@@ -1,0 +1,11 @@
+<div class="blog-container">
+  <h1>{{ "BLOG.TITLE" | translate }}</h1>
+  <div class="posts">
+    <div class="post" *ngFor="let post of limitedPosts">
+      <h2>{{ post.title }}</h2>
+      <p class="date">{{ post.date | date }}</p>
+      <p>{{ post.content }}</p>
+    </div>
+  </div>
+  <p *ngIf="posts.length >= 5">{{ "BLOG.MAX_POSTS" | translate }}</p>
+</div>
