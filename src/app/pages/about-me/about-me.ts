@@ -28,22 +28,22 @@ export class AboutMe {
   cards = [
     {
       nome: 'ABOUT_ME.CARACTERS.0.NAME',
-      img: 'ABOUT_ME.CARACTERS.0.IMG',
+      img: 'assets/img/oliver-sykes.webp',
       desc: 'ABOUT_ME.CARACTERS.0.DESC'
     },
     {
       nome: 'ABOUT_ME.CARACTERS.1.NAME',
-      img: 'ABOUT_ME.CARACTERS.1.IMG',
+      img: 'assets/img/monkey-d-luffy.webp',
       desc: 'ABOUT_ME.CARACTERS.1.DESC'
     },
     {
       nome: 'ABOUT_ME.CARACTERS.2.NAME',
-      img: 'ABOUT_ME.CARACTERS.2.IMG',
+      img: 'assets/img/pope-francis.webp',
       desc: 'ABOUT_ME.CARACTERS.2.DESC'
     },
     {
       nome: 'ABOUT_ME.CARACTERS.3.NAME',
-      img: 'ABOUT_ME.CARACTERS.3.IMG',
+      img: 'assets/img/satoru-gojo.webp',
       desc: 'ABOUT_ME.CARACTERS.3.DESC'
     }
   ];
@@ -51,35 +51,35 @@ export class AboutMe {
   phrases = [
     {
       title: "ABOUT_ME.PHRASES.0.TITLE",
-      img: "ABOUT_ME.PHRASES.0.IMG",
+      img: "assets/img/pantheon.webp",
       alt: "ABOUT_ME.PHRASES.0.ALT",
       phrase: "ABOUT_ME.PHRASES.0.PHRASE",
       author: "ABOUT_ME.PHRASES.0.AUTHOR"
     },
     {
       title: "ABOUT_ME.PHRASES.1.TITLE",
-      img: "ABOUT_ME.PHRASES.1.IMG",
+      img: "assets/img/sempiternal.webp",
       alt: "ABOUT_ME.PHRASES.1.ALT",
       phrase: "ABOUT_ME.PHRASES.1.PHRASE",
       author: "ABOUT_ME.PHRASES.1.AUTHOR"
     },
     {
       title: "ABOUT_ME.PHRASES.2.TITLE",
-      img: "ABOUT_ME.PHRASES.2.IMG",
+      img: "assets/img/master-yi.webp",
       alt: "ABOUT_ME.PHRASES.2.ALT",
       phrase: "ABOUT_ME.PHRASES.2.PHRASE",
       author: "ABOUT_ME.PHRASES.2.AUTHOR"
     },
     {
       title: "ABOUT_ME.PHRASES.3.TITLE",
-      img: "ABOUT_ME.PHRASES.3.IMG",
+      img: "assets/img/chester-bennington.webp",
       alt: "ABOUT_ME.PHRASES.3.ALT",
       phrase: "ABOUT_ME.PHRASES.3.PHRASE",
       author: "ABOUT_ME.PHRASES.3.AUTHOR"
     },
     {
       title: "ABOUT_ME.PHRASES.4.TITLE",
-      img: "ABOUT_ME.PHRASES.4.IMG",
+      img: "assets/img/thats-the-spirit.webp",
       alt: "ABOUT_ME.PHRASES.4.ALT",
       phrase: "ABOUT_ME.PHRASES.4.PHRASE",
       author: "ABOUT_ME.PHRASES.4.AUTHOR"
