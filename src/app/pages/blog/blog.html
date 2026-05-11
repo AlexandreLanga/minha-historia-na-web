@@ -1,11 +1,19 @@
 <div class="blog-container">
-  <h1>{{ "BLOG.TITLE" | translate }}</h1>
-  <div class="posts">
-    <div class="post" *ngFor="let post of limitedPosts">
-      <h2>{{ post.title }}</h2>
-      <p class="date">{{ post.date | date }}</p>
-      <p>{{ post.content }}</p>
+  <div *ngIf="!selectedPost">
+    <h1>{{ "BLOG.TITLE" | translate }}</h1>
+    <div class="posts-list">
+      <div class="post-item" *ngFor="let post of posts" (click)="selectPost(post)">
+        <h2>{{ post.title }}</h2>
+        <p class="date">{{ post.date | date }}</p>
+        <p>{{ post.content | slice:0:100 }}...</p>
+      </div>
     </div>
   </div>
-  <p *ngIf="posts.length >= 5">{{ "BLOG.MAX_POSTS" | translate }}</p>
+
+  <div *ngIf="selectedPost" class="full-post">
+    <button class="back-btn" (click)="backToList()">{{ "BLOG.BACK" | translate }}</button>
+    <h1>{{ selectedPost.title }}</h1>
+    <p class="date">{{ selectedPost.date | date }}</p>
+    <p>{{ selectedPost.content }}</p>
+  </div>
 </div>
