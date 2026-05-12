@@ -1,8 +1,23 @@
 <div class="blog-post-container">
   <div *ngIf="post; else notFound">
-    <h1>{{ post.title }}</h1>
-    <p class="date">{{ post.date | date:'longDate' }}</p>
-    <p class="summary">{{ post.summary }}</p>
+    <header class="post-header">
+      <div class="header-content">
+        <h1 class="post-title">{{ post.title }}</h1>
+        <div class="post-meta">
+          <time class="post-date" [attr.datetime]="post.date.toISOString()">
+            {{ post.date | date:'longDate' }}
+          </time>
+          <div class="post-summary">
+            {{ post.summary }}
+          </div>
+        </div>
+      </div>
+      <div class="header-decoration">
+        <div class="decoration-line"></div>
+        <div class="decoration-accent"></div>
+      </div>
+    </header>
+
     <div *ngIf="isLoading" class="loading">Carregando...</div>
     <div *ngIf="!isLoading" class="content" [innerHTML]="content | markdown"></div>
   </div>
