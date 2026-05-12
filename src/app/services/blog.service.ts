@@ -19,7 +19,7 @@ export class BlogService {
         date: new Date('2026-05-11'),
         markdownPath: 'assets/blog/introducao.md',
         summary: 'Estudos, inovação, insights e muito mais sobre o mundo da tecnologia.',
-        slug: 'introducao.md'
+        slug: 'introducao'
       }
     ];
   }
