@@ -15,11 +15,11 @@ export class BlogService {
   getPosts(): Post[] {
     return [
       {
-        title: 'Reforma Tributária: O Impacto no Setor de Software e TI',
-        date: new Date('2026-05-10'),
-        markdownPath: 'assets/blog/reforma-tributaria.md',
-        summary: 'Como o novo modelo tributário brasileiro afeta empresas de software, SaaS e provedores de TI.',
-        slug: 'reforma-tributaria'
+        title: 'Novidades em tecnologia vindo aí!!!',
+        date: new Date('2026-05-11'),
+        markdownPath: 'assets/blog/introducao.md',
+        summary: 'Estudos, inovação, insights e muito mais sobre o mundo da tecnologia.',
+        slug: 'introducao.md'
       }
     ];
   }
