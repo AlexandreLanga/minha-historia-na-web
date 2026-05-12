@@ -9,95 +9,167 @@ export class MarkdownPipe implements PipeTransform {
   constructor(private sanitizer: DomSanitizer) {}
 
   transform(value: string): SafeHtml {
-    if (!value) return '';
+    if (!value) {
+      return '';
+    }
 
-    let html = value;
+    const normalized = value.replace(/\r\n?/g, '\n').trim();
+    if (!normalized) {
+      return '';
+    }
 
-    // Escape HTML characters but preserve markdown syntax
-    html = this.escapeHtml(html);
+    // Handle explicit line breaks before escaping HTML
+    // Replace <br> tags with a placeholder so they are preserved during parsing
+    const withBreaks = normalized.replace(/(<br\s*\/?\>)/gi, '§§BR§§');
 
-    // Imagens
-    html = html.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1">');
+    const escaped = this.escapeHtml(withBreaks);
+    const content = escaped
+      .replace(/```([\s\S]*?)```/g, (_match, code) => `<pre><code>${code.trim()}</code></pre>`)
+      .split(/\n\n+/)
+      .map((block) => this.parseBlock(block))
+      .join('\n\n');
 
-    // Títulos
-    html = html.replace(/^### (.*?)$/gm, '<h3>$1</h3>');
-    html = html.replace(/^## (.*?)$/gm, '<h2>$1</h2>');
-    html = html.replace(/^# (.*?)$/gm, '<h1>$1</h1>');
+    return this.sanitizer.bypassSecurityTrustHtml(content);
+  }
 
-    // Horizontal rule
-    html = html.replace(/^---$/gm, '<hr>');
+  private parseBlock(block: string): string {
+    const trimmed = block.trim();
 
-    // Negrito
-    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    html = html.replace(/__(.*?)__/g, '<strong>$1</strong>');
+    if (!trimmed) {
+      return '';
+    }
 
-    // Itálico
-    html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
-    html = html.replace(/_(.*?)_/g, '<em>$1</em>');
+    if (/^<pre><code>/.test(trimmed)) {
+      return trimmed;
+    }
 
-    // Código inline
-    html = html.replace(/`(.*?)`/g, '<code>$1</code>');
+    if (/^#{1,6}\s+/.test(trimmed)) {
+      const match = trimmed.match(/^(#{1,6})\s+(.*)$/);
+      if (!match) return `<p>${this.parseInline(trimmed)}</p>`;
+      const level = Math.min(match[1].length, 6);
+      return `<h${level}>${this.parseInline(match[2].trim())}</h${level}>`;
+    }
 
-    // Links
-    html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>');
+    if (/^(\*|-|_)\s*\1\s*\1\s*$/.test(trimmed)) {
+      return '<hr>';
+    }
 
-    // Listas
-    const lines = html.split('\n');
-    let inList = false;
-    let listType: 'ul' | 'ol' | null = null;
-    const processedLines: string[] = [];
+    if (/^>\s?/.test(trimmed)) {
+      return this.parseBlockquote(trimmed);
+    }
 
-    for (let line of lines) {
-      if (line.trim().startsWith('* ')) {
-        if (!inList || listType !== 'ul') {
-          if (inList) {
-            processedLines.push(`</${listType}>`);
-          }
-          processedLines.push('<ul>');
-          inList = true;
-          listType = 'ul';
+    if (/^(\d+\.\s+|[-*+]\s+)/.test(trimmed)) {
+      return this.parseList(block);
+    }
+
+    // Handle paragraphs with potential multiple line breaks
+    const lines = trimmed.split('\n');
+    if (lines.length === 1) {
+      return `<p>${this.parseInline(trimmed)}</p>`;
+    }
+
+    // Process lines, preserving empty lines as <br> tags
+    const processedLines = lines.map((line, index) => {
+      const trimmedLine = line.trim();
+      if (!trimmedLine) {
+        return '<br>';
+      }
+      return this.parseInline(trimmedLine);
+    });
+
+    return `<p>${processedLines.join('')}</p>`;
+  }
+
+  private parseBlockquote(block: string): string {
+    const lines = block.split('\n').map((line) => line.replace(/^>\s?/, ''));
+    const content = lines.join('\n').trim();
+    if (!content) {
+      return '<blockquote></blockquote>';
+    }
+
+    // Process blockquote content as paragraphs, preserving line breaks
+    const paragraphs = content.split(/\n\n+/).map((para) => {
+      const trimmedPara = para.trim();
+      if (!trimmedPara) return '';
+
+      const paraLines = trimmedPara.split('\n');
+      if (paraLines.length === 1) {
+        return `<p>${this.parseInline(trimmedPara)}</p>`;
+      }
+
+      // Process lines, preserving empty lines as <br> tags
+      const processedLines = paraLines.map((line, index) => {
+        const trimmedLine = line.trim();
+        if (!trimmedLine) {
+          return '<br>';
         }
-        processedLines.push('<li>' + line.replace(/^\* /, '') + '</li>');
-      } else if (/^\d+\. /.test(line.trim())) {
-        if (!inList || listType !== 'ol') {
-          if (inList) {
-            processedLines.push(`</${listType}>`);
-          }
-          processedLines.push('<ol>');
-          inList = true;
-          listType = 'ol';
+        return this.parseInline(trimmedLine);
+      });
+
+      return `<p>${processedLines.join('')}</p>`;
+    }).filter((p) => p);
+
+    return `<blockquote>${paragraphs.join('')}</blockquote>`;
+  }
+
+  private parseList(block: string): string {
+    const lines = block.split('\n');
+    const items: string[] = [];
+    const ordered = /^\d+\.\s+/.test(lines[0].trim());
+    const tag = ordered ? 'ol' : 'ul';
+
+    let currentItem = '';
+    let inItem = false;
+
+    for (const line of lines) {
+      const trimmed = line.trim();
+
+      if (!trimmed) {
+        if (inItem) {
+          currentItem += '<br>';
         }
-        processedLines.push('<li>' + line.replace(/^\d+\. /, '') + '</li>');
-      } else {
-        if (inList && line.trim() !== '') {
-          processedLines.push(`</${listType}>`);
-          inList = false;
-          listType = null;
+        continue;
+      }
+
+      const isListItem = ordered ? /^\d+\.\s+/.test(trimmed) : /^[-*+]\s+/.test(trimmed);
+
+      if (isListItem) {
+        if (inItem) {
+          items.push(`<li>${this.parseInline(currentItem.trim())}</li>`);
         }
-        processedLines.push(line);
+        currentItem = trimmed.replace(/^(\d+\.\s+|[-*+]\s+)/, '').trim();
+        inItem = true;
+      } else if (inItem) {
+        // Continuação do item atual (linha indentada ou continuação)
+        currentItem += ' ' + trimmed;
       }
     }
-    if (inList && listType) {
-      processedLines.push(`</${listType}>`);
+
+    if (inItem) {
+      items.push(`<li>${this.parseInline(currentItem.trim())}</li>`);
     }
 
-    html = processedLines.join('\n');
+    return `<${tag}>${items.join('')}</${tag}>`;
+  }
 
-    // Paragraphs
-    html = html.replace(/\n\n/g, '</p><p>');
-    html = '<p>' + html + '</p>';
+  private parseInline(text: string): string {
+    let result = text;
 
-    // Line breaks within paragraphs
-    html = html.replace(/<\/p><p>/g, '</p>\n<p>'); // Temporarily separate paragraphs
-    html = html.replace(/\n/g, '<br>'); // Convert all remaining newlines to <br>
-    html = html.replace(/<\/p>\n<p>/g, '</p><p>'); // Restore paragraph separation
+    // Restore explicit line breaks placeholder to actual <br> tags
+    result = result.replace(/§§BR§§/g, '<br>');
+    result = result.replace(/<br\s*\/?>/gi, '<br>');
 
-    // Cleanup
-    html = html.replace(/<p><\/p>/g, '');
-    html = html.replace(/<p><(h[1-6]|ul|ol|hr)/g, '<$1');
-    html = html.replace(/<\/(h[1-6]|ul|ol|hr)><\/p>/g, '</$1>');
+    result = result.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1">');
+    result = result.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    result = result.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');
+    result = result.replace(/___(.*?)___/g, '<strong><em>$1</em></strong>');
+    result = result.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    result = result.replace(/__(.*?)__/g, '<strong>$1</strong>');
+    result = result.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    result = result.replace(/_(.*?)_/g, '<em>$1</em>');
+    result = result.replace(/`([^`]+)`/g, '<code>$1</code>');
 
-    return this.sanitizer.bypassSecurityTrustHtml(html);
+    return result;
   }
 
   private escapeHtml(text: string): string {

@@ -1,5 +1,3 @@
-# Reforma Tributária e o Impacto no Setor de Tecnologia no Brasil
-
 A transição para o novo modelo tributário brasileiro representa uma das maiores mudanças estruturais das últimas décadas para empresas de tecnologia.  
 Para desenvolvedores, arquitetos de software, CTOs, CFOs e donos de software houses, a migração do sistema atual para o modelo de **IVA Dual** — composto por **IBS (Imposto sobre Bens e Serviços)** e **CBS (Contribuição sobre Bens e Serviços)** — altera diretamente:
 
@@ -10,9 +8,15 @@ Para desenvolvedores, arquitetos de software, CTOs, CFOs e donos de software hou
 - O desenvolvimento de sistemas internos;
 - E até mesmo o modelo de negócios de empresas SaaS.
 
+<br>
+
 Além do impacto tributário, haverá uma necessidade significativa de adaptação tecnológica, principalmente em ERPs, plataformas financeiras, gateways de pagamento e sistemas de emissão fiscal.
 
+<br>
+
 ---
+
+<br>
 
 # 1. O fim da disputa entre ISS e ICMS
 
@@ -20,12 +24,14 @@ Historicamente, o setor de software viveu em um cenário de insegurança jurídi
 
 A principal discussão sempre foi:
 
-> Software é serviço ou mercadoria?
+**Software é serviço ou mercadoria?**
 
 Dependendo da interpretação:
 
 - Incidia **ISS** (tributo municipal);
 - Ou incidia **ICMS** (tributo estadual).
+
+<br>
 
 Essa indefinição gerou anos de disputas judiciais, bitributação, autuações fiscais e complexidade operacional para empresas que comercializam software em múltiplos estados.
 
@@ -33,7 +39,11 @@ Com a reforma tributária, essa distinção perde relevância prática.
 
 O novo modelo do **IBS** unifica a tributação sobre bens e serviços, criando uma lógica mais próxima do IVA utilizado internacionalmente.
 
+<br>
+
 ## Principais mudanças
+
+<br>
 
 ### Tributação no destino
 
@@ -41,15 +51,23 @@ O imposto passa a ser recolhido no local do consumo, e não mais na origem da em
 
 Isso afeta diretamente empresas SaaS e plataformas digitais que vendem nacionalmente.
 
+<br>
+
 ### Redução da guerra fiscal
 
 Estados e municípios perdem parte da autonomia sobre incentivos tributários, reduzindo distorções competitivas.
+
+<br>
 
 ### Simplificação operacional
 
 Empresas deixam de lidar com múltiplas regras estaduais e municipais conflitantes.
 
+<br>
+
 ---
+
+<br>
 
 # 2. O desafio das alíquotas para empresas SaaS
 
@@ -68,6 +86,8 @@ Em vários casos, empresas de tecnologia pagam efetivamente entre:
 - **2% e 5% de ISS**;
 - Ou cargas reduzidas no Simples Nacional.
 
+<br>
+
 Com o IVA Dual, as estimativas apontam para uma alíquota combinada entre:
 
 # **26% e 28%**
@@ -79,7 +99,11 @@ Isso gera preocupação especialmente em:
 - Startups em fase de crescimento;
 - Plataformas digitais com margem comprimida.
 
+<br>
+
 ---
+
+<br>
 
 # 3. O crédito amplo como mecanismo de compensação
 
@@ -93,6 +117,8 @@ Isso muda radicalmente a lógica tributária atual do setor.
 
 ## Exemplos de créditos possíveis
 
+<br>
+
 ### Infraestrutura em nuvem
 
 Serviços contratados de:
@@ -103,6 +129,8 @@ Serviços contratados de:
 - Oracle Cloud.
 
 Passam a gerar crédito tributário.
+
+<br>
 
 ### Ferramentas de desenvolvimento
 
@@ -115,6 +143,8 @@ Softwares utilizados internamente poderão gerar créditos:
 - New Relic;
 - Licenças corporativas.
 
+<br>
+
 ### Hardware e equipamentos
 
 Compras de:
@@ -125,6 +155,8 @@ Compras de:
 - Infraestrutura de escritório.
 
 Também entram na lógica de crédito.
+
+<br>
 
 ### Serviços terceirizados
 
@@ -137,17 +169,27 @@ Empresas que contratam:
 - BPO financeiro;
 - Marketing.
 
+<br>
+
 Poderão aproveitar créditos de forma mais ampla.
+
+<br>
 
 ---
 
+<br>
+
 # 4. Impactos diretos no desenvolvimento de software
+
+<br>
 
 A reforma não afeta apenas o financeiro.
 
 Ela cria demandas técnicas relevantes para times de engenharia e produto.
 
 ## ERP e sistemas fiscais precisarão ser reestruturados
+
+<br>
 
 Muitas plataformas atuais foram construídas considerando:
 
@@ -161,11 +203,17 @@ Muitas plataformas atuais foram construídas considerando:
 
 Com o novo modelo, grande parte dessa lógica muda.
 
+<br>
+
 ---
+
+<br>
 
 # 5. Split Payment: uma das maiores mudanças técnicas
 
 O modelo de **Split Payment** será um dos pontos mais críticos.
+
+<br>
 
 ## Como funciona
 
@@ -175,6 +223,8 @@ Ou seja:
 
 - Parte do valor vai para a empresa;
 - Parte vai diretamente para o governo.
+
+<br>
 
 ## Impactos técnicos
 
@@ -186,6 +236,8 @@ Isso exige integração entre:
 - Motor fiscal;
 - Conciliação financeira.
 
+<br>
+
 Além disso, sistemas precisarão controlar:
 
 - Valores líquidos;
@@ -194,7 +246,11 @@ Além disso, sistemas precisarão controlar:
 - Repasses;
 - Conciliação em tempo real.
 
+<br>
+
 ---
+
+<br>
 
 # 6. O desafio da transição híbrida (2026–2032)
 
@@ -206,9 +262,13 @@ Durante vários anos, empresas precisarão operar com:
 - Modelo novo;
 - Regras simultâneas.
 
+<br>
+
 ## Impactos para engenharia
 
 Isso implica:
+
+<br>
 
 ### Duplicidade de cálculo tributário
 
@@ -219,9 +279,13 @@ Os sistemas precisarão calcular:
 - CBS;
 - Regras transitórias.
 
+<br>
+
 ### Versionamento fiscal
 
 Empresas precisarão criar motores fiscais parametrizáveis por período.
+
+<br>
 
 ### Risco elevado de inconsistência
 
@@ -232,7 +296,11 @@ Sem arquitetura adequada, haverá:
 - Problemas contábeis;
 - Risco de autuação.
 
+<br>
+
 ---
+
+<br>
 
 # 7. Arquitetura fiscal passa a ser um diferencial competitivo
 
@@ -248,6 +316,8 @@ A tendência é que:
 
 Precisem incorporar inteligência tributária nativa.
 
+<br>
+
 ## Isso cria oportunidades para:
 
 - TaxTechs;
@@ -256,7 +326,11 @@ Precisem incorporar inteligência tributária nativa.
 - APIs fiscais;
 - Motores de cálculo tributário.
 
+<br>
+
 ---
+
+<br>
 
 # 8. Impacto no fluxo de caixa das empresas
 
@@ -275,7 +349,11 @@ Empresas SaaS com crescimento acelerado precisarão revisar:
 - Estrutura societária;
 - Planejamento tributário.
 
+<br>
+
 ---
+
+<br>
 
 # 9. Possíveis impactos no pricing de SaaS
 
@@ -299,7 +377,11 @@ Precisarão adaptar:
 - Emissão fiscal;
 - Regras de retenção.
 
+<br>
+
 ---
+
+<br>
 
 # 10. Segurança, auditoria e rastreabilidade
 
@@ -317,7 +399,11 @@ Isso força empresas a melhorarem:
 - Segurança da informação;
 - Integrações financeiras.
 
+<br>
+
 ---
+
+<br>
 
 # 11. Oportunidades para empresas preparadas
 
@@ -338,9 +424,15 @@ Quem investir cedo em:
 - Compliance automatizado;
 - Inteligência tributária.
 
+<br>
+
 Pode transformar a reforma em diferencial estratégico.
 
+<br>
+
 ---
+
+<br>
 
 # Conclusão
 
@@ -363,6 +455,8 @@ Embora a carga tributária possa aumentar nominalmente para parte do setor, a co
 - Crédito amplo;
 - Redução de litígios;
 - Padronização nacional.
+
+<br>
 
 Pode gerar ganhos operacionais importantes no médio e longo prazo.
 
