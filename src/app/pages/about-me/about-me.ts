@@ -156,7 +156,7 @@ export class AboutMe {
       place: 'Allianz Parque - SP',
       year: 2024,
       plataform: 'youtube',
-      url: 'https://www.youtube.com/embed/C3kVAGqqkTU',
+      url: 'https://www.youtube.com/embed/KW3tUZMsnn8',
       description: 'MCLan, DiFerrero and Oliver dicided to sing together'
     },
   ];
