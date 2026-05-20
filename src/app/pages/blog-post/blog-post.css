@@ -13,7 +13,6 @@
   padding: 2.5rem 0;
   border-bottom: 1px solid #e8e8e8;
   position: relative;
-  overflow: hidden;
 }
 
 .header-content {
@@ -141,29 +140,29 @@
   padding: 20px;
 }
 
-.content {
+.markdown-content {
   line-height: 1.85;
   color: #111111;
 }
 
-.content p {
+.markdown-content p {
   margin-bottom: 1.2rem;
 }
 
-.content h2,
-.content h3,
-.content h4 {
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4 {
   margin-top: 2rem;
   margin-bottom: 1rem;
   line-height: 1.25;
 }
 
-.content h1 {
+.markdown-content h1 {
   margin-top: 0;
   margin-bottom: 1.2rem;
 }
 
-.content blockquote {
+.markdown-content blockquote {
   border-left: 4px solid #007bff;
   padding: 16px 20px;
   margin: 24px 0;
@@ -172,44 +171,43 @@
   font-style: normal;
 }
 
-.content ul,
-.content ol {
-  margin: 1rem 0 1.4rem 0;
+.markdown-content ul,
+.markdown-content ol {
+  margin: 1.25rem 0 1.5rem 0;
   padding-left: 2rem;
   color: #111111;
-  list-style-position: inside;
+  list-style-position: outside;
 }
 
-.content li {
+.markdown-content li {
   margin-bottom: 0.75rem;
   line-height: 1.75;
-  text-align: left;
 }
 
-.content ul li {
+.markdown-content ul li {
   list-style-type: disc;
   padding-left: 0.25rem;
 }
 
-.content ol li {
+.markdown-content ol li {
   list-style-type: decimal;
   padding-left: 0.25rem;
 }
 
-.content strong {
+.markdown-content strong {
   color: #000000;
 }
 
-.content a {
+.markdown-content a {
   color: #007bff;
   text-decoration: none;
 }
 
-.content a:hover {
+.markdown-content a:hover {
   text-decoration: underline;
 }
 
-.content hr {
+.markdown-content hr {
   border: none;
   border-top: 1px solid #e0e0e0;
   margin: 2.5rem 0;
