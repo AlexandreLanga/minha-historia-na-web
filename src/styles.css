@@ -15,3 +15,68 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+
+.blog-post-container .markdown-content blockquote {
+  border-left: 5px solid #3498db;
+  padding: 28px 28px 20px 36px;
+  margin: 2rem 0;
+  background: #eef6ff;
+  color: #1d2a3a;
+  font-style: italic;
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1px rgba(52, 152, 219, 0.08);
+  position: relative;
+}
+
+.blog-post-container .markdown-content blockquote p {
+  margin: 0;
+}
+
+.blog-post-container .markdown-content blockquote::before {
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: rgba(52,152,219,0.12);
+  position: absolute;
+  left: 12px;
+  top: 6px;
+  pointer-events: none;
+}
+
+.blog-post-container .markdown-content footer.quote-cite,
+.blog-post-container .markdown-content .quote-cite {
+  display: block;
+  margin-top: 0.75rem;
+  text-align: right;
+  font-weight: 600;
+  color: #234058;
+  font-style: normal;
+}
+
+.blog-post-container .markdown-content footer.quote-cite::before {
+  content: "— ";
+}
+
+.blog-post-container .markdown-content ul,
+.blog-post-container .markdown-content ol {
+  margin: 1.25rem 0 1.5rem 0;
+  padding-left: 0;
+  color: #111111;
+  list-style-position: inside;
+  text-align: right;
+}
+
+.blog-post-container .markdown-content li {
+  margin-bottom: 0.75rem;
+  line-height: 1.75;
+  padding-left: 0;
+}
+
+.blog-post-container .markdown-content ul li {
+  list-style-type: disc;
+}
+
+.blog-post-container .markdown-content ol li {
+  list-style-type: decimal;
+}

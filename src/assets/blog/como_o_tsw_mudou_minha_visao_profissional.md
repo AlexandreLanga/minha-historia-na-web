@@ -90,8 +90,6 @@ Na edição Cybersecurity, pude consolidar minha pessoa, de fato conhecendo nova
 
 E se tudo der certo, continuar a evoluir para talvez futuramente ser um líder de fato, é um evento que faz parte de mim hoje, do que eu sou, e do que eu quero continuar sendo.
 
-<br>
-
 > Ele tem o dom de fazer todos ao seu redor se tornarem aliados. De todas as pessoas deste mar, aquele homem possui a mais formidável das habilidades.
 >
-> — Dracule Mihawk
+> -Dracule Mihawk
