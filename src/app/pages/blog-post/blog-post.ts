@@ -98,8 +98,8 @@ export class BlogPost implements OnInit {
       return '<hr>';
     }
 
-    if (/^>\s?/.test(trimmed)) {
-      return this.parseBlockquote(trimmed);
+    if (/^\s*(?:>|&gt;)/m.test(block)) {
+      return this.parseBlockquote(block);
     }
 
     if (/^(\d+\.\s+|[-*+]\s+)/.test(trimmed)) {
@@ -119,22 +119,31 @@ export class BlogPost implements OnInit {
       return this.parseInline(trimmedLine);
     });
 
-    return `<p>${processedLines.join('')}</p>`;
+    return `<p>${processedLines.join('<br>')}</p>`;
   }
 
   private parseBlockquote(block: string): string {
-    const lines = block.split('\n').map((line) => line.replace(/^>\s?/, ''));
+    const lines = block.split('\n').map((line) => line.replace(/^\s*(?:>|&gt;)\s?/, ''));
     const content = lines.join('\n').trim();
     if (!content) {
       return '<blockquote></blockquote>';
     }
 
-    const paragraphs = content.split(/\n\n+/).map((para) => {
-      const trimmedPara = para.trim();
-      if (!trimmedPara) return '';
-      const paraLines = trimmedPara.split('\n');
+    const rawParagraphs = content.split(/\n\n+/).map((para) => para.trim()).filter(Boolean);
+    let authorLine = '';
+    if (rawParagraphs.length) {
+      const lastRaw = rawParagraphs[rawParagraphs.length - 1];
+      const authorMatch = lastRaw.match(/^[\s\-–—]+(.+)$/);
+      if (authorMatch) {
+        authorLine = authorMatch[1].trim();
+        rawParagraphs.pop();
+      }
+    }
+
+    const paragraphs = rawParagraphs.map((para) => {
+      const paraLines = para.split('\n');
       if (paraLines.length === 1) {
-        return `<p>${this.parseInline(trimmedPara)}</p>`;
+        return `<p>${this.parseInline(para)}</p>`;
       }
       const processedLines = paraLines.map((line) => {
         const trimmedLine = line.trim();
@@ -143,8 +152,12 @@ export class BlogPost implements OnInit {
         }
         return this.parseInline(trimmedLine);
       });
-      return `<p>${processedLines.join('')}</p>`;
-    }).filter((p) => p);
+      return `<p>${processedLines.join('<br>')}</p>`;
+    });
+
+    if (authorLine) {
+      paragraphs.push(`<footer class="quote-cite">${this.parseInline(authorLine)}</footer>`);
+    }
 
     return `<blockquote>${paragraphs.join('')}</blockquote>`;
   }

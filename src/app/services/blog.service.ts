@@ -15,11 +15,11 @@ export class BlogService {
   getPosts(): Post[] {
     return [
       {
-        title: 'Novidades em tecnologia vindo aí!!!',
-        date: new Date('2026-05-11'),
-        markdownPath: 'assets/blog/introducao.md',
-        summary: 'Estudos, inovação, insights e muito mais sobre o mundo da tecnologia.',
-        slug: 'introducao'
+        title: 'Como o Startup Weekend mudou minha visão profissional',
+        date: new Date('2026-05-20'),
+        markdownPath: 'assets/blog/como_o_tsw_mudou_minha_visao_profissional.md',
+        summary: 'Descubra como o Startup Weekend reformulou minha perspectiva profissional sobre empreendedorismo, resultados e aprendizados.',
+        slug: 'como_o_tsw_mudou_minha_visao_profissional'
       }
     ];
   }
