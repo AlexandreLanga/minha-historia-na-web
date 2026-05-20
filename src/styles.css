@@ -64,13 +64,13 @@ body {
   padding-left: 0;
   color: #111111;
   list-style-position: inside;
-  text-align: right;
+  text-align: left;
 }
 
 .blog-post-container .markdown-content li {
   margin-bottom: 0.75rem;
   line-height: 1.75;
-  padding-left: 0;
+  padding-left: 2rem;
 }
 
 .blog-post-container .markdown-content ul li {
