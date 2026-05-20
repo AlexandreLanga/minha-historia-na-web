@@ -98,7 +98,7 @@ export class BlogPost implements OnInit {
       return '<hr>';
     }
 
-    if (/^>\s?/.test(trimmed)) {
+    if (/^(?:>|&gt;)\s?/.test(trimmed)) {
       return this.parseBlockquote(trimmed);
     }
 
@@ -119,11 +119,11 @@ export class BlogPost implements OnInit {
       return this.parseInline(trimmedLine);
     });
 
-    return `<p>${processedLines.join('')}</p>`;
+    return `<p>${processedLines.join('<br>')}</p>`;
   }
 
   private parseBlockquote(block: string): string {
-    const lines = block.split('\n').map((line) => line.replace(/^>\s?/, ''));
+    const lines = block.split('\n').map((line) => line.replace(/^(?:>|&gt;)\s?/, ''));
     const content = lines.join('\n').trim();
     if (!content) {
       return '<blockquote></blockquote>';
@@ -143,7 +143,7 @@ export class BlogPost implements OnInit {
         }
         return this.parseInline(trimmedLine);
       });
-      return `<p>${processedLines.join('')}</p>`;
+      return `<p>${processedLines.join('<br>')}</p>`;
     }).filter((p) => p);
 
     return `<blockquote>${paragraphs.join('')}</blockquote>`;
