@@ -60,8 +60,6 @@ Além de preparar todos para novos desafios, desenvolvendo pessoas, **desmontand
 
 ![agrotech](/assets/img/agrotech.webp)
 
-![trofeu](/assets/img/trofeu.webp)
-
 ![construtech](/assets/img/construtech.webp)
 
 Imagem gerada com IA estilo estúdio Ghibli no momento da premiação. [Link aqui](https://www.youtube.com/watch?v=qQ3bUXgvmMc&t=13626s).
