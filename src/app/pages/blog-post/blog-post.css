@@ -245,3 +245,12 @@
   border-top: 1px solid #e0e0e0;
   margin: 2.5rem 0;
 }
+
+:host ::ng-deep .markdown-renderer img,
+:host ::ng-deep .markdown-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+}
