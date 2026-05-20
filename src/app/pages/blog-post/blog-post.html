@@ -19,7 +19,7 @@
     </header>
 
     <div *ngIf="isLoading" class="loading">Carregando...</div>
-    <div *ngIf="!isLoading" class="content" [innerHTML]="content | markdown"></div>
+    <div *ngIf="!isLoading" class="markdown-content" [innerHTML]="safeContent"></div>
   </div>
   <ng-template #notFound>
     <p>Post não encontrado.</p>
