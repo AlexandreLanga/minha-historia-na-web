@@ -36,13 +36,9 @@ Com a Alana, a Dárqui e a Kauane, criamos uma startup que iria solucionar a dor
 
 Toda a metodologia de aprendizado gira em torno de pequenos insights e mão na massa, você realmente aprende a **amar o problema**, validar toda a construção de um produto, desde **ter a ideia**, juntar pessoas que estão alinhadas com você, **verificar se a dor existe** e pode ser solucionada, e:
 
-<br>
-
 - Se existe mercado, **pessoas dispostas a investirem nessa solução**.
 - Refinamento do produto, **validando o escopo necessário para a criação do MVP**
 - E por fim, fazer as pessoas olharem para você, mostrar no **pitch** que sua ideia pode mudar o mundo para melhor.
-
-<br>
 
 Existem muitos passos que ainda poderiam ser citados, mas acredito que seja melhor deixar como surpresa pra quem for participar. Mas a principal habilidade, que na minha opinião é indiscutivelmente a maior vitória de um participante, é desenvolver sua **habilidade de comunicação e perfil profissional**.
 
