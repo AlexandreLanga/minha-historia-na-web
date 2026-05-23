@@ -32,6 +32,7 @@
     "SECTION_SUMMARY": "Resumo Profissional",
     "PROFESSIONAL_SUMMARY": "Acadêmico de Ciência da Computação com experiência prática no desenvolvimento de soluções em C#, .NET, TypeScript, Angular, GeneXus e SQL. Atuo na manutenção e evolução de sistemas, entregando novas funcionalidades com foco em performance, confiabilidade e experiência do usuário. Experiência com bancos de dados PostgreSQL, SQL Server e Oracle, realizando consultas otimizadas e modelagem de dados. Possuo inglês avançado e facilidade para comunicação, colaboração e aprendizado rápido. Motivado a gerar impacto por meio de soluções eficientes, bem estruturadas e alinhadas às necessidades do negócio.",
     "SECTION_EXPERIENCE": "Carreira Profissional",
+    "DOWNLOAD_RESUME": "Baixar currículo",
     "PROFESSIONAL_EXPERIENCE": [
       {
         "COMPANY": "Expresso São Miguel",
@@ -41,7 +42,9 @@
           "Ajuste e análise de queries em massa pós migração de coluna de tabela.",
           "Aprendizagem em aplicações TMS.",
           "Aprendizado em linguagem Java, NodeJS/React e Delphi.",
-          "Criação de treinamentos sobre a regra de negócio e logística, agregando valor para a equipe e para a empresa."
+          "Criação de treinamentos sobre a regra de negócio e logística, agregando valor para a equipe e para a empresa.",
+          "Desenvolvimento de aplicativo de utilidades gerais em Python.",
+          "Desenvolvimento de padronização de documentos de APIs com arquivos .md e Pandoc, mantendo a documentação atualizada e melhorando a sua legibilidade."
         ]
       },
       {
@@ -74,6 +77,7 @@
         "POSITION": "Programador Trainee / Estagiário",
         "PERIOD": "Fev 2023 - Ago 2024",
         "DESCRIPTION": [
+          "Deploy de implementações GeneXus em produção via arquivos .XPZ e Jenkins.",
           "Desenvolvimento de pequenas funcionalidades sob supervisão de analistas, com foco em entender a regra de negócio e agregar valor ao cliente.",
           "Correção de bugs simples e manutenção de código, visando entender a causa e origem do erro, investigando a fundo o seu impacto e suas consequências.",
           "Refatorações e melhor compreensão do comando de linha.",
