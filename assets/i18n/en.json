@@ -32,6 +32,7 @@
     "SECTION_SUMMARY": "Professional Summary",
     "PROFESSIONAL_SUMMARY": "Computer Science undergraduate with practical experience in developing solutions using C#, .NET, TypeScript, Angular, GeneXus, and SQL. Experienced in maintaining and evolving systems, delivering new features with a focus on performance, reliability, and user experience. Skilled in working with PostgreSQL, SQL Server, and Oracle databases, including optimized queries and data modeling. Possesses advanced English proficiency and strong communication, collaboration, and fast-learning abilities. Motivated to create impact through efficient, well-structured solutions aligned with business needs.",
     "SECTION_EXPERIENCE": "Professional Career",
+    "DOWNLOAD_RESUME": "Download resume",
     "PROFESSIONAL_EXPERIENCE": [
       {
         "COMPANY": "Expresso São Miguel",
@@ -41,7 +42,9 @@
           "Adjustment and analysis of mass queries following table column migration.",
           "Training and immersion in TMS (Transportation Management System) applications.",
           "Ongoing learning in Java, NodeJS/React, and Delphi.",
-          "Creation of training sessions on business rules and logistics, adding value to the team and the company."
+          "Creation of training sessions on business rules and logistics, adding value to the team and the company.",
+          "Development of general utilities application in Python.",
+          "Development of API documentation standardization with .md and Pandoc files, keeping documentation updated and improving its readability."
         ]
       },
       {
@@ -74,6 +77,7 @@
         "POSITION": "Trainee Programmer / Intern",
         "PERIOD": "Feb 2023 - Aug 2024",
         "DESCRIPTION": [
+          "Deploy of GeneXus implementations in production via .XPZ files and Jenkins.",
           "Development of minor features under analyst supervision, focusing on understanding business rules and adding value to the client.",
           "Correction of simple bugs and code maintenance, investigating root causes and assessing impact and consequences.",
           "Refactoring and improving command-line proficiency.",
