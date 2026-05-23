@@ -89,17 +89,15 @@ const EDUCATIONS: Education[] = [
 export class Professional {
   experiences = EXPERIENCES;
   educations = EDUCATIONS;
-  languageSelected: 'PT' | 'EN' = 'PT';
+  languageSelected: 'pt' | 'en' = 'pt';
   resumeFiles = {
-    PT: {
+    pt: {
       path: 'assets/documents/Alexandre_Langa_CV_PT_BR.pdf',
-      name: 'Alexandre_Langa_CV.pdf',
-      label: 'Baixar Currículo'
+      name: 'Alexandre_Langa_CV_PT_BR.pdf'
     },
-    EN: {
-      path: 'assets/documents/Alexandre_Langa_CV_EN.pdf',
-      name: 'Alexandre_Langa_CV_EN.pdf',
-      label: 'Download Resume'
+    en: {
+      path: 'assets/documents/Alexandre_Langa_CV_EN_US.pdf',
+      name: 'Alexandre_Langa_CV_EN_US.pdf'
     }
   };
   constructor(private translate: TranslateService) {}
@@ -108,7 +106,11 @@ export class Professional {
     return `PROFESSIONAL.EDUCATION_STATUS.${status}`;
   }
 
-  setLanguage(lang: 'PT' | 'EN') {
+  setLanguage(lang: 'pt' | 'en') {
     this.languageSelected = lang;
+  }
+
+  get currentResume() {
+    return this.resumeFiles[this.languageSelected];
   }
 }

@@ -58,28 +58,31 @@
 
 <div class="resume-section">
   <div class="lang-selector">
-    <button 
-      (click)="setLanguage('PT')" 
-      [class.active]="languageSelected === 'PT'">
+    <button
+      (click)="setLanguage('pt')"
+      [class.active]="languageSelected === 'pt'">
       PT
     </button>
-    <!-- Not implemented yet -->
-    <!-- <button 
-      (click)="setLanguage('EN')" 
-      [class.active]="languageSelected === 'EN'">
+
+    <button
+      (click)="setLanguage('en')"
+      [class.active]="languageSelected === 'en'">
       EN
-    </button> -->
+    </button>
   </div>
 
-  <a 
-    [href]="resumeFiles[languageSelected].path" 
-    [download]="resumeFiles[languageSelected].name" 
+  <a
+    [href]="currentResume.path"
+    [download]="currentResume.name"
     class="btn-download">
+
     <i class="fas fa-file-download"></i>
-    {{ resumeFiles[languageSelected].label }}
+
+    {{ 'PROFESSIONAL.DOWNLOAD_RESUME' | translate }}
+
   </a>
 </div>
 
 <footer>
-  <p>&copy; 2025 {{ "PROFESSIONAL.NAME" | translate }}</p>
+  <p>&copy; 2026 {{ "PROFESSIONAL.NAME" | translate }}</p>
 </footer>
