@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { BlogService, Post } from '../../services/blog.service';
 
@@ -24,16 +24,22 @@ export class BlogPost implements OnInit {
     private http: HttpClient,
     private cdr: ChangeDetectorRef,
     private sanitizer: DomSanitizer,
-    private blogService: BlogService
+    private blogService: BlogService,
+    private translate: TranslateService
   ) {}
 
   ngOnInit() {
     const slug = this.route.snapshot.paramMap.get('slug');
     if (slug) {
       this.post = this.blogService.getPostBySlug(slug) || null;
-      if (this.post) {
-        this.loadContent();
-      }
+
+      this.translate.getTranslation('pt').subscribe(translations => {
+        if (this.post) {
+          this.post.title = this.translate.getParsedResult(translations, this.post.title);
+          this.post.summary = this.translate.getParsedResult(translations, this.post.summary);
+          this.loadContent();
+        }
+      });
     }
   }
 

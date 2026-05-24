@@ -6,15 +6,23 @@
       type="text"
       [value]="searchTerm"
       (input)="onSearch($any($event.target).value)"
-      placeholder="Buscar por título"
-      aria-label="Buscar posts por título"
+      placeholder="{{ 'BLOG.SEARCH_PLACEHOLDER' | translate }}"
+      aria-label="Search posts by title"
     />
   </div>
+
+  <div *ngIf="isEnglish" class="warning-banner">
+    <p>
+      <strong>Note:</strong> The full content of the articles is entirely in Portuguese. 
+      The translation of titles and descriptions is provided solely to help you understand the context of each post.
+    </p>
+  </div>
+
   <div class="posts-list">
     <div class="post-item" *ngFor="let post of filteredPosts" (click)="selectPost(post)">
-      <h2>{{ post.title }}</h2>
+      <h2>{{ post.title | translate }}</h2>
       <p class="date">{{ post.date | date }}</p>
-      <p class="summary">{{ post.summary }}</p>
+      <p class="summary">{{ post.summary | translate }}</p>
     </div>
   </div>
 </div>

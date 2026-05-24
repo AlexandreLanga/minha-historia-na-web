@@ -15,10 +15,10 @@ export class BlogService {
   getPosts(): Post[] {
     return [
       {
-        title: 'Como o Startup Weekend mudou minha visão profissional',
+        title: 'BLOG.POSTS.STARTUP_WEEKEND_TITLE',
         date: new Date('2026-05-20'),
         markdownPath: 'assets/blog/como_o_tsw_mudou_minha_visao_profissional.md',
-        summary: 'Descubra como o Startup Weekend reformulou minha perspectiva profissional sobre empreendedorismo, resultados e aprendizados.',
+        summary: 'BLOG.POSTS.STARTUP_WEEKEND_SUMMARY',
         slug: 'como_o_tsw_mudou_minha_visao_profissional'
       }
     ];
