@@ -221,6 +221,11 @@
     "TITLE": "Blog de Programação",
     "MAX_POSTS": "Máximo de 5 postagens atingido.",
     "BACK": "Voltar",
-    "LOADING": "Carregando post..."
+    "LOADING": "Carregando post...",
+    "SEARCH_PLACEHOLDER": "Buscar por título",
+    "POSTS":{
+      "STARTUP_WEEKEND_TITLE": "Como o Startup Weekend mudou minha visão profissional",
+      "STARTUP_WEEKEND_SUMMARY": "Descubra como o Startup Weekend reformulou minha perspectiva profissional sobre empreendedorismo, resultados e aprendizados."
+    }
   }
 }
