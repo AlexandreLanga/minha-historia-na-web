@@ -20,6 +20,22 @@
 
     <div *ngIf="isLoading" class="loading">Carregando...</div>
     <div *ngIf="!isLoading" class="markdown-content" [innerHTML]="safeContent"></div>
+
+    <section class="feedback-card">
+      <div class="feedback-intro">
+        <h2>Deixe seu feedback</h2>
+        <p>Se quiser comentar ou sugerir melhorias, envie seu feedback por email. Escolha entre Gmail ou Outlook e abra uma mensagem pronta para preencher.</p>
+      </div>
+      <div class="feedback-actions">
+        <button type="button" class="feedback-button" (click)="openFeedbackOptions()">
+          Feedback por email
+        </button>
+        <div *ngIf="showEmailOptions" class="feedback-options">
+          <button type="button" class="feedback-option" (click)="sendFeedback('gmail')">Enviar pelo Gmail</button>
+          <button type="button" class="feedback-option" (click)="sendFeedback('outlook')">Enviar pelo Outlook</button>
+        </div>
+      </div>
+    </section>
   </div>
   <ng-template #notFound>
     <p>Post não encontrado.</p>

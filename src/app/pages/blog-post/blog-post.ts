@@ -18,6 +18,9 @@ export class BlogPost implements OnInit {
   content = '';
   safeContent: SafeHtml = '';
   isLoading = false;
+  showEmailOptions = false;
+
+  private readonly feedbackEmail = 'alexandrelangadeveloper@gmail.com';
 
   constructor(
     private route: ActivatedRoute,
@@ -59,6 +62,26 @@ export class BlogPost implements OnInit {
         this.cdr.markForCheck();
       }
     });
+  }
+
+  openFeedbackOptions() {
+    this.showEmailOptions = !this.showEmailOptions;
+  }
+
+  sendFeedback(service: 'gmail' | 'outlook') {
+    const title = this.post?.title ?? 'sobre o post';
+    const feedbackSubject = `Feedback - ${title}`;
+    const body = `Olá,%0A%0AGostaria de deixar minha opinião sobre o post "${title}".%0A%0AAqui está meu feedback:%0A%0A`;
+
+    let url = `mailto:${this.feedbackEmail}?subject=${encodeURIComponent(feedbackSubject)}&body=${body}`;
+
+    if (service === 'gmail') {
+      url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(this.feedbackEmail)}&su=${encodeURIComponent(feedbackSubject)}&body=${body}`;
+    } else if (service === 'outlook') {
+      url = `https://outlook.office.com/mail/deeplink/compose?path=/mail/action/compose&to=${encodeURIComponent(this.feedbackEmail)}&subject=${encodeURIComponent(feedbackSubject)}&body=${body}`;
+    }
+
+    window.open(url, '_blank');
   }
 
   private renderMarkdown(value: string): SafeHtml {
