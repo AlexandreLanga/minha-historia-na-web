@@ -197,7 +197,86 @@
   text-align: right;
   font-weight: 600;
   color: #234058;
-  font-style: normal;
+  font-style: normal;}
+
+.feedback-card {
+  margin-top: 3rem;
+  padding: 1.8rem;
+  border-radius: 1rem;
+  background: #f7fbff;
+  border: 1px solid rgba(52, 152, 219, 0.15);
+  box-shadow: 0 12px 28px rgba(52, 152, 219, 0.08);
+}
+
+.feedback-intro h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.45rem;
+  color: #1b3a5a;
+}
+
+.feedback-intro p {
+  margin: 0;
+  color: #34526b;
+  line-height: 1.8;
+}
+
+.feedback-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.feedback-button,
+.feedback-option {
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.feedback-button {
+  padding: 0.95rem 1.4rem;
+  background: #3498db;
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(52, 152, 219, 0.18);
+}
+
+.feedback-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgba(52, 152, 219, 0.22);
+}
+
+.feedback-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.feedback-option {
+  padding: 0.82rem 1.3rem;
+  background: #ffffff;
+  color: #2c3e50;
+  border: 1px solid #d6e7f5;
+}
+
+.feedback-option:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(52, 152, 219, 0.1);
+}
+
+@media (max-width: 640px) {
+  .feedback-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .feedback-button,
+  .feedback-option {
+    width: 100%;
+  }
 }
 
 :host ::ng-deep .blog-post-container .markdown-content footer.quote-cite::before {
