@@ -71,17 +71,44 @@ export class BlogPost implements OnInit {
   sendFeedback(service: 'gmail' | 'outlook') {
     const title = this.post?.title ?? 'sobre o post';
     const feedbackSubject = `Feedback - ${title}`;
-    const body = `Olá,%0A%0AGostaria de deixar minha opinião sobre o post "${title}".%0A%0AAqui está meu feedback:%0A%0A`;
+    const bodyPlain = `Olá,\n\nGostaria de deixar minha opinião sobre o post "${title}".\n\nAqui está meu feedback:\n\n`;
 
-    let url = `mailto:${this.feedbackEmail}?subject=${encodeURIComponent(feedbackSubject)}&body=${body}`;
+    const email = this.feedbackEmail;
+    const encodedSubject = encodeURIComponent(feedbackSubject);
+    const encodedBody = encodeURIComponent(bodyPlain);
 
-    if (service === 'gmail') {
-      url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(this.feedbackEmail)}&su=${encodeURIComponent(feedbackSubject)}&body=${body}`;
-    } else if (service === 'outlook') {
-      url = `https://outlook.office.com/mail/deeplink/compose?path=/mail/action/compose&to=${encodeURIComponent(this.feedbackEmail)}&subject=${encodeURIComponent(feedbackSubject)}&body=${body}`;
+    const gmailWeb = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodedSubject}&body=${encodedBody}`;
+    const outlookWeb = `https://outlook.office.com/mail/deeplink/compose?path=/mail/action/compose&to=${encodeURIComponent(email)}&subject=${encodedSubject}&body=${encodedBody}`;
+    const mailto = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
+
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent || '');
+
+    const openWithFallback = (appUrl: string, webUrl: string) => {
+      try {
+        window.location.href = appUrl;
+      } catch (e) {
+      }
+      setTimeout(() => {
+        window.location.href = webUrl;
+      }, 800);
+    };
+
+    if (isMobile) {
+      if (service === 'gmail') {
+        const gmailApp = `googlegmail://co?to=${encodeURIComponent(email)}&subject=${encodedSubject}&body=${encodedBody}`;
+        openWithFallback(gmailApp, gmailWeb);
+      } else {
+        const outlookApp = `ms-outlook://compose?to=${encodeURIComponent(email)}&subject=${encodedSubject}&body=${encodedBody}`;
+        openWithFallback(outlookApp, outlookWeb);
+      }
+    } else {
+      if (service === 'gmail') {
+        window.open(gmailWeb, '_blank');
+      } else {
+        window.open(outlookWeb, '_blank');
+      }
+      setTimeout(() => {}, 0);
     }
-
-    window.open(url, '_blank');
   }
 
   private renderMarkdown(value: string): SafeHtml {
