@@ -74,9 +74,7 @@ export class BlogPost implements OnInit {
     const bodyPlain = 
       `Olá Alexandre,
       \n\nGostaria de deixar minha opinião sobre o post "${title}".
-
-      \n\nNota: (deixe aqui sua nota de 1 a 5, sendo 1 a pior e 5 a melhor)
-    
+      \nNota: (deixe aqui sua nota de 1 a 5, sendo 1 a pior e 5 a melhor)
       \n\nAqui está meu feedback:\n\n`;
 
     const email = this.feedbackEmail;
