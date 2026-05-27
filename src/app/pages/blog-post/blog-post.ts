@@ -71,7 +71,13 @@ export class BlogPost implements OnInit {
   sendFeedback(service: 'gmail' | 'outlook') {
     const title = this.post?.title ?? 'sobre o post';
     const feedbackSubject = `Feedback - ${title}`;
-    const bodyPlain = `Olá,\n\nGostaria de deixar minha opinião sobre o post "${title}".\n\nAqui está meu feedback:\n\n`;
+    const bodyPlain = 
+      `Olá Alexandre,
+      \n\nGostaria de deixar minha opinião sobre o post "${title}".
+
+      \n\nNota: (deixe aqui sua nota de 1 a 5, sendo 1 a pior e 5 a melhor)
+    
+      \n\nAqui está meu feedback:\n\n`;
 
     const email = this.feedbackEmail;
     const encodedSubject = encodeURIComponent(feedbackSubject);
