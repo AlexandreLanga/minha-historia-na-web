@@ -31,19 +31,21 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Angular CLI
-        run: npm install -g @angular/cli
-
       - name: Build Angular app
         run: ng build --configuration github-pages
 
-      - name: SPA fallback
-        run: cp dist/minha-historia-na-web/browser/index.html dist/minha-historia-na-web/browser/404.html
+      - name: Configure SPA fallback
+        run: |
+          APP_DIR="dist/${{ github.event.repository.name }}/browser"
+          cp "$APP_DIR/index.html" "$APP_DIR/404.html"
+
+      - name: Check dist
+        run: ls -la dist/${{ github.event.repository.name }}/browser
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/minha-historia-na-web/browser
+          path: dist/${{ github.event.repository.name }}/browser
 
   deploy:
     needs: build
