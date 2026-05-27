@@ -72,10 +72,10 @@ export class BlogPost implements OnInit {
     const title = this.post?.title ?? 'sobre o post';
     const feedbackSubject = `Feedback - ${title}`;
     const bodyPlain = 
-      `Olá Alexandre,
+      `Olá Alexandre Langa,
       \n\nGostaria de deixar minha opinião sobre o post "${title}".
       \nNota: (deixe aqui sua nota de 1 a 5, sendo 1 a pior e 5 a melhor)
-      \n\nAqui está meu feedback:\n\n`;
+      \nAqui está meu feedback:\n\n\n`;
 
     const email = this.feedbackEmail;
     const encodedSubject = encodeURIComponent(feedbackSubject);
