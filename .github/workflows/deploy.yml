@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: ng build --configuration github-pages
+        run: npx ng build --configuration github-pages
 
       - name: Configure SPA fallback
         run: |
