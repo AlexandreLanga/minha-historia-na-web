@@ -28,22 +28,22 @@ export class AboutMe {
   cards = [
     {
       nome: 'ABOUT_ME.CARACTERS.0.NAME',
-      img: 'assets/img/oliver-sykes.webp',
+      img: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1780012995/oliver-sykes_iihj6z.webp',
       desc: 'ABOUT_ME.CARACTERS.0.DESC'
     },
     {
       nome: 'ABOUT_ME.CARACTERS.1.NAME',
-      img: 'assets/img/monkey-d-luffy.webp',
+      img: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1780012994/monkey-d-luffy_jda7g3.webp',
       desc: 'ABOUT_ME.CARACTERS.1.DESC'
     },
     {
       nome: 'ABOUT_ME.CARACTERS.2.NAME',
-      img: 'assets/img/pope-francis.webp',
+      img: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1780012986/pope-francis_niajjh.webp',
       desc: 'ABOUT_ME.CARACTERS.2.DESC'
     },
     {
       nome: 'ABOUT_ME.CARACTERS.3.NAME',
-      img: 'assets/img/satoru-gojo.webp',
+      img: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1780012988/satoru-gojo_ankuex.webp',
       desc: 'ABOUT_ME.CARACTERS.3.DESC'
     }
   ];
@@ -51,35 +51,35 @@ export class AboutMe {
   phrases = [
     {
       title: "ABOUT_ME.PHRASES.0.TITLE",
-      img: "assets/img/pantheon.webp",
+      img: "https://res.cloudinary.com/diizw3dqm/image/upload/v1780012995/pantheon_mypjim.webp",
       alt: "ABOUT_ME.PHRASES.0.ALT",
       phrase: "ABOUT_ME.PHRASES.0.PHRASE",
       author: "ABOUT_ME.PHRASES.0.AUTHOR"
     },
     {
       title: "ABOUT_ME.PHRASES.1.TITLE",
-      img: "assets/img/sempiternal.webp",
+      img: "https://res.cloudinary.com/diizw3dqm/image/upload/v1780012988/sempiternal_fl6cjt.webp",
       alt: "ABOUT_ME.PHRASES.1.ALT",
       phrase: "ABOUT_ME.PHRASES.1.PHRASE",
       author: "ABOUT_ME.PHRASES.1.AUTHOR"
     },
     {
       title: "ABOUT_ME.PHRASES.2.TITLE",
-      img: "assets/img/master-yi.webp",
+      img: "https://res.cloudinary.com/diizw3dqm/image/upload/v1780012994/master-yi_dwqhal.webp",
       alt: "ABOUT_ME.PHRASES.2.ALT",
       phrase: "ABOUT_ME.PHRASES.2.PHRASE",
       author: "ABOUT_ME.PHRASES.2.AUTHOR"
     },
     {
       title: "ABOUT_ME.PHRASES.3.TITLE",
-      img: "assets/img/chester-bennington.webp",
+      img: "https://res.cloudinary.com/diizw3dqm/image/upload/v1780012991/chester-bennington_ctxppk.webp",
       alt: "ABOUT_ME.PHRASES.3.ALT",
       phrase: "ABOUT_ME.PHRASES.3.PHRASE",
       author: "ABOUT_ME.PHRASES.3.AUTHOR"
     },
     {
       title: "ABOUT_ME.PHRASES.4.TITLE",
-      img: "assets/img/thats-the-spirit.webp",
+      img: "https://res.cloudinary.com/diizw3dqm/image/upload/v1780012988/thats-the-spirit_bowhpa.webp",
       alt: "ABOUT_ME.PHRASES.4.ALT",
       phrase: "ABOUT_ME.PHRASES.4.PHRASE",
       author: "ABOUT_ME.PHRASES.4.AUTHOR"

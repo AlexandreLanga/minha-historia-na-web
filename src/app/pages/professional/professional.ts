@@ -29,35 +29,35 @@ const EXPERIENCES: Experience[] = [
     position: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.0.POSITION',
     period: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.0.PERIOD',
     description: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.0.DESCRIPTION',
-    logoUrl: 'assets/img/expresso-sao-miguel.webp'
+    logoUrl: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1780012992/expresso-sao-miguel_vfv1wb.webp'
   },
   {
     company: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.1.COMPANY',
     position: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.1.POSITION',
     period: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.1.PERIOD',
     description: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.1.DESCRIPTION',
-    logoUrl: 'assets/img/concert.webp'
+    logoUrl: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1780012992/concert_bummkz.webp'
   },
   {
     company: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.2.COMPANY',
     position: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.2.POSITION',
     period: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.2.PERIOD',
     description: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.2.DESCRIPTION',
-    logoUrl: 'assets/img/vision.webp'
+    logoUrl: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1780012989/vision_uxxhsv.webp'
   },
   {
     company: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.3.COMPANY',
     position: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.3.POSITION',
     period: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.3.PERIOD',
     description: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.3.DESCRIPTION',
-    logoUrl: 'assets/img/infogen.webp'
+    logoUrl: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1780012993/infogen_cerbpv.webp'
   },
   {
     company: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.4.COMPANY',
     position: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.4.POSITION',
     period: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.4.PERIOD',
     description: 'PROFESSIONAL.PROFESSIONAL_EXPERIENCE.4.DESCRIPTION',
-    logoUrl: 'assets/img/popiolski.webp'
+    logoUrl: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1780012987/popiolski_lbdxgd.webp'
   },
 ];
 
@@ -67,14 +67,14 @@ const EDUCATIONS: Education[] = [
     institution: 'PROFESSIONAL.EDUCATION.0.INSTITUTION',
     status: EducationStatus.IN_PROGRESS,
     period: 'PROFESSIONAL.EDUCATION.0.PERIOD',
-    logoUrl: 'assets/img/unochapeco.webp'
+    logoUrl: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1780012989/unochapeco_b3zre5.webp'
   },
   {
     course: 'PROFESSIONAL.EDUCATION.1.COURSE',
     institution: 'PROFESSIONAL.EDUCATION.1.INSTITUTION',
     status: EducationStatus.COMPLETED,
     period: 'PROFESSIONAL.EDUCATION.1.PERIOD',
-    logoUrl: 'assets/img/wizard.webp'
+    logoUrl: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1780012990/wizard_xxtrn0.webp'
   }
 ];
 

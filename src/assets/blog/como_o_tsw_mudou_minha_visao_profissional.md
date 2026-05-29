@@ -54,12 +54,12 @@ Definitivamente é um evento divisor de águas, como o pessoal brinca, existe um
 
 Além de preparar todos para novos desafios, desenvolvendo pessoas, **desmontando e remontando** várias e várias vezes, só resta **gratidão** para as próximas etapas.
 
-![alexandre](assets/img/alexandre.webp)
+![alexandre](https://res.cloudinary.com/diizw3dqm/image/upload/v1780009027/alexandre_rvyh6n.webp)
 
-![event](assets/img/event.webp)
+![event](https://res.cloudinary.com/diizw3dqm/image/upload/v1780009086/event_xhxtkj.webp)
 
-![agrotech](assets/img/agrotech.webp)
+![agrotech](https://res.cloudinary.com/diizw3dqm/image/upload/v1780009027/agrotech_uas6r7.webp)
 
-![construtech](assets/img/construtech.webp)
+![construtech](https://res.cloudinary.com/diizw3dqm/image/upload/v1780009103/construtech_mh0ypw.webp)
 
-Imagem gerada com IA estilo estúdio Ghibli no momento da premiação. [Link aqui](https://www.youtube.com/watch?v=qQ3bUXgvmMc&t=13626s).
+Imagem gerada com IA estilo estúdio Ghibli no momento da premiação. Link [aqui](https://www.youtube.com/watch?v=qQ3bUXgvmMc&t=13626s).
