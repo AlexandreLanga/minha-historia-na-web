@@ -225,7 +225,9 @@
     "SEARCH_PLACEHOLDER": "Search by title",
     "POSTS": {
       "STARTUP_WEEKEND_TITLE": "How Startup Weekend changed my professional vision",
-      "STARTUP_WEEKEND_SUMMARY": "Discover how Startup Weekend reshaped my professional perspective on entrepreneurship, results, and learnings."
+      "STARTUP_WEEKEND_SUMMARY": "Discover how Startup Weekend reshaped my professional perspective on entrepreneurship, results, and learnings.",
+      "PHP_VELHO_OESTE_TITLE": "My experience with PHP Velho Oeste 2026",
+      "PHP_VELHO_OESTE_SUMMARY": "Summary of the event, with insights and learnings that I take from yet another edition in which I participated."
     }
   }
 }
