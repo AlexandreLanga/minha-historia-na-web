@@ -98,7 +98,7 @@ export class AboutMe {
     },
     {
       id: 2,
-      tittle: 'THOOOONE',
+      tittle: 'THROOOONE',
       place: 'Allianz Parque - SP',
       year: 2024,
       plataform: 'youtube',
