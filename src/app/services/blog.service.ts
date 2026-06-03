@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, map, catchError, shareReplay } from 'rxjs';
+import { of } from 'rxjs';
 
 export interface Post {
   title: string;
@@ -8,30 +11,55 @@ export interface Post {
   slug: string;
 }
 
+interface ManifestPost {
+  title: string;
+  summary: string;
+  slug: string;
+  date: string;
+  file: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class BlogService {
-  getPosts(): Post[] {
-    return [
-      {
-        title: 'BLOG.POSTS.STARTUP_WEEKEND_TITLE',
-        date: new Date(2026, 4, 20),
-        markdownPath: 'assets/blog/como_o_tsw_mudou_minha_visao_profissional.md',
-        summary: 'BLOG.POSTS.STARTUP_WEEKEND_SUMMARY',
-        slug: 'como_o_tsw_mudou_minha_visao_profissional'
-      },
-      {
-        title: 'BLOG.POSTS.PHP_VELHO_OESTE_TITLE',
-        date: new Date(2026, 4, 31),
-        markdownPath: 'assets/blog/php_velho_oeste_2026_minha_experiencia.md',
-        summary: 'BLOG.POSTS.PHP_VELHO_OESTE_SUMMARY',
-        slug: 'minha_experiencia_com_o_php_velho_oeste_2026'
-      }
-    ];
+  private readonly MANIFEST_URL = 'https://raw.githubusercontent.com/AlexandreLanga/blog-content/main/manifest.json';
+  private readonly POSTS_BASE_URL = 'https://raw.githubusercontent.com/AlexandreLanga/blog-content/main/posts/';
+
+  constructor(private http: HttpClient) {}
+
+  getPosts(): Observable<Post[]> {
+    return this.http.get<{ posts: ManifestPost[] }>(this.MANIFEST_URL).pipe(
+      map(response => 
+        response.posts.map(post => ({
+          title: post.title,
+          summary: post.summary,
+          slug: post.slug,
+          date: this.parseLocalDate(post.date),
+          markdownPath: this.POSTS_BASE_URL + post.file
+        }))
+      ),
+      catchError(error => {
+        console.error('Erro ao carregar posts:', error);
+        return of([]);
+      }),
+      shareReplay(1)
+    );
   }
 
-  getPostBySlug(slug: string): Post | undefined {
-    return this.getPosts().find(post => post.slug === slug);
+  getPostBySlug(slug: string): Observable<Post | undefined> {
+    return this.getPosts().pipe(
+      map(posts => posts.find(post => post.slug === slug))
+    );
+  }
+
+  private parseLocalDate(dateStr: string): Date {
+    const [year, month, day] = dateStr.split('-').map(Number);
+
+    return new Date(
+      year,
+      month - 1, // Adjust month index (0-based)
+      day
+    );
   }
 }

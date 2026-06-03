@@ -1,10 +1,12 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { BlogService, Post } from '../../services/blog.service';
+import { Subject } from 'rxjs';
+import { takeUntil, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-blog-post',
@@ -13,7 +15,7 @@ import { BlogService, Post } from '../../services/blog.service';
   templateUrl: './blog-post.html',
   styleUrls: ['./blog-post.css'],
 })
-export class BlogPost implements OnInit {
+export class BlogPost implements OnInit, OnDestroy {
   post: Post | null = null;
   content = '';
   safeContent: SafeHtml = '';
@@ -21,6 +23,7 @@ export class BlogPost implements OnInit {
   showEmailOptions = false;
 
   private readonly feedbackEmail = 'alexandrelangadeveloper@gmail.com';
+  private destroy$ = new Subject<void>();
 
   constructor(
     private route: ActivatedRoute,
@@ -34,22 +37,43 @@ export class BlogPost implements OnInit {
   ngOnInit() {
     const slug = this.route.snapshot.paramMap.get('slug');
     if (slug) {
-      this.post = this.blogService.getPostBySlug(slug) || null;
-
-      this.translate.getTranslation('pt').subscribe(translations => {
-        if (this.post) {
-          this.post.title = this.translate.getParsedResult(translations, this.post.title);
-          this.post.summary = this.translate.getParsedResult(translations, this.post.summary);
-          this.loadContent();
-        }
-      });
+      this.blogService.getPostBySlug(slug)
+        .pipe(
+          switchMap(post => {
+            if (post) {
+              this.post = post;
+              return this.translate.getTranslation('pt');
+            }
+            throw new Error('Post not found');
+          }),
+          takeUntil(this.destroy$)
+        )
+        .subscribe({
+          next: (translations) => {
+            if (this.post) {
+              this.post.title = this.translate.getParsedResult(translations, this.post.title);
+              this.post.summary = this.translate.getParsedResult(translations, this.post.summary);
+              this.loadContent();
+            }
+          },
+          error: (err) => {
+            console.error('Error loading post:', err);
+          }
+        });
     }
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   private loadContent() {
     if (!this.post) return;
     this.isLoading = true;
-    this.http.get(this.post.markdownPath, { responseType: 'text' }).subscribe({
+    this.http.get(this.post.markdownPath, { responseType: 'text' })
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
       next: (content) => {
         this.content = content;
         this.safeContent = this.renderMarkdown(content);

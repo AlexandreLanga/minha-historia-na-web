@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, signal, computed, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -11,32 +11,42 @@ import { BlogService, Post } from '../../services/blog.service';
   templateUrl: './blog.html',
   styleUrls: ['./blog.css'],
 })
-export class Blog {
-  posts: Post[];
-  searchTerm = '';
+export class Blog implements OnInit {
+  posts = signal<Post[]>([]);
+  searchTerm = signal('');
 
-  constructor(private router: Router, private blogService: BlogService, private translate: TranslateService) {
-    this.posts = this.blogService.getPosts();
+  filteredPosts = computed(() => {
+    const posts = this.posts();
+    const term = this.searchTerm().trim().toLowerCase();
+    
+    if (!term) {
+      return posts;
+    }
+    
+    return posts.filter(post => {
+      const titleTranslated = this.translate.instant(post.title).toLowerCase();
+      return titleTranslated.includes(term);
+    });
+  });
+
+  constructor(
+    private router: Router,
+    private blogService: BlogService,
+    private translate: TranslateService
+  ) {}
+
+  ngOnInit(): void {
+    this.blogService.getPosts().subscribe(posts => {
+      this.posts.set(posts);
+    });
   }
 
   get isEnglish(): boolean {
     return this.translate.currentLang === 'en';
   }
 
-  get filteredPosts(): Post[] {
-    const term = this.searchTerm.trim().toLowerCase();
-    if (!term) {
-      return this.posts;
-    }
-    
-    return this.posts.filter(post => {
-      const titleTranslated = this.translate.instant(post.title).toLowerCase();
-      return titleTranslated.includes(term);
-    });
-  }
-
   onSearch(value: string) {
-    this.searchTerm = value;
+    this.searchTerm.set(value);
   }
 
   selectPost(post: Post) {
