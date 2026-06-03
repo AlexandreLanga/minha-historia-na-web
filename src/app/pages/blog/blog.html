@@ -4,7 +4,7 @@
   <div class="search-bar">
     <input
       type="text"
-      [value]="searchTerm"
+      [value]="searchTerm()"
       (input)="onSearch($any($event.target).value)"
       placeholder="{{ 'BLOG.SEARCH_PLACEHOLDER' | translate }}"
       aria-label="Search posts by title"
@@ -19,7 +19,7 @@
   </div>
 
   <div class="posts-list">
-    <div class="post-item" *ngFor="let post of filteredPosts" (click)="selectPost(post)">
+    <div class="post-item" *ngFor="let post of filteredPosts()" (click)="selectPost(post)">
       <h2>{{ post.title | translate }}</h2>
       <p class="date">{{ post.date | date }}</p>
       <p class="summary">{{ post.summary | translate }}</p>

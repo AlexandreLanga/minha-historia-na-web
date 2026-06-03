@@ -1,6 +1,7 @@
 import { inject } from '@angular/core';
 import { RenderMode, ServerRoute } from '@angular/ssr';
 import { BlogService } from './services/blog.service';
+import { firstValueFrom } from 'rxjs';
 
 export const serverRoutes: ServerRoute[] = [
   {
@@ -8,7 +9,8 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
     async getPrerenderParams() {
       const blogService = inject(BlogService);
-      return blogService.getPosts().map(post => ({ slug: post.slug }));
+      const posts = await firstValueFrom(blogService.getPosts());
+      return posts.map(post => ({ slug: post.slug }));
     }
   },
   {
