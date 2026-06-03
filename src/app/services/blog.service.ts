@@ -35,7 +35,7 @@ export class BlogService {
           title: post.title,
           summary: post.summary,
           slug: post.slug,
-          date: new Date(post.date),
+          date: this.parseLocalDate(post.date),
           markdownPath: this.POSTS_BASE_URL + post.file
         }))
       ),
@@ -50,6 +50,16 @@ export class BlogService {
   getPostBySlug(slug: string): Observable<Post | undefined> {
     return this.getPosts().pipe(
       map(posts => posts.find(post => post.slug === slug))
+    );
+  }
+
+  private parseLocalDate(dateStr: string): Date {
+    const [year, month, day] = dateStr.split('-').map(Number);
+
+    return new Date(
+      year,
+      month - 1, // Adjust month index (0-based)
+      day
     );
   }
 }
