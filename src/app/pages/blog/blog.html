@@ -1,14 +1,87 @@
 <div class="blog-container">
-  <h1>{{ "BLOG.TITLE" | translate }}</h1>
-  <br>
-  <div class="search-bar">
-    <input
-      type="text"
-      [value]="searchTerm()"
-      (input)="onSearch($any($event.target).value)"
-      placeholder="{{ 'BLOG.SEARCH_PLACEHOLDER' | translate }}"
-      aria-label="Search posts by title"
-    />
+  <div class="header">
+    <h1>{{ "BLOG.TITLE" | translate }}</h1>
+    <button type="button" class="filters-toggle-button" (click)="toggleFilters()" [attr.aria-expanded]="filtersOpen()">
+      {{ filtersOpen() ? ('BLOG.HIDE_FILTERS' | translate) : ('BLOG.SHOW_FILTERS' | translate) }}
+    </button>
+  </div>
+
+  <div class="filters-panel" *ngIf="filtersOpen()">
+    <div class="filter-search-bar">
+      <input
+        type="text"
+        [value]="searchTerm()"
+        (input)="onSearch($any($event.target).value)"
+        placeholder="{{ 'BLOG.SEARCH_PLACEHOLDER' | translate }}"
+      />
+    </div>
+    <div class="date-row">
+      <div class="date-inputs">
+      <input
+        type="date"
+        [value]="dateFrom()"
+      [attr.lang]="isEnglish ? 'en' : 'pt'"
+      (input)="onDateChange($any($event.target).value, 'from')"
+      placeholder="{{ 'BLOG.DATE_FROM_PLACEHOLDER' | translate }}"
+      />
+      <input
+      type="date"
+      [value]="dateTo()"
+      [attr.lang]="isEnglish ? 'en' : 'pt'"
+        (input)="onDateChange($any($event.target).value, 'to')"
+        placeholder="{{ 'BLOG.DATE_TO_PLACEHOLDER' | translate }}"
+      />
+    </div>
+    <button
+      type="button"
+      class="clear-filters"
+      *ngIf="dateFrom() || dateTo()"
+      (click)="clearDateFilters()"
+    >
+      {{ 'BLOG.CLEAR_DATE_FILTERS' | translate }}
+    </button>
+    </div>
+
+    <div class="tag-dropdown full-width">
+    <button type="button" class="tag-dropdown-button" (click)="toggleTagDropdown()">
+      {{ 'BLOG.TAG_FILTER_LABEL' | translate }}
+      <span *ngIf="selectedTags().length">({{ selectedTags().length }})</span>
+    </button>
+    <div class="dropdown-panel" *ngIf="tagDropdownOpen()">
+      <input
+        type="text"
+        [value]="tagSearchTerm()"
+        (input)="onTagSearch($any($event.target).value)"
+        placeholder="{{ 'BLOG.TAG_SEARCH_PLACEHOLDER' | translate }}"
+      />
+      <div class="dropdown-list" *ngIf="filteredAvailableTags().length; else noTagResults">
+        <button
+          type="button"
+          class="dropdown-item"
+          *ngFor="let tag of filteredAvailableTags()"
+          [class.selected]="selectedTags().includes(tag)"
+          (click)="toggleTag(tag)"
+        >
+          {{ tag }}
+        </button>
+      </div>
+      <ng-template #noTagResults>
+        <div class="no-tags">{{ 'BLOG.TAG_NO_RESULTS' | translate }}</div>
+      </ng-template>
+      <button
+        type="button"
+        class="clear-filters"
+        *ngIf="selectedTags().length"
+        (click)="clearTags()"
+      >
+        {{ 'BLOG.CLEAR_TAGS' | translate }}
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="selectedTags().length" class="selected-tags">
+    <span *ngFor="let tag of selectedTags()" class="tag-pill">#{{ tag }}</span>
+  </div>
   </div>
 
   <div *ngIf="isEnglish" class="warning-banner">
@@ -23,6 +96,9 @@
       <h2>{{ post.title | translate }}</h2>
       <p class="date">{{ post.date | date }}</p>
       <p class="summary">{{ post.summary | translate }}</p>
+      <div class="post-tags" *ngIf="post.tags.length">
+        <span *ngFor="let tag of post.tags">#{{ tag }}</span>
+      </div>
     </div>
   </div>
 </div>

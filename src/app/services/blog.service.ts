@@ -9,6 +9,7 @@ export interface Post {
   markdownPath: string;
   summary: string;
   slug: string;
+  tags: string[];
 }
 
 interface ManifestPost {
@@ -17,6 +18,7 @@ interface ManifestPost {
   slug: string;
   date: string;
   file: string;
+  tags?: string[];
 }
 
 @Injectable({
@@ -36,7 +38,8 @@ export class BlogService {
           summary: post.summary,
           slug: post.slug,
           date: this.parseLocalDate(post.date),
-          markdownPath: this.POSTS_BASE_URL + post.file
+          markdownPath: this.POSTS_BASE_URL + post.file,
+          tags: post.tags ?? []
         }))
       ),
       catchError(error => {
