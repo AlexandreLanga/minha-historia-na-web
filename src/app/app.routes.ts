@@ -14,7 +14,7 @@ export const routes: Routes = [
   { path: 'about-me', component: AboutMe },
   { path: 'blog', component: Blog },
   { path: 'blog/:slug', component: BlogPost },
-  { path: 'fale-com-a-milu', component: TalkToMilu },
+  { path: 'talk-to-milu', component: TalkToMilu },
 
   { path: '', pathMatch: 'full', component: Dashboard },
   { path: '**', redirectTo: 'dashboard' }
