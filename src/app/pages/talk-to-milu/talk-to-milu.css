@@ -1,0 +1,133 @@
+.talk-to-milu-container {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milu-panel {
+  width: min(980px, 100%);
+  background: #eeeeee;
+  color: #333;
+  border-radius: 8px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.milu-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 8px;
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.milu-image {
+  width: 100%;
+  height: 100%;
+  max-height: 360px;
+  object-fit: cover;
+}
+
+.milu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.milu-content h1 {
+  color: #222831;
+  font-size: 2rem;
+  text-align: center;
+  background-color: aquamarine;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.milu-content p {
+  color: #393e46;
+  line-height: 1.6;
+}
+
+.milu-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.milu-form label {
+  color: #222831;
+  font-weight: 700;
+}
+
+.milu-form textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 140px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #222831;
+  font: inherit;
+}
+
+.milu-form textarea:focus {
+  outline: none;
+  border-color: #00adb5;
+  box-shadow: 0 0 0 3px rgba(0, 173, 181, 0.18);
+}
+
+.milu-form button {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 0;
+  border-radius: 8px;
+  background: #2885e2;
+  color: #ffffff;
+  padding: 0.8rem 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+.milu-form button:hover:not(:disabled) {
+  background: #176bbd;
+}
+
+.milu-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.milu-message {
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 5px solid;
+}
+
+.milu-message.success {
+  background: #e6fffb;
+  border-color: #00adb5;
+}
+
+.milu-message.error {
+  background: #fff1f2;
+  border-color: #e11d48;
+}
+
+@media (max-width: 800px) {
+  .milu-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .milu-image-wrapper {
+    min-height: 260px;
+  }
+}

@@ -6,7 +6,8 @@
     "MY_HISTORY": "Minha história",
     "PROFESSIONAL": "Profissional",
     "ABOUT_ME": "Sobre mim",
-    "BLOG": "Blog"
+    "BLOG": "Blog",
+    "TALK_TO_MILU": "Fale com a Milu"
   },
   "DASHBOARD": {
     "INTRODUCTION": "\"Acredito no poder da tecnologia de unir as pessoas\"",
@@ -215,6 +216,22 @@
     },
     "SUBTITLES":{
       "MOTIVATION_QUESTION": "Se pudesse se descrever em 4 pessoas/personagens que admira e se inspira, quem seriam?"
+    }
+  },
+  "TALK_TO_MILU": {
+    "TITLE": "Fale com a Milu",
+    "DESCRIPTION": "Envie uma pergunta para a Milu e aguarde a resposta.",
+    "LABEL": "Sua pergunta",
+    "PLACEHOLDER": "O que você quer perguntar para a Milu?",
+    "SEND": "Enviar pergunta",
+    "SENDING": "Enviando...",
+    "SUCCESS": "A Milu respondeu com sucesso.",
+    "ERROR": "Não foi possível falar com a Milu agora. Tente novamente em instantes.",
+    "IMAGE_ALT": {
+      "initial": "Milu aguardando uma pergunta",
+      "loading": "Milu pensando na resposta",
+      "success": "Milu depois de responder",
+      "error": "Milu quando algo deu errado"
     }
   },
   "BLOG": {
