@@ -14,7 +14,7 @@ type MiluRequestStatus = 'initial' | 'loading' | 'success' | 'error';
   styleUrl: './talk-to-milu.css',
 })
 export class TalkToMilu {
-  private readonly apiUrl = 'https://miluapi.onrender.com/';
+  private readonly apiUrl = 'https://miluapi.onrender.com/chat';
 
   question = '';
   status: MiluRequestStatus = 'initial';
