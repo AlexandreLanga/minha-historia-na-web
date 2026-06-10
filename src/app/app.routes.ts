@@ -5,6 +5,7 @@ import { Professional } from './pages/professional/professional';
 import { AboutMe } from './pages/about-me/about-me';
 import { Blog } from './pages/blog/blog';
 import { BlogPost } from './pages/blog-post/blog-post';
+import { TalkToMilu } from './pages/talk-to-milu/talk-to-milu';
 
 export const routes: Routes = [
   { path: 'dashboard', component: Dashboard },
@@ -13,6 +14,7 @@ export const routes: Routes = [
   { path: 'about-me', component: AboutMe },
   { path: 'blog', component: Blog },
   { path: 'blog/:slug', component: BlogPost },
+  { path: 'fale-com-a-milu', component: TalkToMilu },
 
   { path: '', pathMatch: 'full', component: Dashboard },
   { path: '**', redirectTo: 'dashboard' }

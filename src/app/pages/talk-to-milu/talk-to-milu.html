@@ -1,0 +1,42 @@
+<div class="talk-to-milu-container">
+  <section class="milu-panel">
+    <div class="milu-image-wrapper">
+      <img
+        [src]="currentImage"
+        [alt]="'TALK_TO_MILU.IMAGE_ALT.' + status | translate"
+        class="milu-image"
+      />
+    </div>
+
+    <div class="milu-content">
+      <h1>{{ "TALK_TO_MILU.TITLE" | translate }}</h1>
+      <p>{{ "TALK_TO_MILU.DESCRIPTION" | translate }}</p>
+
+      <form class="milu-form" (ngSubmit)="askMilu()">
+        <label for="milu-question">{{ "TALK_TO_MILU.LABEL" | translate }}</label>
+        <textarea
+          id="milu-question"
+          name="miluQuestion"
+          [(ngModel)]="question"
+          [placeholder]="'TALK_TO_MILU.PLACEHOLDER' | translate"
+          [disabled]="status === 'loading'"
+          rows="5"
+        ></textarea>
+
+        <button type="submit" [disabled]="!question.trim() || status === 'loading'">
+          <i class="fas fa-paper-plane"></i>
+          <span *ngIf="status !== 'loading'">{{ "TALK_TO_MILU.SEND" | translate }}</span>
+          <span *ngIf="status === 'loading'">{{ "TALK_TO_MILU.SENDING" | translate }}</span>
+        </button>
+      </form>
+
+      <div class="milu-message success" *ngIf="status === 'success'">
+        <p>{{ answer || ("TALK_TO_MILU.SUCCESS" | translate) }}</p>
+      </div>
+
+      <div class="milu-message error" *ngIf="status === 'error'">
+        <p>{{ "TALK_TO_MILU.ERROR" | translate }}</p>
+      </div>
+    </div>
+  </section>
+</div>

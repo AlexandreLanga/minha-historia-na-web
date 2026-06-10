@@ -6,7 +6,8 @@
     "MY_HISTORY": "My history",
     "PROFESSIONAL": "Professional",
     "ABOUT_ME": "About me",
-    "BLOG": "Blog"
+    "BLOG": "Blog",
+    "TALK_TO_MILU": "Talk to Milu"
   },
   "DASHBOARD": {
     "INTRODUCTION": "\"I believe in the power of technology to bring people together\"",
@@ -215,6 +216,22 @@
     },
     "SUBTITLES": {
       "MOTIVATION_QUESTION": "If you could describe yourself through 4 people/characters you admire and draw inspiration from, who would they be?"
+    }
+  },
+  "TALK_TO_MILU": {
+    "TITLE": "Talk to Milu",
+    "DESCRIPTION": "Send a question to Milu and wait for the answer.",
+    "LABEL": "Your question",
+    "PLACEHOLDER": "What do you want to ask Milu?",
+    "SEND": "Send question",
+    "SENDING": "Sending...",
+    "SUCCESS": "Milu answered successfully.",
+    "ERROR": "It was not possible to talk to Milu right now. Try again in a moment.",
+    "IMAGE_ALT": {
+      "initial": "Milu waiting for a question",
+      "loading": "Milu thinking about the answer",
+      "success": "Milu after answering",
+      "error": "Milu when something went wrong"
     }
   },
   "BLOG": {
