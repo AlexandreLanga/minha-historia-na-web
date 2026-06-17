@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 type MiluRequestStatus = 'initial' | 'loading' | 'success' | 'error';
 
@@ -27,7 +27,7 @@ export class TalkToMilu {
     error:   'https://res.cloudinary.com/diizw3dqm/image/upload/v1781131087/sleepy-milu_o1njbg.png',
   };
 
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private translate: TranslateService) {}
 
   get currentImage(): string {
     return this.miluImages[this.status];
@@ -43,7 +43,7 @@ export class TalkToMilu {
     this.status = 'loading';
     this.answer = '';
 
-    this.http.post<MiluResponse>(this.apiUrl, { message }).subscribe({
+    this.http.post<MiluResponse>(this.apiUrl, { message, language: this.translate.currentLang }).subscribe({
       next: (response) => {
         this.status = 'success';
         this.answer = this.getResponseMessage(response);
