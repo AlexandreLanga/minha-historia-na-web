@@ -171,6 +171,10 @@ export class BlogPost implements OnInit, OnDestroy {
       return trimmed;
     }
 
+    if (/^\[audio\]/i.test(trimmed)) {
+      return this.parseAudio(block);
+    }
+
     if (/^#{1,6}\s+/.test(trimmed)) {
       const match = trimmed.match(/^(#{1,6})\s+(.*)$/);
       if (!match) return `<p>${this.parseInline(trimmed)}</p>`;
@@ -295,6 +299,51 @@ export class BlogPost implements OnInit, OnDestroy {
     result = result.replace(/_(.*?)_/g, '<em>$1</em>');
     result = result.replace(/`([^`]+)`/g, '<code>$1</code>');
     return result;
+  }
+
+  private parseAudio(block: string): string {
+    const lines = block.split('\n');
+    const audioSources: { src: string; type: string }[] = [];
+
+    for (let i = 1; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (/^\[\/audio\]/i.test(line)) {
+        break;
+      }
+      if (line && !line.startsWith('[audio')) {
+        // Parse format: src="file.mp3" type="audio/mpeg" or file.mp3|audio/mpeg
+        const pipeMatch = line.match(/^(.+?)\|(.+?)$/);
+        if (pipeMatch) {
+          audioSources.push({
+            src: pipeMatch[1].trim(),
+            type: pipeMatch[2].trim()
+          });
+        } else {
+          // Try to parse src="..." type="..." format
+          const srcMatch = line.match(/src=["']([^"']+)["']/);
+          const typeMatch = line.match(/type=["']([^"']+)["']/);
+          if (srcMatch) {
+            audioSources.push({
+              src: srcMatch[1],
+              type: typeMatch ? typeMatch[1] : 'audio/mpeg'
+            });
+          }
+        }
+      }
+    }
+
+    if (audioSources.length === 0) {
+      return '';
+    }
+
+    const sourcesTags = audioSources
+      .map(source => `<source src="${this.escapeHtml(source.src)}" type="${source.type}">`)
+      .join('\n');
+
+    return `<audio controls>
+${sourcesTags}
+Your browser does not support the audio element
+</audio>`;
   }
 
   private escapeHtml(text: string): string {
