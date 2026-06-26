@@ -333,3 +333,36 @@
   margin: 1.5rem auto;
   border-radius: 12px;
 }
+
+:host ::ng-deep .markdown-content audio {
+  display: block;
+  max-width: 100%;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.1);
+  padding: 12px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+:host ::ng-deep .markdown-content audio::-webkit-media-controls-panel {
+  background-color: #ffffff;
+}
+
+:host ::ng-deep .markdown-content audio::-webkit-media-controls-play-button {
+  background-color: #3498db;
+  border-radius: 4px;
+}
+
+:host ::ng-deep .markdown-content audio::-webkit-media-controls-volume-slider {
+  background-color: #3498db;
+}
+
+:host ::ng-deep .markdown-content code {
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: #d63384;
+}
