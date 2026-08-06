@@ -9,8 +9,17 @@
     </div>
 
     <div class="milu-content">
-      <h1>{{ "TALK_TO_MILU.TITLE" | translate }}</h1>
-      <p>{{ "TALK_TO_MILU.DESCRIPTION" | translate }}</p>
+      <div class="milu-header-group">
+        <div>
+          <h1>{{ "TALK_TO_MILU.TITLE" | translate }}</h1>
+          <p>{{ "TALK_TO_MILU.DESCRIPTION" | translate }}</p>
+        </div>
+
+        <button class="info-button" type="button" (click)="openInstructions()">
+          <i class="fas fa-lightbulb"></i>
+          {{ "TALK_TO_MILU.INSTRUCTIONS_BUTTON" | translate }}
+        </button>
+      </div>
 
       <form class="milu-form" (ngSubmit)="askMilu()">
         <label for="milu-question">{{ "TALK_TO_MILU.LABEL" | translate }}</label>
@@ -39,4 +48,41 @@
       </div>
     </div>
   </section>
+
+  <div class="modal-overlay" *ngIf="modalOpen" (click)="closeInstructions()">
+    <section class="milu-modal" (click)="$event.stopPropagation()" role="dialog" aria-modal="true" aria-labelledby="milu-modal-title">
+      <div class="modal-top">
+        <div>
+          <span class="modal-badge">{{ "TALK_TO_MILU.MODAL_BADGE" | translate }}</span>
+          <h2 id="milu-modal-title">{{ "TALK_TO_MILU.MODAL_TITLE" | translate }}</h2>
+        </div>
+        <button class="modal-close" type="button" [attr.aria-label]="'TALK_TO_MILU.MODAL_CLOSE' | translate" (click)="closeInstructions()">
+          &times;
+        </button>
+      </div>
+
+      <p class="modal-description">{{ "TALK_TO_MILU.MODAL_DESCRIPTION" | translate }}</p>
+
+      <div class="modal-grid">
+        <article>
+          <h3>{{ "TALK_TO_MILU.MODAL_CONTEXT_TITLE" | translate }}</h3>
+          <p>{{ "TALK_TO_MILU.MODAL_CONTEXT_TEXT" | translate }}</p>
+        </article>
+
+        <article>
+          <h3>{{ "TALK_TO_MILU.MODAL_ASK_TITLE" | translate }}</h3>
+          <ul>
+            <li>{{ "TALK_TO_MILU.SUGGESTION_1" | translate }}</li>
+            <li>{{ "TALK_TO_MILU.SUGGESTION_2" | translate }}</li>
+            <li>{{ "TALK_TO_MILU.SUGGESTION_3" | translate }}</li>
+            <li>{{ "TALK_TO_MILU.SUGGESTION_4" | translate }}</li>
+          </ul>
+        </article>
+      </div>
+
+      <button class="modal-action" type="button" (click)="closeInstructions()">
+        {{ "TALK_TO_MILU.MODAL_CLOSE" | translate }}
+      </button>
+    </section>
+  </div>
 </div>

@@ -94,11 +94,177 @@
   padding: 0.8rem 1.25rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.3s ease, opacity 0.3s ease;
+  transition: background 0.3s ease, opacity 0.3s ease, transform 0.2s ease;
 }
 
 .milu-form button:hover:not(:disabled) {
   background: #176bbd;
+  transform: translateY(-1px);
+}
+
+.info-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid rgba(34, 40, 49, 0.12);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #222831;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(34, 40, 49, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.info-button:hover {
+  background: #f0f7ff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(34, 40, 49, 0.12);
+}
+
+.milu-header-group {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: rgba(12, 20, 35, 0.55);
+  z-index: 50;
+}
+
+.milu-modal {
+  width: min(720px, 100%);
+  max-height: min(90vh, 760px);
+  overflow: auto;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 24px 80px rgba(16, 40, 80, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.modal-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.modal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f4c81;
+  background: rgba(11, 110, 183, 0.1);
+}
+
+.milu-modal h2 {
+  margin: 0.2rem 0 0.5rem;
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  line-height: 1.1;
+  color: #102a43;
+}
+
+.modal-close {
+  border: 0;
+  background: transparent;
+  color: #102a43;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.modal-description {
+  margin: 1rem 0 1.5rem;
+  color: #334e68;
+  line-height: 1.8;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.milu-modal article {
+  padding: 1.35rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(16, 42, 73, 0.08);
+}
+
+.milu-modal article p {
+  color: #243447;
+}
+
+.milu-modal h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.85rem;
+  color: #102a43;
+}
+
+.milu-modal ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #334e68;
+  line-height: 1.75;
+}
+
+.milu-modal li {
+  margin-bottom: 0.75rem;
+}
+
+.modal-action {
+  width: 100%;
+  margin-top: 1.75rem;
+  padding: 1rem 1.2rem;
+  border: 0;
+  border-radius: 999px;
+  background: #1b6ca8;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.modal-action:hover {
+  background: #144f7a;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 920px) {
+  .milu-header-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .milu-modal {
+    padding: 1.5rem;
+  }
+
+  .modal-badge {
+    width: fit-content;
+  }
 }
 
 .milu-form button:disabled {

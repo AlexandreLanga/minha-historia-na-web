@@ -19,6 +19,7 @@ export class TalkToMilu {
   question = '';
   status: MiluRequestStatus = 'initial';
   answer = '';
+  modalOpen = false;
 
   readonly miluImages: Record<MiluRequestStatus, string> = {
     initial: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1781131087/hello-milu_jqc352.png',
@@ -31,6 +32,14 @@ export class TalkToMilu {
 
   get currentImage(): string {
     return this.miluImages[this.status];
+  }
+
+  openInstructions(): void {
+    this.modalOpen = true;
+  }
+
+  closeInstructions(): void {
+    this.modalOpen = false;
   }
 
   askMilu(): void {
