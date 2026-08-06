@@ -6,7 +6,8 @@
     "MY_HISTORY": "My history",
     "PROFESSIONAL": "Professional",
     "ABOUT_ME": "About me",
-    "BLOG": "Blog"
+    "BLOG": "Blog",
+    "TALK_TO_MILU": "Talk to Milu"
   },
   "DASHBOARD": {
     "INTRODUCTION": "\"I believe in the power of technology to bring people together\"",
@@ -217,15 +218,59 @@
       "MOTIVATION_QUESTION": "If you could describe yourself through 4 people/characters you admire and draw inspiration from, who would they be?"
     }
   },
+  "TALK_TO_MILU": {
+    "TITLE": "Talk to Milu",
+    "DESCRIPTION": "Send a question to Milu and wait for the answer.",
+    "LABEL": "Your question",
+    "PLACEHOLDER": "What do you want to ask Milu?",
+    "SEND": "Send question",
+    "SENDING": "Sending...",
+    "SUCCESS": "Milu answered successfully.",
+    "ERROR": "It was not possible to talk to Milu right now. Try again in a moment.",
+    "INSTRUCTIONS_BUTTON": "How it works?",
+    "MODAL_BADGE": "Instructions",
+    "MODAL_TITLE": "Meet Milu",
+    "MODAL_DESCRIPTION": "Milu is an AI assistant specialized in Alexandre's portfolio and career. She can also talk about herself and help you explore the site's content.",
+    "MODAL_CONTEXT_TITLE": "About Milu",
+    "MODAL_CONTEXT_TEXT": "Milu may take a little time to respond on the first interaction, as she is usually sleeping. She has a friendly and cheerful profile, and will always try to respond clearly, happily, and objectively. If she doesn't know the answer, she will say she doesn't know, but will try to give you an answer that helps and makes sense. Milu will respond in the language selected in the side menu.",
+    "MODAL_ASK_TITLE": "Suggested questions",
+    "SUGGESTION_1": "What is the story behind this site?",
+    "SUGGESTION_2": "Which skills and technologies does Alexandre work with today?",
+    "SUGGESTION_3": "Tell me about the content of the 'My History' section.",
+    "SUGGESTION_4": "Tell me about your family.",
+    "MODAL_CLOSE": "Got it, close",
+    "IMAGE_ALT": {
+      "initial": "Milu waiting for a question",
+      "loading": "Milu thinking about the answer",
+      "success": "Milu after answering",
+      "error": "Milu when something went wrong"
+    }
+  },
   "BLOG": {
     "TITLE": "Programming Blog",
     "MAX_POSTS": "Maximum of 5 posts reached.",
     "BACK": "Back",
     "LOADING": "Loading post...",
     "SEARCH_PLACEHOLDER": "Search by title",
+    "TAG_FILTER_LABEL": "Filter tags",
+    "TAG_SEARCH_PLACEHOLDER": "Search tags",
+    "DATE_FILTER_LABEL": "Filter by date",
+    "DATE_FROM_PLACEHOLDER": "dd/mm/yyyy",
+    "DATE_TO_PLACEHOLDER": "dd/mm/yyyy",
+    "CLEAR_DATE_FILTERS": "Clear date",
+    "SHOW_FILTERS": "Show filters",
+    "HIDE_FILTERS": "Hide filters",
+    "CLEAR_TAGS": "Clear",
+    "TAG_NO_RESULTS": "No tags found",
     "POSTS": {
       "STARTUP_WEEKEND_TITLE": "How Startup Weekend changed my professional vision",
-      "STARTUP_WEEKEND_SUMMARY": "Discover how Startup Weekend reshaped my professional perspective on entrepreneurship, results, and learnings."
+      "STARTUP_WEEKEND_SUMMARY": "Discover how Startup Weekend reshaped my professional perspective on entrepreneurship, results, and learnings.",
+      "PHP_VELHO_OESTE_TITLE": "My experience with PHP Velho Oeste 2026",
+      "PHP_VELHO_OESTE_SUMMARY": "Summary of the event, with insights and learnings that I take from yet another edition in which I participated.",
+      "PYTHON_E_IA_TITLE": "New Interests Unlocked! Python and AI",
+      "PYTHON_E_IA_SUMMARY": "Understand how learning Python and Artificial Intelligence has been a journey of discoveries, challenges, and personal and professional growth, opening doors to a promising future in technology.",
+      "ARENA_GEEK_TITLE": "The light symbiosis of personal culture and professional life - Arena Geek 2026",
+      "ARENA_GEEK_SUMMARY": "Discover how Arena Geek 2026 provided me with a unique experience, where personal culture and professional life intertwine, revealing valuable insights about innovation, creativity, and the impact of technology on society."
     }
   }
 }

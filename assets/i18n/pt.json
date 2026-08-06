@@ -6,7 +6,8 @@
     "MY_HISTORY": "Minha história",
     "PROFESSIONAL": "Profissional",
     "ABOUT_ME": "Sobre mim",
-    "BLOG": "Blog"
+    "BLOG": "Blog",
+    "TALK_TO_MILU": "Fale com a Milu"
   },
   "DASHBOARD": {
     "INTRODUCTION": "\"Acredito no poder da tecnologia de unir as pessoas\"",
@@ -217,15 +218,59 @@
       "MOTIVATION_QUESTION": "Se pudesse se descrever em 4 pessoas/personagens que admira e se inspira, quem seriam?"
     }
   },
+  "TALK_TO_MILU": {
+    "TITLE": "Fale com a Milu",
+    "DESCRIPTION": "Envie uma pergunta para a Milu e aguarde a resposta.",
+    "LABEL": "Sua pergunta",
+    "PLACEHOLDER": "O que você quer perguntar para a Milu?",
+    "SEND": "Enviar pergunta",
+    "SENDING": "Enviando...",
+    "SUCCESS": "A Milu respondeu com sucesso.",
+    "ERROR": "Não foi possível falar com a Milu agora. Tente novamente em instantes.",
+    "INSTRUCTIONS_BUTTON": "Como funciona?",
+    "MODAL_BADGE": "Instruções",
+    "MODAL_TITLE": "Conheça a Milu",
+    "MODAL_DESCRIPTION": "A Milu é uma assistente de IA especializada no portfólio e na trajetória do Alexandre. Ela também pode falar sobre si mesma e ajudar você a explorar o conteúdo do site.",
+    "MODAL_CONTEXT_TITLE": "Sobre a Milu",
+    "MODAL_CONTEXT_TEXT": "A Milu pode demorar um pouco para responder na primeira interação, pois ela geralmente está dormindo. Ela tem um perfil amigavél e alegre, e sempre vai tentar responder de forma clara, feliz e objetiva. Se ela não souber a resposta, ela vai dizer que não sabe, mas vai tentar te dar uma resposta que ajude e faça sentido. A Milu responderá no idioma selecionado no menu lateral.",
+    "MODAL_ASK_TITLE": "Sugestões de perguntas",
+    "SUGGESTION_1": "Qual é a história por trás desse site?",
+    "SUGGESTION_2": "Quais habilidades e tecnologias o Alexandre trabalha hoje?",
+    "SUGGESTION_3": "Me diga qual é, e sobre o conteúdo da aba 'Minha História'.",
+    "SUGGESTION_4": "Me conte sobre a sua família.",
+    "MODAL_CLOSE": "Entendi, fechar",
+    "IMAGE_ALT": {
+      "initial": "Milu aguardando uma pergunta",
+      "loading": "Milu pensando na resposta",
+      "success": "Milu depois de responder",
+      "error": "Milu quando algo deu errado"
+    }
+  },
   "BLOG": {
     "TITLE": "Blog de Programação",
     "MAX_POSTS": "Máximo de 5 postagens atingido.",
     "BACK": "Voltar",
     "LOADING": "Carregando post...",
     "SEARCH_PLACEHOLDER": "Buscar por título",
+    "TAG_FILTER_LABEL": "Filtrar tags",
+    "TAG_SEARCH_PLACEHOLDER": "Buscar tags",
+    "DATE_FILTER_LABEL": "Filtrar por data",
+    "DATE_FROM_PLACEHOLDER": "dd/mm/aaaa",
+    "DATE_TO_PLACEHOLDER": "dd/mm/aaaa",
+    "CLEAR_DATE_FILTERS": "Limpar data",
+    "SHOW_FILTERS": "Mostrar filtros",
+    "HIDE_FILTERS": "Ocultar filtros",
+    "CLEAR_TAGS": "Limpar",
+    "TAG_NO_RESULTS": "Nenhuma tag encontrada",
     "POSTS":{
       "STARTUP_WEEKEND_TITLE": "Como o Startup Weekend mudou minha visão profissional",
-      "STARTUP_WEEKEND_SUMMARY": "Descubra como o Startup Weekend reformulou minha perspectiva profissional sobre empreendedorismo, resultados e aprendizados."
+      "STARTUP_WEEKEND_SUMMARY": "Descubra como o Startup Weekend reformulou minha perspectiva profissional sobre empreendedorismo, resultados e aprendizados.",
+      "PHP_VELHO_OESTE_TITLE": "Minha experiência com o PHP Velho Oeste 2026",
+      "PHP_VELHO_OESTE_SUMMARY": "Resumo do evento, com insights e aprendizados que tiro de mais uma edição em que participei.",
+      "PYTHON_E_IA_TITLE": "Novos interesses desbloqueados! Python e IA",
+      "PYTHON_E_IA_SUMMARY": "Entenda como o aprendizado de Python e Inteligência Artificial tem sido uma jornada de descobertas, desafios e crescimento pessoal e profissional, abrindo portas para um futuro promissor na tecnologia.",
+      "ARENA_GEEK_TITLE": "A leve simbiose da cultura pessoal e da vida profissional - Arena Geek 2026",
+      "ARENA_GEEK_SUMMARY": "Descubra como a Arena Geek 2026 me proporcionou uma experiência única, onde a cultura pessoal e a vida profissional se entrelaçam, revelando insights valiosos sobre inovação, criatividade e o impacto da tecnologia na sociedade."
     }
   }
 }
