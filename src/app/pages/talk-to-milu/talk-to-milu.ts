@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -20,6 +20,7 @@ export class TalkToMilu {
   status: MiluRequestStatus = 'initial';
   answer = '';
   modalOpen = false;
+  readonly MAX_CHARS = 1000;
 
   readonly miluImages: Record<MiluRequestStatus, string> = {
     initial: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1781131087/hello-milu_jqc352.png',
@@ -40,6 +41,19 @@ export class TalkToMilu {
 
   closeInstructions(): void {
     this.modalOpen = false;
+  }
+
+  @HostListener('document:keydown.escape', ['$event'])
+  handleEscape(event: any) {
+    if (this.modalOpen) {
+      this.closeInstructions();
+    }
+  }
+
+  onQuestionInput(): void {
+    if (this.question && this.question.length > this.MAX_CHARS) {
+      this.question = this.question.slice(0, this.MAX_CHARS);
+    }
   }
 
   askMilu(): void {

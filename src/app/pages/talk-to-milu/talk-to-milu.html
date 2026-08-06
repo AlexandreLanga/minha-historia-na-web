@@ -30,7 +30,15 @@
           [placeholder]="'TALK_TO_MILU.PLACEHOLDER' | translate"
           [disabled]="status === 'loading'"
           rows="5"
+          maxlength="1000"
+          (input)="onQuestionInput()"
         ></textarea>
+
+        <div class="char-row">
+          <div class="char-counter" [class.near-limit]="question.length >= (MAX_CHARS - 100)">
+            <span>{{ question.length || 0 }} / {{ MAX_CHARS }}</span>
+          </div>
+        </div>
 
         <button type="submit" [disabled]="!question.trim() || status === 'loading'">
           <i class="fas fa-paper-plane"></i>
