@@ -82,6 +82,25 @@
   box-shadow: 0 0 0 3px rgba(0, 173, 181, 0.18);
 }
 
+.char-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.35rem;
+}
+
+.char-counter {
+  font-size: 0.85rem;
+  color: #516a7a;
+  background: rgba(0,0,0,0.03);
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+}
+
+.char-counter.near-limit {
+  color: #b45309;
+  background: rgba(244, 211, 117, 0.12);
+}
+
 .milu-form button {
   align-self: flex-start;
   display: inline-flex;
