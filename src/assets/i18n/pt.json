@@ -239,6 +239,9 @@
     "SUGGESTION_3": "Me diga qual é, e sobre o conteúdo da aba 'Minha História'.",
     "SUGGESTION_4": "Me conte sobre a sua família.",
     "MODAL_CLOSE": "Entendi, fechar",
+    "SOCKET_CONNECTED": "Milu está pronta para transmitir respostas.",
+    "SOCKET_CONNECTING": "Conectando com a Milu...",
+    "SOCKET_ERROR": "Conexão em tempo real indisponível. Usando fallback.",
     "IMAGE_ALT": {
       "initial": "Milu aguardando uma pergunta",
       "loading": "Milu pensando na resposta",
