@@ -32,6 +32,7 @@
           rows="5"
           maxlength="1000"
           (input)="onQuestionInput()"
+          (keydown)="handleEnter($event)"
         ></textarea>
 
         <div class="char-row">
@@ -45,14 +46,24 @@
           <span *ngIf="status !== 'loading'">{{ "TALK_TO_MILU.SEND" | translate }}</span>
           <span *ngIf="status === 'loading'">{{ "TALK_TO_MILU.SENDING" | translate }}</span>
         </button>
+
+        <div class="socket-status" [class.connected]="socketConnected" [class.error]="socketError">
+          <span *ngIf="socketConnected">{{ 'TALK_TO_MILU.SOCKET_CONNECTED' | translate }}</span>
+          <span *ngIf="!socketConnected && !socketError">{{ 'TALK_TO_MILU.SOCKET_CONNECTING' | translate }}</span>
+          <span *ngIf="socketError">{{ 'TALK_TO_MILU.SOCKET_ERROR' | translate }}</span>
+        </div>
       </form>
 
-      <div class="milu-message success" *ngIf="status === 'success'">
-        <p>{{ answer || ("TALK_TO_MILU.SUCCESS" | translate) }}</p>
-      </div>
-
-      <div class="milu-message error" *ngIf="status === 'error'">
-        <p>{{ "TALK_TO_MILU.ERROR" | translate }}</p>
+      <div
+        class="milu-message"
+        [class.success]="status === 'success'"
+        [class.error]="status === 'error'"
+        [class.loading]="status === 'loading'"
+        *ngIf="status === 'loading' || status === 'success' || status === 'error'"
+      >
+        <p *ngIf="status === 'loading'">{{ answer || ("TALK_TO_MILU.SENDING" | translate) }}</p>
+        <p *ngIf="status === 'success'">{{ answer || ("TALK_TO_MILU.SUCCESS" | translate) }}</p>
+        <p *ngIf="status === 'error'">{{ "TALK_TO_MILU.ERROR" | translate }}</p>
       </div>
     </div>
   </section>

@@ -239,6 +239,9 @@
     "SUGGESTION_3": "Tell me about the content of the 'My History' section.",
     "SUGGESTION_4": "Tell me about your family.",
     "MODAL_CLOSE": "Got it, close",
+    "SOCKET_CONNECTED": "Milu is ready to stream answers.",
+    "SOCKET_CONNECTING": "Connecting to Milu...",
+    "SOCKET_ERROR": "Realtime connection unavailable. Using fallback.",
     "IMAGE_ALT": {
       "initial": "Milu waiting for a question",
       "loading": "Milu thinking about the answer",

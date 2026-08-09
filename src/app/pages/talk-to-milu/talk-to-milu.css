@@ -291,10 +291,29 @@
   opacity: 0.65;
 }
 
+.socket-status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.socket-status.connected {
+  color: #0f766e;
+}
+
+.socket-status.error {
+  color: #b91c1c;
+}
+
 .milu-message {
   border-radius: 8px;
   padding: 1rem;
   border-left: 5px solid;
+}
+
+.milu-message.loading {
+  background: #f8fafc;
+  border-color: #94a3b8;
 }
 
 .milu-message.success {
