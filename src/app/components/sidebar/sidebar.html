@@ -2,12 +2,12 @@
   <div class="language-switcher">
     <button (click)="switchLang('pt')" class="lang-btn" [class.selected]="currentLang === 'pt'" [attr.aria-pressed]="currentLang === 'pt'" [attr.aria-label]="('SIDEBAR.PORTUGUESE' | translate)">
       <img src="https://res.cloudinary.com/diizw3dqm/image/upload/v1780012826/brazil_sdgjds.webp" alt="Brazil" class="tech-icon" />
-      <span class="lang-label">{{ "SIDEBAR.PORTUGUESE" | translate }}</span>
+      <span class="lang-label">PT</span>
     </button>
 
     <button (click)="switchLang('en')" class="lang-btn" [class.selected]="currentLang === 'en'" [attr.aria-pressed]="currentLang === 'en'" [attr.aria-label]="('SIDEBAR.ENGLISH' | translate)">
       <img src="https://res.cloudinary.com/diizw3dqm/image/upload/v1780012825/united-states_yzqdea.webp" alt="USA" class="tech-icon" />
-      <span class="lang-label">{{ "SIDEBAR.ENGLISH" | translate }}</span>
+      <span class="lang-label">EN</span>
     </button>
   </div>
 
