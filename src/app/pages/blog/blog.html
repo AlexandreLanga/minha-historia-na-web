@@ -1,9 +1,19 @@
 <div class="blog-container">
   <div class="header">
     <h1>{{ "BLOG.TITLE" | translate }}</h1>
-    <button type="button" class="filters-toggle-button" (click)="toggleFilters()" [attr.aria-expanded]="filtersOpen()">
-      {{ filtersOpen() ? ('BLOG.HIDE_FILTERS' | translate) : ('BLOG.SHOW_FILTERS' | translate) }}
-    </button>
+
+    <div class="toolbar-controls">
+      <label class="page-size-control">
+        <span>{{ 'BLOG.POSTS_PER_PAGE' | translate }}</span>
+        <select [value]="pageSize()" (change)="setPageSize(+($any($event.target).value))">
+          <option *ngFor="let size of pageOptions" [value]="size">{{ size }}</option>
+        </select>
+      </label>
+
+      <button type="button" class="filters-toggle-button" (click)="toggleFilters()" [attr.aria-expanded]="filtersOpen()">
+        {{ filtersOpen() ? ('BLOG.HIDE_FILTERS' | translate) : ('BLOG.SHOW_FILTERS' | translate) }}
+      </button>
+    </div>
   </div>
 
   <div class="filters-panel" *ngIf="filtersOpen()">
@@ -88,15 +98,6 @@
     <p>
       <strong>{{ 'BLOG.WARNING_TITLE' | translate }}</strong> {{ 'BLOG.WARNING_TEXT' | translate }}
     </p>
-  </div>
-
-  <div class="posts-toolbar" *ngIf="filteredPosts().length">
-    <label class="page-size-control">
-      <span>{{ 'BLOG.POSTS_PER_PAGE' | translate }}</span>
-      <select [value]="pageSize()" (change)="setPageSize(+($any($event.target).value))">
-        <option *ngFor="let size of pageOptions" [value]="size">{{ size }}</option>
-      </select>
-    </label>
   </div>
 
   <div class="posts-list" *ngIf="paginatedPosts().length; else noPosts">

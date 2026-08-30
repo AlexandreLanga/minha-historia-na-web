@@ -12,7 +12,11 @@
 .blog-container h1 {
   color: var(--text-strong);
   font-size: clamp(2rem, 3vw, 2.7rem);
-  margin-bottom: 1rem;
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
 }
 
 .filter-search-bar {
@@ -49,6 +53,7 @@
   align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
+  min-width: 0;
 }
 
 .filters-title {
@@ -242,9 +247,19 @@
 
 .posts-toolbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-top: 12px;
   margin-bottom: 16px;
+}
+
+.toolbar-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  width: auto;
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .page-size-control {
@@ -252,6 +267,7 @@
   align-items: center;
   gap: 10px;
   color: var(--text-strong);
+  padding: 0.35rem 0.2rem;
 }
 
 .page-size-control select {
