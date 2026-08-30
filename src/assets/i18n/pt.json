@@ -114,13 +114,18 @@
     "EDUCATION": [
       {
         "COURSE": "Ciência da Computação",
-        "INSTITUTION": "Unochapecó - Universidade Comunitária da Região de Chapecó",
+        "INSTITUTION": "Universidade Comunitária da Região de Chapecó - Unochapecó",
         "PERIOD": "2023 - 2027"
       },
       {
         "COURSE": "Inglês",
         "INSTITUTION": "Wizard by Pearson",
         "PERIOD": "2013 - 2022"
+      },
+      {
+        "COURSE": "Administração",
+        "INSTITUTION": "Universidade Federal da Fronteira Sul - UFFS",
+        "PERIOD": "2026 - 2032"
       }
     ],
     "SKILLS": [
