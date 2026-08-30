@@ -70,6 +70,13 @@ const EDUCATIONS: Education[] = [
     logoUrl: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1780012989/unochapeco_b3zre5.webp'
   },
   {
+    course: 'PROFESSIONAL.EDUCATION.2.COURSE',
+    institution: 'PROFESSIONAL.EDUCATION.2.INSTITUTION',
+    status: EducationStatus.IN_PROGRESS,
+    period: 'PROFESSIONAL.EDUCATION.2.PERIOD',
+    logoUrl: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1788059032/uffs_uoccoa.webp'
+  },
+  {
     course: 'PROFESSIONAL.EDUCATION.1.COURSE',
     institution: 'PROFESSIONAL.EDUCATION.1.INSTITUTION',
     status: EducationStatus.COMPLETED,
