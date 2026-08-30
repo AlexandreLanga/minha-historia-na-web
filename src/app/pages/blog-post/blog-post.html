@@ -1,11 +1,14 @@
 <div class="blog-post-container">
   <div *ngIf="post; else notFound">
     <header class="post-header">
+      <button type="button" class="back-button" (click)="goBack()">
+        ← {{ 'BLOG.BACK' | translate }}
+      </button>
       <div class="header-content">
         <h1 class="post-title">{{ post.title }}</h1>
         <div class="post-meta">
           <time class="post-date" [attr.datetime]="post.date.toISOString()">
-            {{ post.date | date:'longDate' }}
+            {{ post.date | date:(isEnglish ? 'MM/dd/yyyy' : 'dd/MM/yyyy') }}
           </time>
           <div class="post-summary">
             {{ post.summary }}
@@ -20,6 +23,12 @@
 
     <div *ngIf="isLoading" class="loading">Carregando...</div>
     <div *ngIf="!isLoading" class="markdown-content" [innerHTML]="safeContent"></div>
+
+    <div class="post-footer-actions">
+      <button type="button" class="back-button bottom-back-button" (click)="goBack()">
+        ← {{ 'BLOG.BACK' | translate }}
+      </button>
+    </div>
 
     <section class="feedback-card">
       <div class="feedback-intro">

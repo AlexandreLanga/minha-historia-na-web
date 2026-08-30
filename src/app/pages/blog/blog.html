@@ -86,19 +86,37 @@
 
   <div *ngIf="isEnglish" class="warning-banner">
     <p>
-      <strong>Note:</strong> The full content of the articles is entirely in Portuguese. 
-      The translation of titles and descriptions is provided solely to help you understand the context of each post.
+      <strong>{{ 'BLOG.WARNING_TITLE' | translate }}</strong> {{ 'BLOG.WARNING_TEXT' | translate }}
     </p>
   </div>
 
-  <div class="posts-list">
-    <div class="post-item" *ngFor="let post of filteredPosts()" (click)="selectPost(post)">
+  <div class="posts-toolbar" *ngIf="filteredPosts().length">
+    <label class="page-size-control">
+      <span>{{ 'BLOG.POSTS_PER_PAGE' | translate }}</span>
+      <select [value]="pageSize()" (change)="setPageSize(+($any($event.target).value))">
+        <option *ngFor="let size of pageOptions" [value]="size">{{ size }}</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="posts-list" *ngIf="paginatedPosts().length; else noPosts">
+    <div class="post-item" *ngFor="let post of paginatedPosts()" (click)="selectPost(post)">
       <h2>{{ post.title | translate }}</h2>
-      <p class="date">{{ post.date | date }}</p>
+      <p class="date">{{ post.date | date:(isEnglish ? 'MM/dd/yyyy' : 'dd/MM/yyyy') }}</p>
       <p class="summary">{{ post.summary | translate }}</p>
       <div class="post-tags" *ngIf="post.tags.length">
         <span *ngFor="let tag of post.tags">#{{ tag }}</span>
       </div>
     </div>
+  </div>
+
+  <ng-template #noPosts>
+    <div class="no-posts">{{ 'BLOG.NO_POSTS_FOUND' | translate }}</div>
+  </ng-template>
+
+  <div class="pagination" *ngIf="filteredPosts().length > pageSize()">
+    <button type="button" (click)="previousPage()" [disabled]="currentPage() === 1">{{ 'BLOG.PREVIOUS_PAGE' | translate }}</button>
+    <span>{{ 'BLOG.PAGE_INFO' | translate: { current: currentPage(), total: totalPages() } }}</span>
+    <button type="button" (click)="nextPage()" [disabled]="currentPage() >= totalPages()">{{ 'BLOG.NEXT_PAGE' | translate }}</button>
   </div>
 </div>

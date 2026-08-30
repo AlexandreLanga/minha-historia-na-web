@@ -270,6 +270,13 @@
     "HIDE_FILTERS": "Ocultar filtros",
     "CLEAR_TAGS": "Limpar",
     "TAG_NO_RESULTS": "Nenhuma tag encontrada",
+    "WARNING_TITLE": "Nota:",
+    "WARNING_TEXT": "O conteúdo completo dos artigos está totalmente em português. A tradução dos títulos e descrições é fornecida apenas para ajudar a entender o contexto de cada post.",
+    "POSTS_PER_PAGE": "Posts por página",
+    "NO_POSTS_FOUND": "Nenhum post encontrado com os filtros selecionados.",
+    "PREVIOUS_PAGE": "Anterior",
+    "NEXT_PAGE": "Próxima",
+    "PAGE_INFO": "Página {{current}} de {{total}}",
     "POSTS":{
       "STARTUP_WEEKEND_TITLE": "Como o Startup Weekend mudou minha visão profissional",
       "STARTUP_WEEKEND_SUMMARY": "Descubra como o Startup Weekend reformulou minha perspectiva profissional sobre empreendedorismo, resultados e aprendizados.",

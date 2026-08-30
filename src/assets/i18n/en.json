@@ -270,6 +270,13 @@
     "HIDE_FILTERS": "Hide filters",
     "CLEAR_TAGS": "Clear",
     "TAG_NO_RESULTS": "No tags found",
+    "WARNING_TITLE": "Note:",
+    "WARNING_TEXT": "The full content of the articles is entirely in Portuguese. The translation of titles and descriptions is provided solely to help you understand the context of each post.",
+    "POSTS_PER_PAGE": "Posts per page",
+    "NO_POSTS_FOUND": "No posts found with the selected filters.",
+    "PREVIOUS_PAGE": "Previous",
+    "NEXT_PAGE": "Next",
+    "PAGE_INFO": "Page {{current}} of {{total}}",
     "POSTS": {
       "STARTUP_WEEKEND_TITLE": "How Startup Weekend changed my professional vision",
       "STARTUP_WEEKEND_SUMMARY": "Discover how Startup Weekend reshaped my professional perspective on entrepreneurship, results, and learnings.",

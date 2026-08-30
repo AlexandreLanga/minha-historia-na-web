@@ -236,6 +236,28 @@
   border-color: #007bff;
 }
 
+.posts-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.page-size-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.page-size-control select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+}
+
 .posts-list {
   display: flex;
   flex-direction: column;
@@ -257,6 +279,35 @@
 
 .post-item h2 {
   margin: 0 0 10px 0;
+}
+
+.no-posts {
+  margin-top: 24px;
+  color: #d0d0d0;
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  color: white;
+}
+
+.pagination button {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .date {
