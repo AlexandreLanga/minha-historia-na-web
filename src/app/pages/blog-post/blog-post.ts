@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { BlogService, Post } from '../../services/blog.service';
@@ -27,6 +27,7 @@ export class BlogPost implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private http: HttpClient,
     private cdr: ChangeDetectorRef,
     private sanitizer: DomSanitizer,
@@ -68,6 +69,10 @@ export class BlogPost implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
+  get isEnglish(): boolean {
+    return this.translate.currentLang === 'en';
+  }
+
   private loadContent() {
     if (!this.post) return;
     this.isLoading = true;
@@ -86,6 +91,10 @@ export class BlogPost implements OnInit, OnDestroy {
         this.cdr.markForCheck();
       }
     });
+  }
+
+  goBack() {
+    this.router.navigate(['/blog']);
   }
 
   openFeedbackOptions() {
