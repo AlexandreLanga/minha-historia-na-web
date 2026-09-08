@@ -105,4 +105,29 @@ horse.mp3|audio/mpeg
       expect(result).toContain('Your browser does not support the audio element');
     });
   });
+
+  describe('Video Parser', () => {
+    it('should parse YouTube links as responsive embeds', () => {
+      const block = `[video]\nhttps://www.youtube.com/watch?v=abc123\n[/video]`;
+      const result = component['parseVideo'](block);
+
+      expect(result).toContain('class="video-embed"');
+      expect(result).toContain('https://www.youtube-nocookie.com/embed/abc123?rel=0');
+      expect(result).toContain('allowfullscreen');
+    });
+
+    it('should parse direct video sources with optional MIME types', () => {
+      const block = `[video]\nhttps://cdn.example.com/video.mp4|video/mp4\n[/video]`;
+      const result = component['parseVideo'](block);
+
+      expect(result).toContain('<video controls');
+      expect(result).toContain('src="https://cdn.example.com/video.mp4" type="video/mp4"');
+    });
+
+    it('should reject unsafe video URLs', () => {
+      const block = `[video]\njavascript:alert(1)\n[/video]`;
+
+      expect(component['parseVideo'](block)).toBe('');
+    });
+  });
 });
