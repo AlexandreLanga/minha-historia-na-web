@@ -184,6 +184,10 @@ export class BlogPost implements OnInit, OnDestroy {
       return this.parseAudio(block);
     }
 
+    if (/^\[video\]/i.test(trimmed)) {
+      return this.parseVideo(block);
+    }
+
     if (/^#{1,6}\s+/.test(trimmed)) {
       const match = trimmed.match(/^(#{1,6})\s+(.*)$/);
       if (!match) return `<p>${this.parseInline(trimmed)}</p>`;
@@ -353,6 +357,85 @@ export class BlogPost implements OnInit, OnDestroy {
 ${sourcesTags}
 Your browser does not support the audio element
 </audio>`;
+  }
+
+  private parseVideo(block: string): string {
+    const lines = block.split('\n');
+    const sources: { src: string; type?: string }[] = [];
+
+    for (let i = 1; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (/^\[\/video\]/i.test(line)) {
+        break;
+      }
+      if (!line || line.startsWith('[video')) {
+        continue;
+      }
+
+      const pipeMatch = line.match(/^(.+?)\|(.+?)$/);
+      const srcMatch = line.match(/src=["']([^"']+)["']/i);
+      const typeMatch = line.match(/type=["']([^"']+)["']/i);
+      const src = pipeMatch ? pipeMatch[1].trim() : srcMatch?.[1];
+      const type = pipeMatch ? pipeMatch[2].trim() : typeMatch?.[1];
+
+      if (src && this.isVideoUrl(src)) {
+        sources.push({ src, type });
+      }
+    }
+
+    if (sources.length === 0) {
+      return '';
+    }
+
+    if (sources.length === 1) {
+      const embedUrl = this.getEmbedUrl(sources[0].src);
+      if (embedUrl) {
+        return `<div class="video-embed"><iframe src="${this.escapeHtml(embedUrl)}" title="Vídeo do post" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
+      }
+    }
+
+    const sourceTags = sources
+      .map(source => {
+        const typeAttribute = source.type ? ` type="${this.escapeHtml(source.type)}"` : '';
+        return `<source src="${this.escapeHtml(source.src)}"${typeAttribute}>`;
+      })
+      .join('\n');
+
+    return `<video controls playsinline preload="metadata">
+${sourceTags}
+Seu navegador não suporta a reprodução deste vídeo.
+</video>`;
+  }
+
+  private isVideoUrl(value: string): boolean {
+    try {
+      const url = new URL(value);
+      return url.protocol === 'http:' || url.protocol === 'https:';
+    } catch {
+      return false;
+    }
+  }
+
+  private getEmbedUrl(value: string): string | null {
+    const url = new URL(value);
+    const hostname = url.hostname.toLowerCase().replace(/^www\./, '');
+
+    if (hostname === 'youtube.com' || hostname === 'm.youtube.com' || hostname === 'youtube-nocookie.com') {
+      const videoId = url.searchParams.get('v') || url.pathname.match(/^\/(?:embed\/|shorts\/|live\/)([^/?]+)/)?.[1];
+      return videoId ? `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?rel=0` : null;
+    }
+
+    if (hostname === 'youtu.be') {
+      const videoId = url.pathname.slice(1).split('/')[0];
+      return videoId ? `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?rel=0` : null;
+    }
+
+    if (hostname === 'vimeo.com' || hostname === 'player.vimeo.com') {
+      const videoId = url.pathname.match(/\/videos?\/(\d+)/)?.[1] || url.pathname.match(/^\/(\d+)/)?.[1];
+      return videoId ? `https://player.vimeo.com/video/${videoId}` : null;
+    }
+
+    return null;
   }
 
   private escapeHtml(text: string): string {

@@ -169,6 +169,35 @@
   margin-bottom: 1.2rem;
 }
 
+:host ::ng-deep .markdown-content video,
+:host ::ng-deep .markdown-content .video-embed {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem auto;
+  border-radius: 12px;
+  background: #111;
+}
+
+:host ::ng-deep .markdown-content video {
+  height: auto;
+  max-height: 72vh;
+}
+
+:host ::ng-deep .markdown-content .video-embed {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+:host ::ng-deep .markdown-content .video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 :host ::ng-deep .markdown-content h2,
 :host ::ng-deep .markdown-content h3,
 :host ::ng-deep .markdown-content h4 {
