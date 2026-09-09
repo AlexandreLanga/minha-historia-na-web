@@ -22,7 +22,7 @@ export class Blog implements OnInit {
   dateFrom = signal('');
   dateTo = signal('');
   currentPage = signal(1);
-  pageSize = signal(10);
+  pageSize = signal(5);
 
   availableTags = computed(() => {
     const postTags = this.posts().flatMap(post => post.tags);

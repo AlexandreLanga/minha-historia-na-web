@@ -124,10 +124,34 @@ horse.mp3|audio/mpeg
       expect(result).toContain('src="https://cdn.example.com/video.mp4" type="video/mp4"');
     });
 
+    it('should parse direct video URLs without a MIME type', () => {
+      const block = `[video]\nhttps://cdn.example.com/video.mp4\n[/video]`;
+      const result = component['parseVideo'](block);
+
+      expect(result).toContain('<video controls');
+      expect(result).toContain('src="https://cdn.example.com/video.mp4"');
+    });
+
     it('should reject unsafe video URLs', () => {
       const block = `[video]\njavascript:alert(1)\n[/video]`;
 
       expect(component['parseVideo'](block)).toBe('');
+    });
+
+    it('should resolve relative video URLs against the post location', () => {
+      component.post = {
+        title: 'Post',
+        summary: 'Resumo',
+        slug: 'post',
+        date: new Date(),
+        markdownPath: 'https://cdn.example.com/posts/post.md',
+        tags: [],
+      };
+      const block = `[video]\nmedia/video.mp4|video/mp4\n[/video]`;
+
+      const result = component['parseVideo'](block);
+
+      expect(result).toContain('src="https://cdn.example.com/posts/media/video.mp4"');
     });
   });
 });

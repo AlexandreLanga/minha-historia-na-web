@@ -375,11 +375,12 @@ Your browser does not support the audio element
       const pipeMatch = line.match(/^(.+?)\|(.+?)$/);
       const srcMatch = line.match(/src=["']([^"']+)["']/i);
       const typeMatch = line.match(/type=["']([^"']+)["']/i);
-      const src = pipeMatch ? pipeMatch[1].trim() : srcMatch?.[1];
+      const src = pipeMatch ? pipeMatch[1].trim() : srcMatch?.[1] || line;
       const type = pipeMatch ? pipeMatch[2].trim() : typeMatch?.[1];
 
-      if (src && this.isVideoUrl(src)) {
-        sources.push({ src, type });
+      const resolvedSrc = src ? this.resolveMediaUrl(src) : null;
+      if (resolvedSrc && this.isVideoUrl(resolvedSrc)) {
+        sources.push({ src: resolvedSrc, type });
       }
     }
 
@@ -413,6 +414,14 @@ Seu navegador não suporta a reprodução deste vídeo.
       return url.protocol === 'http:' || url.protocol === 'https:';
     } catch {
       return false;
+    }
+  }
+
+  private resolveMediaUrl(value: string): string | null {
+    try {
+      return new URL(value, this.post?.markdownPath || window.location.origin).toString();
+    } catch {
+      return null;
     }
   }
 
