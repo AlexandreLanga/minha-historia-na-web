@@ -46,14 +46,14 @@ describe('Blog', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should paginate posts in groups of 10 by default', () => {
+  it('should paginate posts in groups of 5 by default', () => {
     component.posts.set(buildPosts(25));
 
     expect(component.currentPage()).toBe(1);
-    expect(component.pageSize()).toBe(10);
+    expect(component.pageSize()).toBe(5);
     expect(component.filteredPosts().length).toBe(25);
-    expect(component.paginatedPosts().length).toBe(10);
-    expect(component.totalPages()).toBe(3);
+    expect(component.paginatedPosts().length).toBe(5);
+    expect(component.totalPages()).toBe(5);
   });
 
   it('should allow changing the page size to 5 or 20', () => {
