@@ -9,7 +9,7 @@ export interface Post {
   markdownPath: string;
   summary: string;
   slug: string;
-  tags: string[];
+  tags: number[];
 }
 
 interface ManifestPost {
@@ -18,7 +18,7 @@ interface ManifestPost {
   slug: string;
   date: string;
   file: string;
-  tags?: string[];
+  tags?: number[];
 }
 
 @Injectable({
