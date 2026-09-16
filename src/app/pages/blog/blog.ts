@@ -16,9 +16,10 @@ export class Blog implements OnInit {
   posts = signal<Post[]>([]);
   searchTerm = signal('');
   filtersOpen = signal(false);
-  selectedTags = signal<string[]>([]);
+  selectedTags = signal<number[]>([]);
   tagDropdownOpen = signal(false);
   tagSearchTerm = signal('');
+  language = signal('pt');
   dateFrom = signal('');
   dateTo = signal('');
   currentPage = signal(1);
@@ -31,7 +32,7 @@ export class Blog implements OnInit {
 
   filteredAvailableTags = computed(() => {
     const filter = this.tagSearchTerm().trim().toLowerCase();
-    return this.availableTags().filter(tag => tag.toLowerCase().includes(filter));
+    return this.availableTags().filter(tag => this.getTagLabel(tag).toLowerCase().includes(filter));
   });
 
   filteredPosts = computed(() => {
@@ -97,7 +98,10 @@ export class Blog implements OnInit {
     private router: Router,
     private blogService: BlogService,
     private translate: TranslateService
-  ) {}
+  ) {
+    this.language.set(this.translate.currentLang || 'pt');
+    this.translate.onLangChange.subscribe(({ lang }) => this.language.set(lang));
+  }
 
   ngOnInit(): void {
     this.blogService.getPosts().subscribe(posts => {
@@ -165,7 +169,12 @@ export class Blog implements OnInit {
     this.currentPage.set(1);
   }
 
-  toggleTag(tag: string) {
+  getTagLabel(tag: number): string {
+    this.language();
+    return this.translate.instant(`BLOG.TAGS.${tag}`);
+  }
+
+  toggleTag(tag: number) {
     const current = this.selectedTags();
     const index = current.indexOf(tag);
 

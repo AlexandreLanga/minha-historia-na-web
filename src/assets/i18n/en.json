@@ -270,6 +270,15 @@
     "HIDE_FILTERS": "Hide filters",
     "CLEAR_TAGS": "Clear",
     "TAG_NO_RESULTS": "No tags found",
+    "TAGS": {
+      "1": "Project",
+      "2": "Learning",
+      "3": "Event",
+      "4": "Innovation",
+      "5": "Python",
+      "6": "Artificial Intelligence",
+      "7": "PHP"
+    },
     "WARNING_TITLE": "Note:",
     "WARNING_TEXT": "The full content of the articles is entirely in Portuguese. The translation of titles and descriptions is provided solely to help you understand the context of each post.",
     "POSTS_PER_PAGE": "Posts per page",

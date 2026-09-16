@@ -270,6 +270,15 @@
     "HIDE_FILTERS": "Ocultar filtros",
     "CLEAR_TAGS": "Limpar",
     "TAG_NO_RESULTS": "Nenhuma tag encontrada",
+    "TAGS": {
+      "1": "Projeto",
+      "2": "Aprendizado",
+      "3": "Evento",
+      "4": "Inovação",
+      "5": "Python",
+      "6": "Inteligência Artificial",
+      "7": "PHP"
+    },
     "WARNING_TITLE": "Nota:",
     "WARNING_TEXT": "O conteúdo completo dos artigos está totalmente em português. A tradução dos títulos e descrições é fornecida apenas para ajudar a entender o contexto de cada post.",
     "POSTS_PER_PAGE": "Posts por página",

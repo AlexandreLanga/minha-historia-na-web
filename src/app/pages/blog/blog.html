@@ -72,7 +72,7 @@
           [class.selected]="selectedTags().includes(tag)"
           (click)="toggleTag(tag)"
         >
-          {{ tag }}
+          {{ getTagLabel(tag) }}
         </button>
       </div>
       <ng-template #noTagResults>
@@ -90,7 +90,7 @@
   </div>
 
   <div *ngIf="selectedTags().length" class="selected-tags">
-    <span *ngFor="let tag of selectedTags()" class="tag-pill">#{{ tag }}</span>
+    <span *ngFor="let tag of selectedTags()" class="tag-pill">#{{ getTagLabel(tag) }}</span>
   </div>
   </div>
 
@@ -106,7 +106,7 @@
       <p class="date">{{ post.date | date:(isEnglish ? 'MM/dd/yyyy' : 'dd/MM/yyyy') }}</p>
       <p class="summary">{{ post.summary | translate }}</p>
       <div class="post-tags" *ngIf="post.tags.length">
-        <span *ngFor="let tag of post.tags">#{{ tag }}</span>
+        <span *ngFor="let tag of post.tags">#{{ getTagLabel(tag) }}</span>
       </div>
     </div>
   </div>

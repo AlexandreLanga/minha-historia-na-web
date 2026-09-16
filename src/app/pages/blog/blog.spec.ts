@@ -16,7 +16,7 @@ describe('Blog', () => {
     markdownPath: `/posts/${index + 1}.md`,
     summary: `Resumo ${index + 1}`,
     slug: `post-${index + 1}`,
-    tags: index % 2 === 0 ? ['tag-1'] : ['tag-2'],
+    tags: index % 2 === 0 ? [1] : [2],
   }));
 
   beforeEach(async () => {
