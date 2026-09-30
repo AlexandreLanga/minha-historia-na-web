@@ -6,11 +6,13 @@ import { AboutMe } from './pages/about-me/about-me';
 import { Blog } from './pages/blog/blog';
 import { BlogPost } from './pages/blog-post/blog-post';
 import { TalkToMilu } from './pages/talk-to-milu/talk-to-milu';
+import { Projects } from './pages/projects/projects';
 
 export const routes: Routes = [
   { path: 'dashboard', component: Dashboard },
   { path: 'my-history', component: MyHistory },
   { path: 'profissional', component: Professional },
+  { path: 'projects', component: Projects },
   { path: 'about-me', component: AboutMe },
   { path: 'blog', component: Blog },
   { path: 'blog/:slug', component: BlogPost },

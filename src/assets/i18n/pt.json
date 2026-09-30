@@ -5,9 +5,40 @@
     "DASHBOARD": "Dashboard",
     "MY_HISTORY": "Minha história",
     "PROFESSIONAL": "Profissional",
+    "PROJECTS": "Projetos",
     "ABOUT_ME": "Sobre mim",
     "BLOG": "Blog",
     "TALK_TO_MILU": "Fale com a Milu"
+  },
+  "PROJECTS_PAGE": {
+    "TITLE": "Meus Projetos",
+    "SUBTITLE": "Uma coleção de ideias transformadas em realidade.",
+    "SECTION_LABEL": "Portfólio",
+    "LIST_TITLE": "Todos os projetos",
+    "EMPTY": "Nenhum projeto disponível no momento.",
+    "FAVORITE": "Projeto favorito",
+    "VIEW_MORE": "Ver mais",
+    "DOWNLOAD": "Baixar executável",
+    "DEMO": "Ver demonstração",
+    "REPOSITORY": "Repositório",
+    "CLOSE": "Fechar detalhes",
+    "DETAILS_LABEL": "Detalhes do projeto",
+    "TECHNOLOGIES": "Tecnologias utilizadas",
+    "COLLABORATORS": "Equipe e colaboradores",
+    "IMPACT": "Resultados e impacto",
+    "STATUS": {
+      "completed": "Concluído",
+      "inProgress": "Em andamento",
+      "future": "Futuro"
+    },
+    "PROJECTS": {
+      "BOOKER": {
+        "IMAGE_ALT": "Logo do aplicativo desktop Booker, uma biblioteca digital para leitura.",
+        "DESCRIPTION": "Uma biblioteca digital desktop feita em Python e Tkinter para organizar livros locais e tornar a leitura de PDF, EPUB e TXT mais prática.",
+        "DETAILS": "O Booker foi criado para acompanhar a leitura do início ao fim. A pessoa pode importar livros locais, pesquisar por título, autor, categoria e tags, filtrar a biblioteca e abrir documentos em uma experiência de leitura paginada. Durante a leitura, pode ajustar o zoom, pesquisar trechos, registrar anotações por página e salvar o progresso para continuar depois.",
+        "IMPACT": "O projeto transforma uma coleção de arquivos locais em uma biblioteca pessoal mais organizada e dá mais continuidade ao hábito de leitura, preservando progresso, anotações e marcações. Também demonstra a aplicação de Python em uma solução desktop completa, com persistência em SQLite e suporte a diferentes formatos de documento."
+      }
+    }
   },
   "DASHBOARD": {
     "INTRODUCTION": "\"Acredito no poder da tecnologia de unir as pessoas\"",
