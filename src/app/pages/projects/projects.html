@@ -1,0 +1,111 @@
+<div class="projects-page">
+  <header class="page-header">
+    <p class="eyebrow">{{ 'PROJECTS_PAGE.SECTION_LABEL' | translate }}</p>
+    <h1>{{ 'PROJECTS_PAGE.TITLE' | translate }}</h1>
+    <p class="subtitle">{{ 'PROJECTS_PAGE.SUBTITLE' | translate }}</p>
+  </header>
+
+  <section class="projects-section" aria-labelledby="projects-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">{{ 'PROJECTS_PAGE.SECTION_LABEL' | translate }}</p>
+        <h2 id="projects-title">{{ 'PROJECTS_PAGE.LIST_TITLE' | translate }}</h2>
+      </div>
+    </div>
+
+    <p class="empty-state" *ngIf="projects.length === 0">{{ 'PROJECTS_PAGE.EMPTY' | translate }}</p>
+
+    <div class="project-grid" *ngIf="projects.length > 0">
+      <article class="project-card" *ngFor="let project of projects" [class.favorite-card]="project.favorite">
+        <div class="project-image-wrap">
+          <img class="project-image" [src]="project.image" [alt]="project.imageAlt | translate" />
+          <span class="favorite-label" *ngIf="project.favorite">
+            <i class="fas fa-star" aria-hidden="true"></i>
+            {{ 'PROJECTS_PAGE.FAVORITE' | translate }}
+          </span>
+        </div>
+
+        <div class="project-content">
+          <div class="project-heading">
+            <h3>{{ project.name }}</h3>
+            <span class="project-status" [class]="'project-status status-' + project.status">
+              <i class="fas" [class.fa-check]="project.status === 'completed'" [class.fa-hourglass-half]="project.status === 'inProgress'" [class.fa-seedling]="project.status === 'future'" aria-hidden="true"></i>
+              {{ ('PROJECTS_PAGE.STATUS.' + project.status) | translate }}
+            </span>
+          </div>
+          <p class="project-description">{{ project.description | translate }}</p>
+          <ul class="technology-list" *ngIf="project.technologies.length">
+            <li *ngFor="let technology of project.technologies">{{ technology }}</li>
+          </ul>
+          <div class="project-actions">
+            <button class="details-button" type="button" (click)="openDetails(project, projectDialog)">
+              <i class="fas fa-circle-info" aria-hidden="true"></i>
+              {{ 'PROJECTS_PAGE.VIEW_MORE' | translate }}
+            </button>
+            <a class="external-button" *ngIf="project.downloadLink" [href]="project.downloadLink" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-download" aria-hidden="true"></i>
+              {{ 'PROJECTS_PAGE.DOWNLOAD' | translate }}
+            </a>
+            <a class="external-button secondary-action" *ngIf="project.demoLink" [href]="project.demoLink" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              {{ 'PROJECTS_PAGE.DEMO' | translate }}
+            </a>
+            <a class="external-button secondary-action" *ngIf="project.repoLink" [href]="project.repoLink" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github" aria-hidden="true"></i>
+              {{ 'PROJECTS_PAGE.REPOSITORY' | translate }}
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <dialog #projectDialog class="project-dialog" (click)="closeOnBackdrop($event, projectDialog)" (close)="selectedProject = null">
+    <ng-container *ngIf="selectedProject as project">
+      <button class="dialog-close" type="button" (click)="projectDialog.close()" [attr.aria-label]="'PROJECTS_PAGE.CLOSE' | translate">
+        <i class="fas fa-xmark" aria-hidden="true"></i>
+      </button>
+      <img class="dialog-image" [src]="project.image" [alt]="project.imageAlt | translate" />
+      <div class="dialog-content">
+        <p class="eyebrow">{{ 'PROJECTS_PAGE.DETAILS_LABEL' | translate }}</p>
+        <h2 id="project-detail-title">{{ project.name }}</h2>
+        <span class="project-status" [class]="'project-status status-' + project.status">
+          {{ ('PROJECTS_PAGE.STATUS.' + project.status) | translate }}
+        </span>
+        <p class="detail-description">{{ project.details | translate }}</p>
+
+        <section class="detail-section" *ngIf="project.technologies.length">
+          <h3>{{ 'PROJECTS_PAGE.TECHNOLOGIES' | translate }}</h3>
+          <ul class="technology-list">
+            <li *ngFor="let technology of project.technologies">{{ technology }}</li>
+          </ul>
+        </section>
+        <section class="detail-section" *ngIf="project.collaborators.length">
+          <h3>{{ 'PROJECTS_PAGE.COLLABORATORS' | translate }}</h3>
+          <ul class="detail-list">
+            <li *ngFor="let collaborator of project.collaborators">{{ collaborator }}</li>
+          </ul>
+        </section>
+        <section class="detail-section">
+          <h3>{{ 'PROJECTS_PAGE.IMPACT' | translate }}</h3>
+          <p>{{ project.impact | translate }}</p>
+        </section>
+
+        <div class="project-actions dialog-actions">
+          <a class="external-button" *ngIf="project.downloadLink" [href]="project.downloadLink" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-download" aria-hidden="true"></i>
+            {{ 'PROJECTS_PAGE.DOWNLOAD' | translate }}
+          </a>
+          <a class="external-button secondary-action" *ngIf="project.demoLink" [href]="project.demoLink" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            {{ 'PROJECTS_PAGE.DEMO' | translate }}
+          </a>
+          <a class="external-button secondary-action" *ngIf="project.repoLink" [href]="project.repoLink" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            {{ 'PROJECTS_PAGE.REPOSITORY' | translate }}
+          </a>
+        </div>
+      </div>
+    </ng-container>
+  </dialog>
+</div>

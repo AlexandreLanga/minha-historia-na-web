@@ -5,9 +5,40 @@
     "DASHBOARD": "Dashboard",
     "MY_HISTORY": "My history",
     "PROFESSIONAL": "Professional",
+    "PROJECTS": "Projects",
     "ABOUT_ME": "About me",
     "BLOG": "Blog",
     "TALK_TO_MILU": "Talk to Milu"
+  },
+  "PROJECTS_PAGE": {
+    "TITLE": "My Projects",
+    "SUBTITLE": "A collection of ideas turned into reality.",
+    "SECTION_LABEL": "Portfolio",
+    "LIST_TITLE": "All projects",
+    "EMPTY": "No projects available at the moment.",
+    "FAVORITE": "Favorite project",
+    "VIEW_MORE": "View details",
+    "DOWNLOAD": "Download executable",
+    "DEMO": "Live demo",
+    "REPOSITORY": "Repository",
+    "CLOSE": "Close project details",
+    "DETAILS_LABEL": "Project details",
+    "TECHNOLOGIES": "Technologies used",
+    "COLLABORATORS": "Team and collaborators",
+    "IMPACT": "Results and impact",
+    "STATUS": {
+      "completed": "Completed",
+      "inProgress": "In progress",
+      "future": "Future"
+    },
+    "PROJECTS": {
+      "BOOKER": {
+        "IMAGE_ALT": "Logo of the Booker desktop app, a digital library for reading.",
+        "DESCRIPTION": "A desktop digital library built with Python and Tkinter to organize local books and make reading PDF, EPUB, and TXT files more practical.",
+        "DETAILS": "Booker was created to support the reading journey from start to finish. Readers can import local books, search by title, author, category, and tags, filter their library, and open documents in a paginated reading experience. While reading, they can adjust the zoom, search for passages, add page-based notes, and save their progress to continue later.",
+        "IMPACT": "The project turns a collection of local files into a more organized personal library and helps readers maintain continuity in their reading habits by preserving progress, notes, and highlights. It also demonstrates Python applied to a complete desktop solution, with SQLite persistence and support for multiple document formats."
+      }
+    }
   },
   "DASHBOARD": {
     "INTRODUCTION": "\"I believe in the power of technology to bring people together\"",
