@@ -63,6 +63,9 @@
     "TITLE": "Currículo Profissional",
     "SECTION_SUMMARY": "Resumo Profissional",
     "PROFESSIONAL_SUMMARY": "Acadêmico de Ciência da Computação com experiência prática no desenvolvimento de soluções em C#, .NET, TypeScript, Angular, GeneXus e SQL. Atuo na manutenção e evolução de sistemas, entregando novas funcionalidades com foco em performance, confiabilidade e experiência do usuário. Experiência com bancos de dados PostgreSQL, SQL Server e Oracle, realizando consultas otimizadas e modelagem de dados. Possuo inglês avançado e facilidade para comunicação, colaboração e aprendizado rápido. Motivado a gerar impacto por meio de soluções eficientes, bem estruturadas e alinhadas às necessidades do negócio.",
+    "SECTION_VALUES": "Valores e o que me move",
+    "WORK_VALUES": "Acredito que um bom ambiente de trabalho se constrói com respeito, responsabilidade, colaboração e abertura para aprender. Valorizo relações transparentes, troca de conhecimento e autonomia com compromisso.",
+    "MOTIVATION": "O que me move é transformar desafios reais em soluções úteis, aprender continuamente e perceber que meu trabalho gera valor para as pessoas e para o negócio.",
     "SECTION_EXPERIENCE": "Carreira Profissional",
     "DOWNLOAD_RESUME": "Baixar currículo",
     "PROFESSIONAL_EXPERIENCE": [

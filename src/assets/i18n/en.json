@@ -63,6 +63,9 @@
     "TITLE": "Professional Resume",
     "SECTION_SUMMARY": "Professional Summary",
     "PROFESSIONAL_SUMMARY": "Computer Science undergraduate with practical experience in developing solutions using C#, .NET, TypeScript, Angular, GeneXus, and SQL. Experienced in maintaining and evolving systems, delivering new features with a focus on performance, reliability, and user experience. Skilled in working with PostgreSQL, SQL Server, and Oracle databases, including optimized queries and data modeling. Possesses advanced English proficiency and strong communication, collaboration, and fast-learning abilities. Motivated to create impact through efficient, well-structured solutions aligned with business needs.",
+    "SECTION_VALUES": "My values and what drives me",
+    "WORK_VALUES": "I believe a good workplace is built on respect, responsibility, collaboration, and openness to learning. I value transparent relationships, knowledge sharing, and autonomy backed by accountability.",
+    "MOTIVATION": "I am driven by turning real challenges into useful solutions, continuing to learn, and seeing my work create value for people and the business.",
     "SECTION_EXPERIENCE": "Professional Career",
     "DOWNLOAD_RESUME": "Download resume",
     "PROFESSIONAL_EXPERIENCE": [
