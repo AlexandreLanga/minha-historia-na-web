@@ -63,6 +63,9 @@
     "TITLE": "Professional Resume",
     "SECTION_SUMMARY": "Professional Summary",
     "PROFESSIONAL_SUMMARY": "Computer Science undergraduate with practical experience in developing solutions using C#, .NET, TypeScript, Angular, GeneXus, and SQL. Experienced in maintaining and evolving systems, delivering new features with a focus on performance, reliability, and user experience. Skilled in working with PostgreSQL, SQL Server, and Oracle databases, including optimized queries and data modeling. Possesses advanced English proficiency and strong communication, collaboration, and fast-learning abilities. Motivated to create impact through efficient, well-structured solutions aligned with business needs.",
+    "SECTION_VALUES": "My values and what drives me",
+    "WORK_VALUES": "I believe a good workplace is built on respect, responsibility, collaboration, and openness to learning. I value transparent relationships, knowledge sharing, and autonomy backed by accountability.",
+    "MOTIVATION": "I am driven by turning real challenges into useful solutions, continuing to learn, and seeing my work create value for people and the business.",
     "SECTION_EXPERIENCE": "Professional Career",
     "DOWNLOAD_RESUME": "Download resume",
     "PROFESSIONAL_EXPERIENCE": [
@@ -329,7 +332,9 @@
       "FEIRA_INOVACAO_CHAPECO_TITLE": "2° Chapecó Innovation and Entrepreneurship Fair",
       "FEIRA_INOVACAO_CHAPECO_SUMMARY": "Discover my experience at the Chapecó Innovation Fair and the reflections on innovation, creativity, and technology that the event inspired.",
       "UM_PROJETO_QUE_NAO_FOI_PARA_FRENTE_TITLE": "A project that didn't move forward",
-      "UM_PROJETO_QUE_NAO_FOI_PARA_FRENTE_SUMMARY": "Reflections on a project that didn't progress as expected, but left some valuable lessons."
+      "UM_PROJETO_QUE_NAO_FOI_PARA_FRENTE_SUMMARY": "Reflections on a project that didn't progress as expected, but left some valuable lessons.",
+      "EMPREENDE_UFFS_2026_TITLE": "First Place at Empreende UFFS 2026",
+      "EMPREENDE_UFFS_2026_SUMMARY": "Takeaways and reflections on entrepreneurship, innovation, and new ideas."
     }
   }
 }
