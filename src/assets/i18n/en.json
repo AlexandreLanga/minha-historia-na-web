@@ -289,7 +289,7 @@
     }
   },
   "BLOG": {
-    "TITLE": "Programming Blog",
+    "TITLE": "Tech Culture Blog",
     "MAX_POSTS": "Maximum of 5 posts reached.",
     "BACK": "Back",
     "LOADING": "Loading post...",
