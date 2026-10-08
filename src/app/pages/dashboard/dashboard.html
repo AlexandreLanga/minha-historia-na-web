@@ -22,16 +22,25 @@
     </div>
 
     <div class="weather-card">
-      <h2>{{ wheather?.city }}, {{ wheather?.country }}</h2>
-      <div class="weather-info">
-        <p><strong> {{ "DASHBOARD.TEMPERATURE" | translate }} </strong> {{ wheather?.temperature }}°C</p>
-        <p><strong> {{ "DASHBOARD.LOCALTIME" | translate }} </strong> {{ wheather?.localTime }}</p>
-        <p>
-          <strong> {{ "DASHBOARD.TIMEZONE" | translate }} :</strong>
-          {{ (wheather?.timezone || 0) / 3600 >= 0 ? "+" : "" }}
-          {{ (wheather?.timezone || 0) / 3600 }}
-        </p>
+      <div class="weather-loading" *ngIf="isWeatherLoading" role="status" aria-live="polite">
+        <span class="loading-spinner" aria-hidden="true"></span>
+        <span>{{ "DASHBOARD.WEATHER_LOADING" | translate }}</span>
       </div>
+      <p class="weather-error" *ngIf="weatherError">
+        {{ "DASHBOARD.WEATHER_ERROR" | translate }}
+      </p>
+      <ng-container *ngIf="wheather as weather">
+        <h2>{{ weather.city }}, {{ weather.country }}</h2>
+        <div class="weather-info">
+          <p><strong> {{ "DASHBOARD.TEMPERATURE" | translate }} </strong> {{ weather.temperature }}°C</p>
+          <p><strong> {{ "DASHBOARD.LOCALTIME" | translate }} </strong> {{ weather.localTime }}</p>
+          <p>
+            <strong> {{ "DASHBOARD.TIMEZONE" | translate }} :</strong>
+            {{ weather.timezone / 3600 >= 0 ? "+" : "" }}
+            {{ weather.timezone / 3600 }}
+          </p>
+        </div>
+      </ng-container>
     </div>
 
     <div class="extra-informations">

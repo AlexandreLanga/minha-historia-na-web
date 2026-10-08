@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { finalize } from 'rxjs/operators';
 import { WeatherData, WeatherService } from '../../services/weather';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -12,6 +13,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class Dashboard implements OnInit {
   wheather: WeatherData | null = null;
+  isWeatherLoading = true;
+  weatherError = false;
   actualAge: number;
   bornDate = new Date('2004-10-16');
 
@@ -24,10 +27,24 @@ export class Dashboard implements OnInit {
   }
 
   ngOnInit(): void {
-    this.weatherService.getWeather().subscribe((res) => {
-      this.wheather = res;
-      this.cdr.detectChanges();
-    });
+    this.weatherService
+      .getWeather()
+      .pipe(
+        finalize(() => {
+          this.isWeatherLoading = false;
+          this.cdr.detectChanges();
+        })
+      )
+      .subscribe({
+        next: (res) => {
+          this.wheather = res;
+          this.cdr.detectChanges();
+        },
+        error: () => {
+          this.weatherError = true;
+          this.cdr.detectChanges();
+        },
+      });
   }
 
   calculateAge(bornDate: Date): number {

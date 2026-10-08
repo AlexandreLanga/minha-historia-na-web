@@ -47,6 +47,8 @@
     "TEXT_THREE": "Esta aplicação não é apenas um projeto para demonstrar habilidades técnicas. É também um espaço onde registro pensamentos, valores, visão de mundo e sonhos.",
     "TEXT_FOUR": "Aqui está o que se passa na mente de um jovem que realmente sonha grande.",
     "TEXT_FIVE": "Inclusive, alguém já te perguntou como está o tempo hoje? Por aqui, está assim:",
+    "WEATHER_LOADING": "Carregando clima...",
+    "WEATHER_ERROR": "Não foi possível carregar os dados do clima.",
     "TEMPERATURE": "Temperatura:",
     "LOCALTIME": "Horário de Brasília:",
     "TIMEZONE": "Fuso horário (UTC)",

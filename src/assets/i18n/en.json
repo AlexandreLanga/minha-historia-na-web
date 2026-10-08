@@ -47,6 +47,8 @@
     "TEXT_THREE": "This application is not just a project to showcase technical skills. It's also a space where I record thoughts, values, worldview, and dreams.",
     "TEXT_FOUR": "Here is what's going on in the mind of a young person who truly dreams big.",
     "TEXT_FIVE": "By the way, has anyone asked you how the weather is today? Around here, it's like this:",
+    "WEATHER_LOADING": "Loading weather...",
+    "WEATHER_ERROR": "Weather data could not be loaded.",
     "TEMPERATURE": "Temperature:",
     "LOCALTIME": "Brasília local time:",
     "TIMEZONE": "Time zone (UTC)",
