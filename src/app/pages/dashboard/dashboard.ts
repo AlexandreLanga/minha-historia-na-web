@@ -24,7 +24,7 @@ export class Dashboard implements OnInit {
   }
 
   ngOnInit(): void {
-    this.weatherService.getWeather('Chapecó').subscribe((res) => {
+    this.weatherService.getWeather().subscribe((res) => {
       this.wheather = res;
       this.cdr.detectChanges();
     });
