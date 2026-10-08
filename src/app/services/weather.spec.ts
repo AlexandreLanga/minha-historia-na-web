@@ -39,7 +39,7 @@ describe('Weather', () => {
     });
 
     const request = httpTestingController.expectOne(
-      'https://api-utilidades.onrender.com/api/v1/clima/Chapecó'
+      'https://api-utilidades.onrender.com/api/v1/clima/cidade?cidade=Chapecó'
     );
     expect(request.request.method).toBe('GET');
 

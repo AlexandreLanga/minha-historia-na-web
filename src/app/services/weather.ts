@@ -33,7 +33,7 @@ interface WeatherApiResponse {
 }
 
 const WEATHER_API_URL =
-  'https://api-utilidades.onrender.com/api/v1/clima/Chapecó';
+  'https://api-utilidades.onrender.com/api/v1/clima/cidade?cidade=Chapecó';
 
 @Injectable({
   providedIn: 'root',
