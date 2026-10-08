@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
+declare const API_UTILIDADES_JWT: string;
+
 export interface WeatherData {
   temperature: number;
   city: string;
@@ -27,7 +29,7 @@ interface WeatherApiResponse {
 }
 
 const WEATHER_API_URL =
-  'https://minha-historia-na-web-weather-proxy.onrender.com/api/v1/clima/Chapecó';
+  'https://api-utilidades.onrender.com/api/v1/clima/Chapecó';
 
 @Injectable({
   providedIn: 'root',
@@ -36,7 +38,14 @@ export class WeatherService {
   constructor(private http: HttpClient) {}
 
   getWeather(): Observable<WeatherData> {
-    return this.http.get<WeatherApiResponse>(WEATHER_API_URL).pipe(
+    const token =
+      typeof API_UTILIDADES_JWT === 'undefined' ? '' : API_UTILIDADES_JWT;
+
+    return this.http
+      .get<WeatherApiResponse>(WEATHER_API_URL, {
+        headers: token ? { Authorization: `Bearer ${token}` } : undefined,
+      })
+      .pipe(
       map((data) => {
         const temperature =
           data.temperature ??
@@ -57,7 +66,7 @@ export class WeatherService {
         };
       }),
       catchError(this.handleError)
-    );
+      );
   }
 
   private handleError(error: HttpErrorResponse | Error) {

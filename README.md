@@ -27,26 +27,17 @@ Frontend
 
 - Layout responsivo
 
-- Integração com a API de clima da API Utilidades por um proxy privado no Render
+- Integração direta com a API de clima da API Utilidades
 
-### Proxy de clima no Render
+### JWT da API de clima
 
-O site continua estático no GitHub Pages. Para não expor o JWT no JavaScript
-do navegador, o serviço `proxy/` encaminha a consulta para a API Utilidades.
+No GitHub, configure o secret `API_UTILIDADES_JWT` no environment
+`github-pages`. O workflow o usa para fazer o build do frontend.
 
-1. Crie o serviço usando o Blueprint `render.yaml` deste repositório.
-2. Configure `API_UTILIDADES_JWT` nas variáveis de ambiente do serviço Render,
-   usando somente o token JWT, sem o prefixo `Bearer`.
-3. Mantenha `FRONTEND_ORIGIN` com a origem do site (e
-   `http://localhost:4200` para desenvolvimento local).
-4. O frontend espera o proxy em
-   `https://minha-historia-na-web-weather-proxy.onrender.com`. Se o Render
-   atribuir outra URL ao serviço, atualize `WEATHER_API_URL` em
-   `src/app/services/weather.ts`.
-
-O JWT deve ser armazenado no Render, onde o proxy o usa em runtime; não o
-adicione aos secrets do workflow de GitHub Pages, pois qualquer valor usado no
-build Angular poderia acabar exposto nos arquivos públicos do site.
+O GitHub Pages publica arquivos estáticos, portanto o valor incorporado no
+frontend fica visível aos visitantes. Use apenas um JWT mock/de teste, nunca
+um token com acesso ou privilégios reais. A API também precisa permitir
+requisições CORS da origem do site.
 
 Em estudo para evolução do projeto
 

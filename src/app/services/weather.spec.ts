@@ -31,7 +31,7 @@ describe('Weather', () => {
     expect(service).toBeTruthy();
   });
 
-  it('loads Chapecó weather through the Render proxy', () => {
+  it('loads Chapecó weather from API Utilidades', () => {
     let weather: WeatherData | undefined;
 
     service.getWeather().subscribe((result) => {
@@ -39,7 +39,7 @@ describe('Weather', () => {
     });
 
     const request = httpTestingController.expectOne(
-      'https://minha-historia-na-web-weather-proxy.onrender.com/api/v1/clima/Chapecó'
+      'https://api-utilidades.onrender.com/api/v1/clima/Chapecó'
     );
     expect(request.request.method).toBe('GET');
 
