@@ -19,6 +19,7 @@ export interface WeatherData {
 interface WeatherApiResponse {
   temperature?: number;
   temperatura?: number;
+  temperaturaAtual?: number;
   temp?: number;
   main?: { temp?: number };
   city?: string;
@@ -46,7 +47,7 @@ export class WeatherService {
 
     return this.http
       .get<WeatherApiResponse>(WEATHER_API_URL, {
-        headers: token ? { Authorization: `Bearer ${token}` } : undefined,
+        headers: token ? { 'X-API-KEY': token } : undefined,
       })
       .pipe(
         timeout({ first: API_STARTUP_TIMEOUT_MS }),
@@ -66,6 +67,7 @@ export class WeatherService {
           const temperature =
             data.temperature ??
             data.temperatura ??
+            data.temperaturaAtual ??
             data.temp ??
             data.main?.temp;
 
