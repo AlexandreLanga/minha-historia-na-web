@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
+
 export interface WeatherData {
   temperature: number;
   city: string;
@@ -9,32 +10,58 @@ export interface WeatherData {
   timezone: number;
   localTime: string;
 }
+
+interface WeatherApiResponse {
+  temperature?: number;
+  temperatura?: number;
+  temp?: number;
+  main?: { temp?: number };
+  city?: string;
+  cidade?: string;
+  name?: string;
+  country?: string;
+  pais?: string;
+  sys?: { country?: string };
+  timezone?: number;
+  fusoHorario?: number;
+}
+
+const WEATHER_API_URL =
+  'https://minha-historia-na-web-weather-proxy.onrender.com/api/v1/clima/Chapecó';
+
 @Injectable({
   providedIn: 'root',
 })
 export class WeatherService {
-  private apiKey = '1bf1bc485352caaa00c1d201a8826fb6';
-  private baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
-
   constructor(private http: HttpClient) {}
 
-  getWeather(city: string): Observable<WeatherData> {
-    const url = `${this.baseUrl}?q=${encodeURIComponent(city)}&appid=${this.apiKey}&units=metric&lang=pt_br`;
+  getWeather(): Observable<WeatherData> {
+    return this.http.get<WeatherApiResponse>(WEATHER_API_URL).pipe(
+      map((data) => {
+        const temperature =
+          data.temperature ??
+          data.temperatura ??
+          data.temp ??
+          data.main?.temp;
 
-    return this.http.get<any>(url).pipe(
-      map((data) => ({
-        temperature: data.main.temp,
-        city: data.name,
-        country: data.sys.country,
-        timezone: data.timezone,
-        localTime: new Date(Date.now()).toLocaleTimeString('pt-BR'),
-      })),
+        if (typeof temperature !== 'number' || !Number.isFinite(temperature)) {
+          throw new Error('Weather API response does not include a valid temperature');
+        }
+
+        return {
+          temperature,
+          city: data.city ?? data.cidade ?? data.name ?? 'Chapecó',
+          country: data.country ?? data.pais ?? data.sys?.country ?? 'BR',
+          timezone: data.timezone ?? data.fusoHorario ?? -10800,
+          localTime: new Date().toLocaleTimeString('pt-BR'),
+        };
+      }),
       catchError(this.handleError)
     );
   }
 
-  private handleError(error: HttpErrorResponse) {
-    console.error('API requisition error:', error);
+  private handleError(error: HttpErrorResponse | Error) {
+    console.error('Weather API request error:', error);
     return throwError(
       () =>
         new Error(

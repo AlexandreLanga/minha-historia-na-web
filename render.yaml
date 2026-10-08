@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: minha-historia-na-web-weather-proxy
+    runtime: node
+    rootDir: proxy
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: API_UTILIDADES_JWT
+        sync: false
+      - key: FRONTEND_ORIGIN
+        value: https://alexandrelanga.github.io,http://localhost:4200
