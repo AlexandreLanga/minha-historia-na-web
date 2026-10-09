@@ -243,20 +243,37 @@ h2 {
 }
 
 .dialog-close {
-  position: absolute;
-  z-index: 1;
-  top: 0.8rem;
-  right: 0.8rem;
+  position: sticky;
+  z-index: 2;
+  top: 0.75rem;
   display: grid;
-  width: 2.5rem;
+  width: 2.75rem;
   aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  margin: 0.75rem 0.75rem -3.5rem auto;
+  border: 1px solid #d9e2e8;
   border-radius: 50%;
   background: #fff;
   color: #20343f;
-  font-size: 1rem;
+  box-shadow: 0 3px 12px rgba(9, 24, 34, 0.2);
+  font-size: 1.1rem;
   cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.dialog-close:hover {
+  border-color: #0d655d;
+  background: #117c72;
+  color: #fff;
+}
+
+.dialog-close:active {
+  transform: scale(0.94);
+}
+
+.dialog-close:focus-visible {
+  outline: 3px solid #117c72;
+  outline-offset: 3px;
 }
 
 .dialog-image {
