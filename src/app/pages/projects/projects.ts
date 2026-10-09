@@ -17,6 +17,7 @@ export interface Project {
   collaborators: string[];
   impact: string;
   demoLink: string | null;
+  serviceLink: string | null;
   repoLink: string | null;
   downloadLink: string | null;
 }
@@ -35,6 +36,7 @@ export const MOCK_PROJECTS: Project[] = [
     collaborators: [],
     impact: 'PROJECTS_PAGE.PROJECTS.BOOKER.IMPACT',
     demoLink: 'https://www.youtube.com/watch?v=H6F6T3UzRi0',
+    serviceLink: null,
     repoLink: 'https://github.com/AlexandreLanga/booker',
     downloadLink: 'https://drive.google.com/file/d/1j36Hm7uLQqp7ZlGCHbL2Mt3I5TCUE1AZ/view?usp=sharing',
   },
@@ -51,6 +53,7 @@ export const MOCK_PROJECTS: Project[] = [
     collaborators: [],
     impact: 'PROJECTS_PAGE.PROJECTS.API_UTILIDADES.IMPACT',
     demoLink: null,
+    serviceLink: 'https://api-utilidades.onrender.com/',
     repoLink: 'https://github.com/AlexandreLanga/api-utilidades',
     downloadLink: null,
   },
