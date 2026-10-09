@@ -37,6 +37,12 @@
         "DESCRIPTION": "Uma biblioteca digital desktop feita em Python e Tkinter para organizar livros locais e tornar a leitura de PDF, EPUB e TXT mais prática.",
         "DETAILS": "O Booker foi criado para acompanhar a leitura do início ao fim. A pessoa pode importar livros locais, pesquisar por título, autor, categoria e tags, filtrar a biblioteca e abrir documentos em uma experiência de leitura paginada. Durante a leitura, pode ajustar o zoom, pesquisar trechos, registrar anotações por página e salvar o progresso para continuar depois.",
         "IMPACT": "O projeto transforma uma coleção de arquivos locais em uma biblioteca pessoal mais organizada e dá mais continuidade ao hábito de leitura, preservando progresso, anotações e marcações. Também demonstra a aplicação de Python em uma solução desktop completa, com persistência em SQLite e suporte a diferentes formatos de documento."
+      },
+      "API_UTILIDADES": {
+        "IMAGE_ALT": "Logo da API Utilidades, uma API REST para consulta de endereços e clima.",
+        "DESCRIPTION": "API REST em Java 21 e Spring Boot que reúne consulta de CEP e busca de endereços pelo ViaCEP, além de consultas de clima atual por cidade ou coordenadas via OpenWeatherMap.",
+        "DETAILS": "A API oferece endpoints versionados para consultar endereços por CEP (com ou sem hífen), pesquisar por UF, cidade e logradouro e obter o clima por cidade ou coordenadas geográficas. As rotas da API exigem uma chave enviada no header X-API-KEY; credenciais são fornecidas por variáveis de ambiente. O projeto também documenta a API com OpenAPI/Swagger e inclui validação de parâmetros, respostas de erro no formato RFC 7807, limitação de requisições, circuit breakers e cache em memória para consultas de CEP.",
+        "IMPACT": "O projeto centraliza serviços úteis de endereço e clima em uma API documentada, com tratamento explícito de erros e controles de segurança e resiliência. Testes automatizados, health check do Actuator, execução em Docker como usuário sem privilégios e validações no GitHub Actions apoiam a qualidade e a operação da aplicação."
       }
     }
   },

@@ -37,6 +37,12 @@
         "DESCRIPTION": "A desktop digital library built with Python and Tkinter to organize local books and make reading PDF, EPUB, and TXT files more practical.",
         "DETAILS": "Booker was created to support the reading journey from start to finish. Readers can import local books, search by title, author, category, and tags, filter their library, and open documents in a paginated reading experience. While reading, they can adjust the zoom, search for passages, add page-based notes, and save their progress to continue later.",
         "IMPACT": "The project turns a collection of local files into a more organized personal library and helps readers maintain continuity in their reading habits by preserving progress, notes, and highlights. It also demonstrates Python applied to a complete desktop solution, with SQLite persistence and support for multiple document formats."
+      },
+      "API_UTILIDADES": {
+        "IMAGE_ALT": "API Utilidades logo, a REST API for address and weather lookups.",
+        "DESCRIPTION": "A REST API built with Java 21 and Spring Boot that combines ViaCEP ZIP-code lookups and address searches with current weather queries by city or coordinates through OpenWeatherMap.",
+        "DETAILS": "The API provides versioned endpoints to look up addresses by ZIP code (with or without a hyphen), search by state, city, and street, and retrieve weather by city or geographic coordinates. API routes require a key sent in the X-API-KEY header; credentials are supplied through environment variables. The project also documents the API with OpenAPI/Swagger and includes parameter validation, RFC 7807 error responses, request rate limiting, circuit breakers, and an in-memory cache for ZIP-code lookups.",
+        "IMPACT": "The project brings useful address and weather services together in a documented API with explicit error handling and security and resilience controls. Automated tests, an Actuator health check, a Docker image running as a non-privileged user, and GitHub Actions validations support application quality and operations."
       }
     }
   },
