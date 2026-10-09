@@ -1,0 +1,11 @@
+{
+  "name": "minha-historia-na-web",
+  "compatibility_date": "2026-10-06",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "dist/minha-historia-na-web/browser",
+    "not_found_handling": "single-page-application"
+  }
+}
