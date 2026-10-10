@@ -7,8 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:minha-historia-na-web": "node dist/minha-historia-na-web/server/server.mjs",
-    "deploy": "npm run build && npx wrangler deploy"
+    "serve:ssr:minha-historia-na-web": "    node dist/minha-historia-na-web/server/server.mjs"
   },
   "prettier": {
     "overrides": [
