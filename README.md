@@ -31,15 +31,14 @@ Frontend
 
 ### JWT da API de clima
 
-O JWT é mantido no servidor e não é incluído no bundle do frontend. No Cloudflare,
-acesse **Workers & Pages > seu Worker > Settings > Variables and Secrets** e
-adicione `API_UTILIDADES_JWT` como um secret. O Worker usa esse secret para
-encaminhar `/api/weather` à API de clima.
+O JWT é mantido no servidor e não é incluído no bundle do frontend. Na Vercel,
+acesse **Project > Settings > Environment Variables** e adicione
+`API_UTILIDADES_JWT`. A função serverless [api/weather.ts](api/weather.ts) usa
+essa variável para encaminhar `/api/weather` à API de clima.
 
-O build (`npm run build`) não precisa do JWT. Para publicar, execute
-`npm run deploy` ou use `npm run build` como comando de build e
-`npx wrangler deploy` como comando de deploy. A chamada ao serviço de clima no
-ambiente local depende de executar o Worker com o secret configurado.
+O build (`npm run build`) não precisa do JWT. A configuração de build e de
+rotas fica em [vercel.json](vercel.json). Para testar `/api/weather`
+localmente, use `npx vercel dev` com a variável configurada.
 Em estudo para evolução do projeto
 
 - Melhorias de performance e otimização
