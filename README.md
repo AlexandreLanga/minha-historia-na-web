@@ -31,14 +31,17 @@ Frontend
 
 ### JWT da API de clima
 
-No GitHub, configure o secret `API_UTILIDADES_JWT` no environment
-`github-pages`. O workflow o usa para fazer o build do frontend.
+O JWT é lido da variável `API_UTILIDADES_JWT`:
 
-O GitHub Pages publica arquivos estáticos, portanto o valor incorporado no
-frontend fica visível aos visitantes. Use apenas um JWT mock/de teste, nunca
-um token com acesso ou privilégios reais. A API também precisa permitir
-requisições CORS da origem do site.
+- Local: copie `.env.example` para `.env` (ignorado pelo git) e preencha o valor.
+  Os scripts `npm start` e `npm run build` carregam o `.env` automaticamente.
+- Cloudflare: em Workers & Pages > Settings > Variables and secrets, defina
+  `API_UTILIDADES_JWT` (build) e use `npm run build` como comando de build e
+  `npx wrangler deploy` como comando de deploy.
 
+O valor é incorporado no bundle do frontend e fica visível aos visitantes. Use
+apenas um JWT mock/de teste, nunca um token com privilégios reais. A API também
+precisa permitir CORS para o domínio do Cloudflare.
 Em estudo para evolução do projeto
 
 - Melhorias de performance e otimização
