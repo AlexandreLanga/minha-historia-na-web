@@ -29,10 +29,6 @@
             "outputMode": "static"
           },
           "configurations": {
-            "github-pages": {
-              "outputHashing": "all",
-              "baseHref": "/minha-historia-na-web/"
-            },
             "production": {
               "budgets": [
                 {
