@@ -37,10 +37,11 @@ acesse **Project > Settings > Environment Variables** e adicione
 essa variável para encaminhar `/api/weather` à API de clima.
 
 O build (`npm run build`) não precisa do JWT. A configuração de build e de
-rotas fica em [vercel.json](vercel.json). No `npm start`, o
-[proxy.conf.js](proxy.conf.js) encaminha `/api/weather` usando a variável de
-ambiente `API_UTILIDADES_JWT` (defina-a no terminal antes de iniciar, por
-exemplo `$env:API_UTILIDADES_JWT="..."` no PowerShell).
+rotas fica em [vercel.json](vercel.json). Para rodar localmente, copie
+[.env.example](.env.example) para `.env` e preencha `API_UTILIDADES_JWT`; o
+`npm start` lê o arquivo via [proxy.conf.js](proxy.conf.js) e encaminha
+`/api/weather`. O `.env` não é versionado. Em produção, cadastre a variável na
+Vercel (ou `npx vercel env add API_UTILIDADES_JWT`).
 Em estudo para evolução do projeto
 
 - Melhorias de performance e otimização
