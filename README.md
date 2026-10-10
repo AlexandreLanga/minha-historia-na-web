@@ -31,17 +31,15 @@ Frontend
 
 ### JWT da API de clima
 
-O JWT é lido da variável `API_UTILIDADES_JWT`:
+O JWT é mantido no servidor e não é incluído no bundle do frontend. No Cloudflare,
+acesse **Workers & Pages > seu Worker > Settings > Variables and Secrets** e
+adicione `API_UTILIDADES_JWT` como um secret. O Worker usa esse secret para
+encaminhar `/api/weather` à API de clima.
 
-- Local: copie `.env.example` para `.env` (ignorado pelo git) e preencha o valor.
-  Os scripts `npm start` e `npm run build` carregam o `.env` automaticamente.
-- Cloudflare: em Workers & Pages > Settings > Variables and secrets, defina
-  `API_UTILIDADES_JWT` (build) e use `npm run build` como comando de build e
-  `npx wrangler deploy` como comando de deploy.
-
-O valor é incorporado no bundle do frontend e fica visível aos visitantes. Use
-apenas um JWT mock/de teste, nunca um token com privilégios reais. A API também
-precisa permitir CORS para o domínio do Cloudflare.
+O build (`npm run build`) não precisa do JWT. Para publicar, execute
+`npm run deploy` ou use `npm run build` como comando de build e
+`npx wrangler deploy` como comando de deploy. A chamada ao serviço de clima no
+ambiente local depende de executar o Worker com o secret configurado.
 Em estudo para evolução do projeto
 
 - Melhorias de performance e otimização

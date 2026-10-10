@@ -39,9 +39,10 @@ describe('Weather', () => {
     });
 
     const request = httpTestingController.expectOne(
-      'https://api-utilidades.onrender.com/api/v1/clima/cidade?cidade=Chapecó'
+      '/api/weather'
     );
     expect(request.request.method).toBe('GET');
+    expect(request.request.headers.has('X-API-KEY')).toBeFalse();
 
     request.flush({
       temperatura: 18,

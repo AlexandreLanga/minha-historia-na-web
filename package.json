@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node scripts/ng-env.mjs serve",
-    "build": "node scripts/ng-env.mjs build",
-    "watch": "node scripts/ng-env.mjs build --watch --configuration development",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:minha-historia-na-web": "node dist/minha-historia-na-web/server/server.mjs",
     "deploy": "npm run build && npx wrangler deploy"

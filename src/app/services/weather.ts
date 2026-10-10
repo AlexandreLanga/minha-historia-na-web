@@ -3,8 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError, timer } from 'rxjs';
 import { catchError, map, retry, timeout } from 'rxjs/operators';
 
-declare const API_UTILIDADES_JWT: string;
-
 const API_STARTUP_TIMEOUT_MS = 120_000;
 const TRANSIENT_RETRY_DELAY_MS = 3_000;
 
@@ -32,8 +30,7 @@ interface WeatherApiResponse {
   fusoHorario?: number;
 }
 
-const WEATHER_API_URL =
-  'https://api-utilidades.onrender.com/api/v1/clima/cidade?cidade=Chapecó';
+const WEATHER_API_URL = '/api/weather';
 
 @Injectable({
   providedIn: 'root',
@@ -42,13 +39,8 @@ export class WeatherService {
   constructor(private http: HttpClient) {}
 
   getWeather(): Observable<WeatherData> {
-    const token =
-      typeof API_UTILIDADES_JWT === 'undefined' ? '' : API_UTILIDADES_JWT;
-
     return this.http
-      .get<WeatherApiResponse>(WEATHER_API_URL, {
-        headers: token ? { 'X-API-KEY': token } : undefined,
-      })
+      .get<WeatherApiResponse>(WEATHER_API_URL)
       .pipe(
         timeout({ first: API_STARTUP_TIMEOUT_MS }),
         retry({
