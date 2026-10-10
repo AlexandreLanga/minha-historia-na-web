@@ -11,5 +11,17 @@ export async function GET(): Promise<Response> {
     );
   }
 
-  return fetch(WEATHER_API_URL, { headers: { 'X-API-KEY': jwt } });
+  const upstream = await fetch(WEATHER_API_URL, {
+    headers: { 'X-API-KEY': jwt },
+  });
+
+  // Não repassar os headers do upstream: o corpo já vem descomprimido e o
+  // Content-Encoding original quebraria a leitura no navegador.
+  return new Response(await upstream.text(), {
+    status: upstream.status,
+    headers: {
+      'Content-Type':
+        upstream.headers.get('Content-Type') ?? 'application/json',
+    },
+  });
 }
