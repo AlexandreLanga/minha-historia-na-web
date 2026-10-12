@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
-export type ProjectStatus = 'completed' | 'inProgress' | 'future';
+export type ProjectStatus = 'completed' | 'inProgress' | 'continuous' | 'future';
 
 export interface Project {
   id: number;

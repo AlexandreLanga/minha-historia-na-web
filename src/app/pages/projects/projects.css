@@ -154,6 +154,11 @@ h2 {
   color: #8a5a08;
 }
 
+.status-continuous {
+  background: #e8eafa;
+  color: #514589;
+}
+
 .status-future {
   background: #e8edf2;
   color: #4c6272;

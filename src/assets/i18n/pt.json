@@ -30,6 +30,7 @@
     "STATUS": {
       "completed": "Concluído",
       "inProgress": "Em andamento",
+      "continuous": "Desenvolvimento contínuo",
       "future": "Futuro"
     },
     "PROJECTS": {

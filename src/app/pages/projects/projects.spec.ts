@@ -18,4 +18,13 @@ describe('Projects', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should display continuous development status', () => {
+    component.projects[0].status = 'continuous';
+    fixture.detectChanges();
+
+    const status = fixture.nativeElement.querySelector('.status-continuous');
+    expect(status).toBeTruthy();
+    expect(status.querySelector('.fa-arrows-rotate')).toBeTruthy();
+  });
 });
