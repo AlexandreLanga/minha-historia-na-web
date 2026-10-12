@@ -28,7 +28,7 @@
           <div class="project-heading">
             <h3>{{ project.name }}</h3>
             <span class="project-status" [class]="'project-status status-' + project.status">
-              <i class="fas" [class.fa-check]="project.status === 'completed'" [class.fa-hourglass-half]="project.status === 'inProgress'" [class.fa-seedling]="project.status === 'future'" aria-hidden="true"></i>
+              <i class="fas" [class.fa-check]="project.status === 'completed'" [class.fa-hourglass-half]="project.status === 'inProgress'" [class.fa-arrows-rotate]="project.status === 'continuous'" [class.fa-seedling]="project.status === 'future'" aria-hidden="true"></i>
               {{ ('PROJECTS_PAGE.STATUS.' + project.status) | translate }}
             </span>
           </div>
