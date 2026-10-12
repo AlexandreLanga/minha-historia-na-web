@@ -57,6 +57,23 @@ export const MOCK_PROJECTS: Project[] = [
     repoLink: 'https://github.com/AlexandreLanga/api-utilidades',
     downloadLink: null,
   },
+  {
+    id: 3,
+    name: 'langa-ai-agents',
+    image: 'https://res.cloudinary.com/diizw3dqm/image/upload/v1791783512/copilot_image_inecsi.png',
+    imageAlt: 'PROJECTS_PAGE.PROJECTS.LANGA_AI_AGENTS.IMAGE_ALT',
+    description: 'PROJECTS_PAGE.PROJECTS.LANGA_AI_AGENTS.DESCRIPTION',
+    details: 'PROJECTS_PAGE.PROJECTS.LANGA_AI_AGENTS.DETAILS',
+    status: 'continuous',
+    favorite: false,
+    technologies: ['GitHub Copilot', 'Markdown', 'Python', 'Java / Spring Boot', '.NET', 'Angular / TypeScript'],
+    collaborators: [],
+    impact: 'PROJECTS_PAGE.PROJECTS.LANGA_AI_AGENTS.IMPACT',
+    demoLink: null,
+    serviceLink: null,
+    repoLink: 'https://github.com/AlexandreLanga/langa-ai-agents',
+    downloadLink: null,
+  },
 ];
 
 @Component({

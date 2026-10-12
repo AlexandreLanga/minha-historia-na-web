@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Projects } from './projects';
+import { MOCK_PROJECTS, Projects } from './projects';
 
 describe('Projects', () => {
   let component: Projects;
@@ -26,5 +26,19 @@ describe('Projects', () => {
     const status = fixture.nativeElement.querySelector('.status-continuous');
     expect(status).toBeTruthy();
     expect(status.querySelector('.fa-arrows-rotate')).toBeTruthy();
+  });
+
+});
+
+describe('Project data', () => {
+  it('should include the langa-ai-agents project', () => {
+    const project = MOCK_PROJECTS.find(item => item.name === 'langa-ai-agents');
+
+    expect(project).toBeTruthy();
+    expect(project?.image).toBe(
+      'https://res.cloudinary.com/diizw3dqm/image/upload/v1791783512/copilot_image_inecsi.png'
+    );
+    expect(project?.repoLink).toBe('https://github.com/AlexandreLanga/langa-ai-agents');
+    expect(project?.status).toBe('continuous');
   });
 });
